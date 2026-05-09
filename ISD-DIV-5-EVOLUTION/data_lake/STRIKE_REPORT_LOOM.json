@@ -1,0 +1,413 @@
+{
+  "meta": {
+    "product": "Loom",
+    "scan_timestamp": "2026-05-06T23:21:32.457044",
+    "engine_version": "1.1.0",
+    "mode": "live"
+  },
+  "pricing_friction": [
+    {
+      "source": "web",
+      "content": "**I was tired of paying $15/month for Loom when I barely use ...**",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/ProductivityApps/comments/1kjal9k/i_was_tired_of_paying_15month_for_loom_when_i/)",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Loom pricing and subscription options. Loom video recorder features ... Works well for light use without feeling overpriced. More posts ...Read more",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**wow so i just read Loom's pricing changes and it's quite a ...**",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "wow so i just read Loom's pricing changes and it's quite a dramatic increase for most orgs tldr: they're getting rid of creator lite seats ...Read more",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing | Start Recording For Free**",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.loom.com/pricing)",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing in 2026: Still Worth It Post-Atlassian?**",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://supademo.com/blog/loom-pricing)",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Loom's pricing looks straightforward on the surface: a free plan, two paid tiers, and an enterprise option. But in 2026, the real cost of ...Read more",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing: What's The Real Cost? (2025)**",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.arcade.software/post/loom-pricing)",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Does the Atlassian acquisition affect Loom's pricing? This guide covers the actual cost associated with Loom in 2025.",
+      "query": "\"Loom\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing | Start Recording For Free**",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.loom.com/pricing)",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "$18. per user / month. Try for free. Everything in Starter, and. Unlimited videos. Unlimited recording time. Basic waveform editing. Remove Loom branding.Read more",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing: Free and Paid Plans**",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.atlassian.com/software/loom/pricing)",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "$18. per user / month ... The Standard package of Atlassian's advanced cloud security product, Atlassian Guard, is included in Loom's Enterprise plan for free.Read more",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing: What's The Real Cost? (2025)**",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.arcade.software/post/loom-pricing)",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": ": Priced at $15 USD per user per month (billed annually). It offers ... Loom Enterprise: How much does it really cost? Based on customer interviews ...Read more",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Loom Software Pricing & Plans 2026: See Your Cost**",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Loom Business is priced at $12.50 per Creator per month (billed annually) at list rates. Monthly billing is available at a higher per-seat cost. Business ...Read more",
+      "query": "\"Loom\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing | Start Recording For Free**",
+      "query": "\"Loom\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.loom.com/pricing)",
+      "query": "\"Loom\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing: Free and Paid Plans**",
+      "query": "\"Loom\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.atlassian.com/software/loom/pricing)",
+      "query": "\"Loom\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "Explore Loom pricing plans to help every team have fewer, better meetings. Get started for free and record unlimited, AI-enhanced videos to move your work ...",
+      "query": "\"Loom\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "**Loom Pricing: What's The Real Cost? (2025)**",
+      "query": "\"Loom\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.arcade.software/post/loom-pricing)",
+      "query": "\"Loom\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "Loom's Plans: Summary · Starter: Free plan with a 5-minute recording limit and up to 25 videos per person. · Business: Priced at $15 USD per user per month ( ...Read more",
+      "query": "\"Loom\" free tier OR limitations OR restricted"
+    }
+  ],
+  "export_hostage": [
+    {
+      "source": "web",
+      "content": "**Engagement Insights data exports | Loom**",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://support.atlassian.com/loom/docs/engagement-insights-data-exports/)",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Rewatch to Loom content migration: Post-migration FAQs · Get AI Chat with Loom ... On this pageMake the most of your data exportEngagement data Limitations FAQWho ...Read more",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Data export**",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://help.loomio.com/en/user_manual/groups/data_export/index.html)",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Open the group drop down menu by clicking on the three dots, and select Export group data. Export group data as CSV. For working with the group data in a ...Read more",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Exportable engagement insights Definition - Loom Explained**",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.tella.com/definition/exportable-engagement-insights)",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "How to export engagement insights from Loom? ... To export engagement insights from Loom, you first need to navigate to the video you want to export insights for.Read more",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Is there a way to bulk export share URLs for Loom videos ...**",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://community.atlassian.com/forums/Loom-questions/Is-there-a-way-to-bulk-export-share-URLs-for-Loom-videos-in-a/qaq-p/3158578)",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Yes-- a workspace admin can do so! From within Loom: Settings > Workspace > Data > Export engagement insights. You must be a registered user to add a comment ...Read more",
+      "query": "\"Loom\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Start recording button is locked? - Loom**",
+      "query": "\"Loom\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://community.atlassian.com/forums/Loom-questions/Start-recording-button-is-locked/qaq-p/3181232)",
+      "query": "\"Loom\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**How to unlock boot with disconnected lock loom?**",
+      "query": "\"Loom\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "I cant unlocked my boot the boot lock loom is disconnected and my subwoofers are blocking access to the boot, how do i unlocked the boot in my fg",
+      "query": "\"Loom\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "How to Unlock a Phone · How to Stop Spam Calls · Best Stock Trading Apps ... As with the Loom Desktop Client, errors with the Loom Google ...Read more",
+      "query": "\"Loom\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Tried all the top Loom alternatives, here's what I found ...**",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/ProductivityApps/comments/1kb71dw/tried_all_the_top_loom_alternatives_heres_what_i/)",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**The Ultimate Loom Alternative: Why Cap is the Best Open- ...**",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://cap.so/loom-alternative)",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Looking for the best Loom alternative? Discover Cap, the open-source, privacy-focused screen recorder for Mac & Windows with a built-in Loom video importer.",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**How To Choose The Best Loom Alternative In 2026 [Top ...**",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.tella.com/blog/loom-alternatives)",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "12 best Loom alternatives to consider in 2026. Tella; Supercut; Cap; VEED; Camtasia; ScreenFlow; ScreenPal; Descript; ShareX; QuickTime; OBS ...Read more",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Best Free Loom Alternative (2026)**",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Looking for a free Loom alternative? Kommodo offers unlimited screen recordings with no time limits, AI transcription, and auto SOP generation.",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds. Import your existing Loom videos seamlessly.Read more",
+      "query": "\"Loom\" alternative OR \"switched from\" OR replacement"
+    }
+  ],
+  "enterprise_pain": [
+    {
+      "source": "web",
+      "content": "**Pattern Limitations Due to Number of Shafts/Harnesses?**",
+      "query": "\"Loom\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/weaving/comments/s0ugap/pattern_limitations_due_to_number_of/)",
+      "query": "\"Loom\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "**Loom SDK limitations: Can't record cam bubble across tabs ...**",
+      "query": "\"Loom\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "(https://support.atlassian.com/loom/kb/loom-sdk-limitations-cant-record-cam-bubble-across-tabs-edit-recording/)",
+      "query": "\"Loom\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "Loom SDK limitations: Can't record cam bubble across tabs, edit recording settings, or capture internal audio? Loom SDK limitations: Can't ...Read more",
+      "query": "\"Loom\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "**Loom's Missing Features: What Modern Screen Recorders ...**",
+      "query": "\"Loom\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.canvid.com/blog/loom-missing-features)",
+      "query": "\"Loom\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "And as we've become more accustomed to remote work, Loom's limitations have become increasingly apparent. Loom's floating webcam looks so basic.Read more",
+      "query": "\"Loom\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "**Anyone else have a broken loom in progress?**",
+      "query": "site:reddit.com \"Loom\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/LoomKnitting/comments/1jatxz6/anyone_else_have_a_broken_loom_in_progress/)",
+      "query": "site:reddit.com \"Loom\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "**Why is Loom so slow to acknowledge problems with their ...**",
+      "query": "site:reddit.com \"Loom\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/UseLoom/comments/1ohh6hi/why_is_loom_so_slow_to_acknowledge_problems_with/)",
+      "query": "site:reddit.com \"Loom\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "Users often experience slow performance with Loom, especially during internet disruptions, leading to frustrating lags and video quality drops. See 56 mentions.Read more",
+      "query": "site:g2.com \"Loom\" cons OR negative"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.g2.com/products/atlassian-loom/reviews?open_modal_url=%2Fproducts%2Fatlassian-loom%2Fwishlists%3Fhost_path%3D%252Fproducts%252Fatlassian-loom%252Freviews%253Fqs%253Dpros-and-cons%26source%3Dpdp_avatar&page=4&qs=pros-and-cons)",
+      "query": "site:g2.com \"Loom\" cons OR negative"
+    }
+  ],
+  "sentiment_signals": [],
+  "competitors": [
+    "Tella",
+    "ScreenPal",
+    "BombBomb",
+    "Screen Studio",
+    "ScreenFlow",
+    "Zoom Clips",
+    "Competitors",
+    "Course",
+    "Product",
+    "Small"
+  ],
+  "unbundle_opportunity": {
+    "viable": true,
+    "local_first_possible": true,
+    "estimated_market_size": 1000000,
+    "saas_hostage_indicators": [
+      "Export friction detected",
+      "Pricing complaints prevalent",
+      "Enterprise frustration documented"
+    ]
+  },
+  "verdict": {
+    "strike_worthy": true,
+    "priority": "high",
+    "rationale": "Strong market gap: 74 pain signals, 3 hostage indicators",
+    "total_signals": 74
+  }
+}

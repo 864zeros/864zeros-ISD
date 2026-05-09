@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "product": "Web Highlights",
+    "scan_timestamp": "2026-05-06T22:58:47.596638",
+    "engine_version": "1.1.0",
+    "mode": "live"
+  },
+  "pricing_friction": [
+    {
+      "source": "web",
+      "content": "(https://web-highlights.com/blog/why-i-will-change-my-pricing-model-from-a-lifetime-plan-to-freemium/)",
+      "query": "\"Web Highlights\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Of 1738 users who uninstalled my extension and filled out the survey, 128 thought it was too expensive: Why did you uninstall Web Highlights? I ...Read more",
+      "query": "\"Web Highlights\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "... expensive, in my currency it's $59.90/month so it's an absolute no ... web highlights — Would love your feedback! r/PKMS - Built a free ...Read more",
+      "query": "\"Web Highlights\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Web Highlights offers the following pricing options: Free version with many features; Premium: $3.99/month, $39.99/year, $139.99/lifetime (US ...Read more",
+      "query": "\"Web Highlights\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Web Highlights offers the following pricing options: Free version with many features; Premium and Ultimate plans available. See current prices ...Read more",
+      "query": "\"Web Highlights\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Check out the current pricing here: https://web-highlights.com/pricing. ... Try Chrome Enterprise Core. Web Highlights: PDF & Web Highlighter + Notes & AI ...Read more",
+      "query": "\"Web Highlights\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Pricing of Web Highlights · Basic – Free · Premium – $3.49/month, $34.99/year, $139.99/lifetime (US prices) · Ultimate – $3.99/month, $39.99/year, ...Read more",
+      "query": "\"Web Highlights\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Pricing of Web Highlights. Web Highlights offers the following ... Business: $10 per month per user. Customer Support Options of Diigo.Read more",
+      "query": "\"Web Highlights\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Pricing of Web Highlights. Web Highlights is mostly free to use with ... Enterprise: custom pricing. Final Verdict. If your main goal is ...Read more",
+      "query": "\"Web Highlights\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://web-highlights.com/blog/why-i-will-change-my-pricing-model-from-a-lifetime-plan-to-freemium/)",
+      "query": "\"Web Highlights\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "Q: Is the Web Highlights Extension free to use? You can freely install and use the Web Highlights Extension without any cost. The offline ...Read more",
+      "query": "\"Web Highlights\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "... free trial: See pricing: https://web-highlights.com/pricing WHY WEB HIGHLIGHTS? ✓ It just works – Highlight text in multiple colors on any website or ...Read more",
+      "query": "\"Web Highlights\" free tier OR limitations OR restricted"
+    }
+  ],
+  "export_hostage": [
+    {
+      "source": "web",
+      "content": "**How to Export Pocket Data and Import to Web Highlights**",
+      "query": "\"Web Highlights\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://web-highlights.com/blog/how-to-export-pocket-saves-and-import-to-webhighlights/)",
+      "query": "\"Web Highlights\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "How to Export Pocket Data and Import to Web Highlights · Step 1: Export Your Saves from Pocket · Step 2: Import Highlights into Web Highlights.Read more",
+      "query": "\"Web Highlights\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Learn how to export your research data to Capacities using Web Highlights. Follow our step-by-step guide to improve your workflow and productivity. Feb 8, 2024 ...Read more",
+      "query": "\"Web Highlights\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**How to Export Your Research to Capacities with ...**",
+      "query": "\"Web Highlights\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://web-highlights.com/blog/how-to-export-your-research-to-capacities-with-web-highlights/)",
+      "query": "\"Web Highlights\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "How to Export Your Research to Capacities with Web Highlights · 1. Highlight any website · 2. Add Capacities API Token · 3. Export to Capacities · 4 ...Read more",
+      "query": "\"Web Highlights\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "When you use the YouTube AI summary feature inside Web Highlights, you get four compact types: ... can't export it anywhere. For longer ...Read more",
+      "query": "\"Web Highlights\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Web Highlights supports transcript-based notes by letting users highlight, tag, and export notes. This makes it easier to turn video content ...Read more",
+      "query": "\"Web Highlights\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Export Your Glasp Highlights to Notion, Obsidian, ...**",
+      "query": "\"Web Highlights\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://blog.glasp.co/export-your-glasp-highlights-to-note-taking-apps/)",
+      "query": "\"Web Highlights\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Connect your Readwise account. Click \"Sync\" and your highlights will be automatically imported. How to Export Web Highlights into Readwise.Read more",
+      "query": "\"Web Highlights\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Web Highlights vs. Hypothesis compared for students. See which tool ... Use flashcards or spaced repetition to lock in key ideas; Export ...Read more",
+      "query": "\"Web Highlights\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Top 10 Web Highlights Alternatives & Competitors in 2026**",
+      "query": "\"Web Highlights\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.g2.com/products/web-highlights/competitors/alternatives)",
+      "query": "\"Web Highlights\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "The best overall Web Highlights alternative is Wipster. Other similar apps like Web Highlights are Google Cloud OpenCue, InstaText, Inoreader, and SendBig. Web ...Read more",
+      "query": "\"Web Highlights\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Best Alternatives for PDF & Web Highlighter - Tooltivity**",
+      "query": "\"Web Highlights\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://tooltivity.com/alternatives/web-highlights)",
+      "query": "\"Web Highlights\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Searching for a PDF & Web Highlighter alternative? Check out our top-rated extensions that work just like PDF & Web Highlighter + AI Summary & Notes. Here ...Read more",
+      "query": "\"Web Highlights\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Web Highlights as Weava Alternative: A Detailed Review**",
+      "query": "\"Web Highlights\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://web-highlights.com/blog/webhighlights-weava-alternative/)",
+      "query": "\"Web Highlights\" alternative OR \"switched from\" OR replacement"
+    }
+  ],
+  "enterprise_pain": [
+    {
+      "source": "web",
+      "content": "Web Highlights works best on standard web pages. Some sites may not support reliable highlighting due to technical limitations: Dynamic URLs: Some websites ...Read more",
+      "query": "\"Web Highlights\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "limitations mean I can't always guarantee your highlights will. Web Highlights BlogMarius Bongarts. Q: Why is the Google Sign-in feature of ...Read more",
+      "query": "\"Web Highlights\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "PDF Highlighting Limitations ​. PDF files always need to ... Web Highlights will transform those PDFs into a format that can be highlighted.Read more",
+      "query": "\"Web Highlights\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "**Import highlights from web highlighters - Help**",
+      "query": "\"Web Highlights\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "(https://forum.obsidian.md/t/import-highlights-from-web-highlighters/8848)",
+      "query": "\"Web Highlights\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "I'm looking for a solution to sync my web highlights to my Obsidian Vault so I can quickly search my web history (aka my web highlights) while writing notes in ...Read more",
+      "query": "\"Web Highlights\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "It seems the facebook links are broken! Also, I'm very surprised ... January 2024 Web Highlights. Hobby · r/WarhammerUnderworlds - January ...Read more",
+      "query": "site:reddit.com \"Web Highlights\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "Print as booklet broken on iPhone 16?? 1. 4. Built a free tool to organize and rediscover your ebook & web highlights — Would love your feedback ...Read more",
+      "query": "site:reddit.com \"Web Highlights\" frustrating OR broken OR slow"
+    }
+  ],
+  "sentiment_signals": [],
+  "competitors": [
+    "Hypothesis",
+    "Raindrop",
+    "UNRYO",
+    "Edge Reader Mode",
+    "Google Cloud OpenCue",
+    "JabRef"
+  ],
+  "unbundle_opportunity": {
+    "viable": true,
+    "local_first_possible": true,
+    "estimated_market_size": 700000,
+    "saas_hostage_indicators": [
+      "Export friction detected",
+      "Pricing complaints prevalent",
+      "Enterprise frustration documented"
+    ]
+  },
+  "verdict": {
+    "strike_worthy": true,
+    "priority": "high",
+    "rationale": "Strong market gap: 41 pain signals, 3 hostage indicators",
+    "total_signals": 41
+  }
+}

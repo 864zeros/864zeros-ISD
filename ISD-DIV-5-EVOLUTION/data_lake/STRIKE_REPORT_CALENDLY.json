@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "product": "Calendly",
+    "scan_timestamp": "2026-05-06T21:06:48.457052",
+    "engine_version": "1.1.0",
+    "mode": "live"
+  },
+  "pricing_friction": [
+    {
+      "source": "web",
+      "content": "**Calendly was costing $176/month just for bookings. So I ...**",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/TutorsHelpingTutors/comments/1njz8h6/calendly_was_costing_176month_just_for_bookings/)",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "With a 11 tutors, the bill for Calendly was running $176/month. So we built our own tool, designed around tutors and small groups who don't want ...Read more",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Pricing**",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://calendly.com/pricing)",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Can we try Calendly with multiple users? Absolutely! You can invite team members to join your trial account at no cost. At the end of your 14-day trial, all ...Read more",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Bookings Calendly pricing plans**",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.zoho.com/bookings/explore/calendly-pricing-plans.html)",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Calendly pricing & plans: Is it worth buying in 2026?**",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.jotform.com/blog/calendly-pricing/)",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Calendly pricing & plans: Is it worth buying in 2026? ; Price (Annual), Free, $10/seat/mo, $16/seat/mo, Starts at $15k/yr ; Active Event Types, 1 ...Read more",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Calendly Pricing (Guide)**",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.forbes.com/advisor/business/software/calendly-pricing/)",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Calendly offers free and low-cost plans starting at $8 per month. Learn more about Calendly pricing and to decide which plan is right for ...",
+      "query": "\"Calendly\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Pricing**",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://calendly.com/pricing)",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Calendy Enterprise Pricing Guide (2026 Update)**",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.default.com/post/calendly-enterprise-pricing)",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "We've calculated that 30 users on Calendly Enterprise pricing translates to about $42 per month per user ($15,000 per year). Calendly Enterprise ...Read more",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "As your team grows beyond 30 seats, the average price per user will automatically go down. For example: Seats 1-30 cost $16 per seat, per month (billed annually) ...Read more",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Calendly Pricing: 2026 Guide & Calculator**",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://zeeg.me/en/blog/post/calendly-pricing)",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Calendly plan are always mentioned per user). When you choose monthly billing, the the Standard plan costs $12 per seat each month, while ...Read more",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Calendly pricing: Features and plans explained - Orb**",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.withorb.com/blog/calendly-pricing)",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Calendly Teams plan at $20/month per seat includes lead routing, round ... Calendly Teams costs $20 per user/month on a monthly plan or $16 per user ...Read more",
+      "query": "\"Calendly\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Pricing**",
+      "query": "\"Calendly\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "(https://calendly.com/pricing)",
+      "query": "\"Calendly\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "I made an account on Caledly and I did not pay for an account. Can I continue to use the free version, I am just looking to be able to have clients to ...",
+      "query": "\"Calendly\" free tier OR limitations OR restricted"
+    }
+  ],
+  "export_hostage": [
+    {
+      "source": "web",
+      "content": "**How to import and export contacts**",
+      "query": "\"Calendly\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://calendly.com/help/how-to-import-and-export-contacts)",
+      "query": "\"Calendly\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**How to Export Data From Calendly on a Schedule**",
+      "query": "\"Calendly\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://blog.coupler.io/how-to-export-data-from-calendly/)",
+      "query": "\"Calendly\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Discover how to export Calendly data for effective reporting. Also, learn how to set up an automated export on schedule and how to visualize ...",
+      "query": "\"Calendly\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Learn how to effectively track conversions in Calendly using UTM parameters, Google Analytics, and more. Discover how to export meeting data ...",
+      "query": "\"Calendly\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**How To Export Calendly Data (2026 Guide)**",
+      "query": "\"Calendly\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "How To Export Calendly Data (2026 Guide) Export Calendly data, How to export Calendly data, Download Calendly data, Calendly data export ...",
+      "query": "\"Calendly\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Locked out**",
+      "query": "\"Calendly\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://community.calendly.com/how-do-i-40/locked-out-5410)",
+      "query": "\"Calendly\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Locked Out of My Calendly Account (Google Sign-In ...**",
+      "query": "\"Calendly\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://community.calendly.com/how-do-i-40/locked-out-of-my-calendly-account-google-sign-in-redirect-issue-3895)",
+      "query": "\"Calendly\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Hi Calendly Community,I’m completely locked out of my Calendly account and hoping someone here — maybe a Calendly rep — can help or point me in the ...",
+      "query": "\"Calendly\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "By default, Calendly detects your time zone and your invitee's time zone. For in-person events, we recommend locking the time zone to the event ...Read more",
+      "query": "\"Calendly\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**How do I unlock a group event type?**",
+      "query": "\"Calendly\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://community.calendly.com/how-do-i-40/how-do-i-unlock-a-group-event-type-2690)",
+      "query": "\"Calendly\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**10 Best Calendly Alternatives I tested in Mar 2026**",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://lunacal.ai/compare/calendly-alternative)",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Compare calendly alternatives like Acuity Scheduling, Lunacal, Cal.com, Doodle, HubSpot Meetings, Koalendar, Reclaim.ai, Setmore, ...",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Alternatives to calendly for scheduling and meeting ...**",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/ProductivityApps/comments/1f2d3et/alternatives_to_calendly_for_scheduling_and/)",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**8 Calendly Alternatives You Shouldn't Overlook**",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.emailtooltester.com/en/blog/calendly-alternatives/)",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Calendly Alternatives - Ultimate List as of 2026**",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://calendly-alternatives.org/)",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "We've put together a list of the best Calendly alternatives. In this page, we'll help you find the best scheduling tool for your use case.Read more",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Calendly Alternative: We Stopped Comparing Scheduling ...**",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://cotera.co/articles/calendly-alternative-ai-scheduling)",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "None of these problems would be solved by switching from Calendly to Cal.com. None of them would be solved by switching to any scheduling tool.Read more",
+      "query": "\"Calendly\" alternative OR \"switched from\" OR replacement"
+    }
+  ],
+  "enterprise_pain": [
+    {
+      "source": "web",
+      "content": "Calendly free plan 2026: Complete guide to features, limitations, workarounds & when to upgrade. Compare with GDPR-compliant alternatives ...",
+      "query": "\"Calendly\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "It gets especially frustrating in a team setting: You never ... im too broke for calendly so i just use supercal lol. datawazo. • 4mo ...Read more",
+      "query": "site:reddit.com \"Calendly\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "Top Cons or Disadvantages of Calendly for G Suite. 1. Connectivity Issues. Users face connectivity issues that disrupt syncing with Google Calendar and Meet ...Read more",
+      "query": "site:g2.com \"Calendly\" cons OR negative"
+    }
+  ],
+  "sentiment_signals": [],
+  "competitors": [
+    "Doodle",
+    "Acuity",
+    "Cal.com",
+    "Calendar",
+    "Motion",
+    "Schedly",
+    "TidyCal",
+    "Your Go-To List",
+    "Acuity Scheduling Vs",
+    "Microsoft Bookings"
+  ],
+  "unbundle_opportunity": {
+    "viable": true,
+    "local_first_possible": true,
+    "estimated_market_size": 1000000,
+    "saas_hostage_indicators": [
+      "Export friction detected",
+      "Pricing complaints prevalent",
+      "Enterprise frustration documented"
+    ]
+  },
+  "verdict": {
+    "strike_worthy": true,
+    "priority": "high",
+    "rationale": "Strong market gap: 61 pain signals, 3 hostage indicators",
+    "total_signals": 61
+  }
+}

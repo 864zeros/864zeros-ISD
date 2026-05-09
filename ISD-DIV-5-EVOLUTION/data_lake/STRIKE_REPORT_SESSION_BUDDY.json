@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "product": "Session Buddy",
+    "scan_timestamp": "2026-05-06T21:59:30.377773",
+    "engine_version": "1.1.0",
+    "mode": "live"
+  },
+  "pricing_friction": [
+    {
+      "source": "web",
+      "content": "Session Buddy Update Is A Complete Mess ... 5 bucks per month and it's \"lifetime lock in price for a product that will get more expensive\" .Read more",
+      "query": "\"Session Buddy\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "The cost is complexity and price. Workona's free plan limits you to 5 workspaces. The Pro plan is $6/month — the most expensive option in this ...Read more",
+      "query": "\"Session Buddy\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Session Buddy - Pricing, Features, and Details in 2026**",
+      "query": "\"Session Buddy\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Learn more about Session Buddy. Explore Session Buddy Pricing, features, integrations, popular comparisons, and more. Get a free demo.",
+      "query": "\"Session Buddy\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Get a clear overview of session buddy: what it is, key pros and cons, specs, pricing, and vendor details. Use FitGap's transparent insights to see whether ...",
+      "query": "\"Session Buddy\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Pricing — free forever for local, $5/mo for cloud sync + AI**",
+      "query": "\"Session Buddy\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://sessionat.com/pricing)",
+      "query": "\"Session Buddy\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Session Buddy is free with no limitations. TabGroup Vault has a free tier and a $29 lifetime Pro upgrade. TabGroup Vault preserves Chrome ...Read more",
+      "query": "\"Session Buddy\" free tier OR limitations OR restricted"
+    }
+  ],
+  "export_hostage": [
+    {
+      "source": "web",
+      "content": "**Import and Export - Session Buddy**",
+      "query": "\"Session Buddy\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://sessionbuddy.com/import-export/)",
+      "query": "\"Session Buddy\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Exporting collections · Open the Export Dialog: Click the gear icon in Session Buddy, then select “Export…” from the dropdown menu. · Choose Collections: Decide ...Read more",
+      "query": "\"Session Buddy\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Session Buddy: Migrate, Transfer, Sync, Export-Import & ...**",
+      "query": "\"Session Buddy\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "You can use export/import to merge session data. See: Session Buddy Import and Export. http://sessionbuddy.com/importExport/importExport.html.Read more",
+      "query": "\"Session Buddy\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**How to migrate your session from Session Buddy…**",
+      "query": "\"Session Buddy\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.tabdeck.so/blog/how-to-migrate-from-session-buddy)",
+      "query": "\"Session Buddy\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Export your session from Session Buddy. Assuming you have both the Session ... Migration. Migrate from OneTabMigrate from Session Buddy. 2026 Tab Deck ...Read more",
+      "query": "\"Session Buddy\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Troubleshooting Export - Session Buddy**",
+      "query": "\"Session Buddy\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://sessionbuddy.com/troubleshooting-export/)",
+      "query": "\"Session Buddy\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "In some cases, however, folder selection may be unsupported or blocked by a permission setting. When this happens, Session Buddy falls back to a file download ...Read more",
+      "query": "\"Session Buddy\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Session Buddy (Can't import it's exported .html or .txt ...**",
+      "query": "\"Session Buddy\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/chrome/comments/739fu7/session_buddy_cant_import_its_exported_html_or/)",
+      "query": "\"Session Buddy\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Not sure about session buddy!, but try Kurator. It stores tabs (links) in folders, you can easily, export and import folders. You can access ...Read more",
+      "query": "\"Session Buddy\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Export function brokey after update!**",
+      "query": "\"Session Buddy\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "You received this message because you are subscribed to the Google Groups \"Session Buddy Discussion\" group. ... I also can't export. \"error ...Read more",
+      "query": "\"Session Buddy\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Alternatives to (now wrecked) Session Buddy? : r/chrome**",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/chrome/comments/1bdw9o7/alternatives_to_now_wrecked_session_buddy/)",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Session Buddy Alternatives: Top 12 Tab & Bookmark ...**",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://alternativeto.net/software/session-buddy/)",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "The best Session Buddy alternatives are OneTab, Tab Stash and Tab Session Manager. Our crowd-sourced lists contains more than 50 apps ...",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Solved: Alternative to Session Buddy Chrome extension**",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.experts-exchange.com/questions/29295145/Alternative-to-Session-Buddy-Chrome-extension.html)",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Find answers to Alternative to Session Buddy Chrome extension from the expert community at Experts Exchange.",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Best Session Buddy alternative for Chrome & Edge**",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**An alternative to Session Buddy: \"Tabs Backup & Restore\"**",
+      "query": "\"Session Buddy\" alternative OR \"switched from\" OR replacement"
+    }
+  ],
+  "enterprise_pain": [
+    {
+      "source": "web",
+      "content": "**Opera (15-26) gets very slow as Sessions.db gets large**",
+      "query": "\"Session Buddy\" enterprise OR B2B problems OR issues"
+    },
+    {
+      "source": "web",
+      "content": "I lost all of my tabs during the update issue earlier this week, but I was able to recover using a session buddy backup. However, clicking on ...Read more",
+      "query": "\"Session Buddy\" enterprise OR B2B problems OR issues"
+    },
+    {
+      "source": "web",
+      "content": "While Session Buddy is stable, its official roadmap and user reviews reveal notable limitations: No Tab Group Support: Chrome native tab groups ...Read more",
+      "query": "\"Session Buddy\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "To accommodate device memory limitations, large files are handled differently from smaller ones. ... json file extension and follow the Session Buddy JSON format.Read more",
+      "query": "\"Session Buddy\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "Session Buddy is the ultimate solution for managing your browser ... While potentially viable, this approach comes with some known technical limitations.Read more",
+      "query": "\"Session Buddy\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "**limitations in current features?**",
+      "query": "\"Session Buddy\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "limitations in current features? 40 views. active ... I have used Session Buddy for many years now and have benefited from it greatly. ... Do these issues represent ...",
+      "query": "\"Session Buddy\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "Whenever i open my sessions through google chromes extension 'Session Buddy' they become unresponsive and/or really slow. Is there any way i can fix this?Read more",
+      "query": "site:reddit.com \"Session Buddy\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "When I opened Session Buddy and everything was gone. All my saved sessions and tab collections just disappeared as if the app had been freshly installed.Read more",
+      "query": "site:reddit.com \"Session Buddy\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "When i re open my tabs/windows they become unresponsive and very slow.The reason i think its Session Buddy's fault is because when i reopen them ...Read more",
+      "query": "site:reddit.com \"Session Buddy\" frustrating OR broken OR slow"
+    }
+  ],
+  "sentiment_signals": [],
+  "competitors": [
+    "One Tab Group",
+    "Webloggle",
+    "Dokkio",
+    "Linkman",
+    "OneTab",
+    "Pocket",
+    "TabGroup Vault",
+    "BEST Private Options",
+    "CarryLinks",
+    "Diigo"
+  ],
+  "unbundle_opportunity": {
+    "viable": true,
+    "local_first_possible": true,
+    "estimated_market_size": 1000000,
+    "saas_hostage_indicators": [
+      "Export friction detected",
+      "Pricing complaints prevalent",
+      "Enterprise frustration documented"
+    ]
+  },
+  "verdict": {
+    "strike_worthy": true,
+    "priority": "high",
+    "rationale": "Strong market gap: 44 pain signals, 3 hostage indicators",
+    "total_signals": 44
+  }
+}

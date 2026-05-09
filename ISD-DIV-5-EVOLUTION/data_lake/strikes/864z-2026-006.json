@@ -1,0 +1,44 @@
+{
+  "id": "864z-2026-006",
+  "name": "RoamRescue",
+  "slug": "roamrescue",
+  "type": "rescue",
+  "version": "1.0.0",
+  "description": "Local-first block-graph notes. One-click migration from Roam. No subscription, no cloud lock-in.",
+  "target": {
+    "name": "Roam Research",
+    "price": 15,
+    "pain": "Export friction detected; Pricing complaints prevalent; Enterprise frustration documented",
+    "export_format": "MARKDOWN"
+  },
+  "host_permissions": [],
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "sidePanel",
+    "contextMenus"
+  ],
+  "metadata": {
+    "vulture_score": 11.36,
+    "validation_timestamp": "2026-05-06T19:32:43.412278",
+    "transformed_at": "2026-05-06T19:33:01.549696",
+    "source_schema": "validator.StrikePackage",
+    "target_schema": "strike-bridge.js v2.0"
+  },
+  "builder_hints": {
+    "required_bricks": [
+      "BRK-DB-001",
+      "BRK-MIG-002"
+    ],
+    "delta_features": [
+      "Local-first block graph (IndexedDB)",
+      "One-click Roam JSON import",
+      "Logseq-style daily notes"
+    ],
+    "projection": {
+      "target_mrr": 2500,
+      "months_to_exit": 8,
+      "rule_of_40_match": true
+    }
+  }
+}

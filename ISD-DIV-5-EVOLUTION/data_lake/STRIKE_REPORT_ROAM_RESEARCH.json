@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "product": "Roam Research",
+    "scan_timestamp": "2026-05-06T19:27:14.702459",
+    "engine_version": "1.1.0",
+    "mode": "live"
+  },
+  "pricing_friction": [
+    {
+      "source": "web",
+      "content": "**Can we stop complaining about the cost? : r/RoamResearch**",
+      "query": "\"Roam Research\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/RoamResearch/comments/re7s66/can_we_stop_complaining_about_the_cost/)",
+      "query": "\"Roam Research\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "I keep reading about the cost of Roam Research as being this enormous impediment to subscribing - or as being the primary reason for switching to another app - ...Read more",
+      "query": "\"Roam Research\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "Why are people leaving Roam Research? The most common reasons are pricing ($15/month with no free tier), performance degradation with large ...Read more",
+      "query": "\"Roam Research\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "In-depth Roam Research review. Learn about features, pricing ( ... More expensive than many competing note-taking apps at $15/month minimum.Read more",
+      "query": "\"Roam Research\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Roam Research: Pricing & Features | Shyft**",
+      "query": "\"Roam Research\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Roam Research pricing starts at $15/mo. Contact Roam Research for enterprise pricing and volume discounts. What do users think of Roam Research? Is Roam ...",
+      "query": "\"Roam Research\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "In-depth Roam Research review. Learn about features, pricing ($15/mo), pros & cons. Best networked note-taking app for building a second ...",
+      "query": "\"Roam Research\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Roam Research offers no free tier whatsoever. Its Pro plan starts at $15 per month for individuals, and team access through the Believer plan costs $25 per user ...Read more",
+      "query": "\"Roam Research\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Is RoamResearch $15/month justifiable**",
+      "query": "\"Roam Research\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "Start Free Trial *. You'll be charged after 31 days. * Trial only valid if you've never had a plan. Believer. $500. / 5 years. $8.33 / month ... Roam RESEARCH.Read more",
+      "query": "\"Roam Research\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "**7 Best Roam Research Alternatives in 2026 (Lower Cost ...**",
+      "query": "\"Roam Research\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "Roam Research has no free tier — only a limited trial. Its standard Pro plan runs $15 per month when billed monthly, dropping to roughly $15 per month on ...Read more",
+      "query": "\"Roam Research\" free tier OR limitations OR restricted"
+    }
+  ],
+  "export_hostage": [
+    {
+      "source": "web",
+      "content": "**How To Backup And Export Your Data From Roam Research**",
+      "query": "\"Roam Research\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://productivity.academy/news/export-data-roam-research/)",
+      "query": "\"Roam Research\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Click on the 3 dots in the top right of any page in your Roam Research account · Select Export for exporting a single page (that you are currently on) · OR, ...Read more",
+      "query": "\"Roam Research\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Obsidian allows you to easily migrate your notes from Roam Research. Export your data from Roam Research In Roam Research, click on More ...Read more",
+      "query": "\"Roam Research\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Roam-migration. A command-line tool to convert Roam Research exported files to Org-roam compatible markdown. Installation ...Read more",
+      "query": "\"Roam Research\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**How to switch from Roam Research to Obsidian**",
+      "query": "\"Roam Research\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**How to remove encrypted/locked graph : r/RoamResearch**",
+      "query": "\"Roam Research\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/RoamResearch/comments/10b290i/how_to_remove_encryptedlocked_graph/)",
+      "query": "\"Roam Research\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Travis Hinton ▻ Roam Research Users. 5y · Public · Not into ... I see you can export out a RM-created Notebook page, but you can't export ...Read more",
+      "query": "\"Roam Research\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Why I Switched: A deep dive into Roam vs. Obsidian**",
+      "query": "\"Roam Research\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://nileswyler.medium.com/why-i-switched-a-deep-dive-into-roam-vs-obsidian-df1a394971ff)",
+      "query": "\"Roam Research\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "I know there are export features in Roam and that users report no lock-in ... Roam Research: Amazing product, albeit pricey with ...Read more",
+      "query": "\"Roam Research\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**7 Best Roam Research Alternatives (2026): Linked Notes ...**",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.atlasworkspace.ai/blog/roam-research-alternative)",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Logseq is the closest direct replacement for Roam Research. It is an open-source outliner with bidirectional links, block references, and a journals-first ...Read more",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**5 Surprising Alternatives to Roam Research You Need to Try**",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://medium.com/@theo-james/5-surprising-alternatives-to-roam-research-you-need-to-try-7660a8e6e87a)",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Logseq is a powerful, open-source alternative to Roam Research that prioritizes privacy and flexibility. It's ideal for users who value ...Read more",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Open source alternatives to Roam Research : r/selfhosted**",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/selfhosted/comments/f0z6yd/open_source_alternatives_to_roam_research/)",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Best Roam Research Alternatives for 2026**",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://noteapps.info/best_roam_research_alternatives_2026_personalized_ad_free)",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Open source and self-hosted alternatives to Roam Research**",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://nesslabs.com/roam-research-alternatives)",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "If you love Roam Research but prefer a self-hosted alternative for privacy reasons, there are a few open-source options available.",
+      "query": "\"Roam Research\" alternative OR \"switched from\" OR replacement"
+    }
+  ],
+  "enterprise_pain": [
+    {
+      "source": "web",
+      "content": "Automate smarter with Roam Research and scale with confidence. Zapier is built for enterprise-grade security, compliance, and performance. Start free with email.Read more",
+      "query": "\"Roam Research\" enterprise OR B2B problems OR issues"
+    },
+    {
+      "source": "web",
+      "content": "**help for roam getting slower and slower : r/RoamResearch**",
+      "query": "site:reddit.com \"Roam Research\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/RoamResearch/comments/q7tu3t/help_for_roam_getting_slower_and_slower/)",
+      "query": "site:reddit.com \"Roam Research\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "My roam research has been getting slower and slower. Commands like /dat /today /todo take forever to load. Text input lags and you have to wait an eternity for ...Read more",
+      "query": "site:reddit.com \"Roam Research\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "**Why does editing have slow lag in Roam? : r/RoamResearch**",
+      "query": "site:reddit.com \"Roam Research\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/RoamResearch/comments/mymfg1/why_does_editing_have_slow_lag_in_roam/)",
+      "query": "site:reddit.com \"Roam Research\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "... Roam Research, Notion, and Obsidian. You can also export your highlights in ... Pros & Cons. Generated from real user reviews. Workflow Efficiency (1)Read more",
+      "query": "site:g2.com \"Roam Research\" cons OR negative"
+    }
+  ],
+  "sentiment_signals": [],
+  "competitors": [],
+  "unbundle_opportunity": {
+    "viable": true,
+    "local_first_possible": true,
+    "estimated_market_size": 0,
+    "saas_hostage_indicators": [
+      "Export friction detected",
+      "Pricing complaints prevalent",
+      "Enterprise frustration documented"
+    ]
+  },
+  "verdict": {
+    "strike_worthy": true,
+    "priority": "high",
+    "rationale": "Strong market gap: 45 pain signals, 3 hostage indicators",
+    "total_signals": 45
+  }
+}

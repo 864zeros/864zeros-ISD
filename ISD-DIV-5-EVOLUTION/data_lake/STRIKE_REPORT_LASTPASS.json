@@ -1,0 +1,417 @@
+{
+  "meta": {
+    "product": "LastPass",
+    "scan_timestamp": "2026-05-06T20:25:31.985253",
+    "engine_version": "1.1.0",
+    "mode": "live"
+  },
+  "pricing_friction": [
+    {
+      "source": "web",
+      "content": "... \" Like Terrible Service and Price Increases : r/msp. Close search. Clear search. Ask. LastPass pricing and cost details. LastPass revenue ...Read more",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Pricing by Plan**",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.lastpass.com/pricing)",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**LastPass Premium costs $24.51/per year (Tax included, $14.21 ...**",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://support.lastpass.com/s/question/0D5TP0000055slJ0AQ/lastpass-premium-costs-2451per-year-tax-included-1421per-year-exl-tax-more-than-advertised?language=es)",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "LastPass pricing in Euro is not a direct conversion from USD pricing, the usual cost of LastPass Premium is €34.80/year, if you're not seeing a discounted ...",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**LastPass Pricing: Plans, Features, and Cost-Saving Tips**",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.spendflo.com/blog/lastpass-pricing-guide)",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "LastPass cost ranges between $3k to $30k depending on the plan chosen. Here's a more detailed explanation of their cost. ‍. Single Plan: ‍. Free ...Read more",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**What does LastPass Premium Cost? (Is it Worth it?)**",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "If you have trouble keeping track of your passwords, you need a password manager like LastPass. But what does LastPass Premium cost? Let's have a look.",
+      "query": "\"LastPass\" pricing expensive OR \"too expensive\" OR overpriced"
+    },
+    {
+      "source": "web",
+      "content": "**Pricing by Plan**",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.lastpass.com/pricing)",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "$4.25 per user/mo. Business. $7.00 per user/mo. Business Max. $9.00 per user/mo ... Business. yes. Business Max. yes. LastPass Families for employees. Empower ...",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**LastPass Pricing Guide 2026: Compare Plans and Cost**",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.securden.com/blog/lastpass-pricing-review.html)",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Business Plan ($7 per user per month): Enterprises. Lastly, there's the LastPass Business Plan which is perfect for large enterprises, MSPs, or ...Read more",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "With LastPass Business, you get everything for just $7 per user/month, or purchase a site license to cover your entire business through a custom contract.Read more",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Am I the only one that is confused by the LastPass products and pricing ... Pay per seat as well. KABM2025. • 5mo ago. Thanks. There is ...Read more",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**LastPass Software Pricing & Plans 2026: See Your Cost**",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "Enterprise: Custom pricing (typically $12–$15+ per user per month). Key ... Explore LastPass Enterprise pricing with Vendr. How much does LastPass ...Read more",
+      "query": "\"LastPass\" enterprise pricing OR \"per seat\" OR \"per user\""
+    },
+    {
+      "source": "web",
+      "content": "**Pricing by Plan**",
+      "query": "\"LastPass\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.lastpass.com/pricing)",
+      "query": "\"LastPass\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.lastpass.com/pricing/lastpass-premium-vs-free)",
+      "query": "\"LastPass\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "Advantages of LastPass premium over free. Limitations of LastPass free version. LastPass pricing details. LastPass reviews and user experiences.Read more",
+      "query": "\"LastPass\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "**LastPass Pricing Guide 2026: Compare Plans and Cost**",
+      "query": "\"LastPass\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.securden.com/blog/lastpass-pricing-review.html)",
+      "query": "\"LastPass\" free tier OR limitations OR restricted"
+    },
+    {
+      "source": "web",
+      "content": "This guide simplifies all the LastPass pricing plans, helping you decide if it's worth the investment. You'll also learn which plan fits your requirements.Read more",
+      "query": "\"LastPass\" free tier OR limitations OR restricted"
+    }
+  ],
+  "export_hostage": [
+    {
+      "source": "web",
+      "content": "(https://support.lastpass.com/help/export-your-passwords-and-secure-notes-lp040004)",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**how do I export my passwords? : r/Lastpass**",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/Lastpass/comments/1039jjg/how_do_i_export_my_passwords/)",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Export your LastPass Data**",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Learn how to export your LastPass vault as a backup or to import into other password management applications. Body. Follow these instructions to ...",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**How do I migrate data between my LastPass accounts?**",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://support.lastpass.com/help/how-do-i-migrate-data-between-my-lastpass-accounts)",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "Export vault data from LastPass as a generic CSV file · Export vault data as a LastPass encrypted file · Export vault data for your identities.",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**How do I export vault data while logged in through the ...**",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "(https://support.lastpass.com/s/document-item?language=en_US&bundleId=lastpass&topicId=LastPass%2Fexport-web-vault.html&_LANG=enus)",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "You can export your LastPass vault data through the LastPass website. This export method will display your vault data on a new web browser page ...",
+      "query": "\"LastPass\" export data OR \"how to export\" OR migration"
+    },
+    {
+      "source": "web",
+      "content": "**Will not export passwords : r/Lastpass**",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/Lastpass/comments/1bfl81j/will_not_export_passwords/)",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Finally decided to make the effort to leave LastPass. Tried to export my 150+ passwords and only 5 of them exported into a csv.",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Unlock your LastPass account**",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://support.lastpass.com/s/document-item?language=en_US&_LANG=enus&bundleId=lastpass&topicId=LastPass%2Funlock-account.html&sfdcIFrameOrigin=null)",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Unlock your LastPass account · Merge two LastPass accounts · Which LastPass account should I use? How do I delete my LastPass account?Read more",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Hello.My account is locked in mobile‑only mode and ...**",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://community.lastpass.com/discussion/4842/hello-my-account-is-locked-in-mobile-only-mode-and-my-computers-lastpass-is-incompatible-to-make-an-upgrade)",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "Hello.My account is locked in mobile‑only mode and my computer's LastPass is incompatible to make an upgrade I need a Device Type Reset so I ...",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**I'm locked out of LastPass because I can't disable the ...**",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://support.lastpass.com/help/im-locked-out-of-lastpass-because-i-cant-disable-the-lastpass-authenticator-what-should-i-do)",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**How do I export vault data while logged in through the ...**",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "(https://support.lastpass.com/s/document-item?language=en_US&bundleId=lastpass&topicId=LastPass%2Fexport-web-vault.html&_LANG=enus)",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "As an administrator enable the \"Prohibit export\" policy to disable the export option for the LastPass vault data (including passwords, notes, ...Read more",
+      "query": "\"LastPass\" lock-in OR locked OR \"can't export\""
+    },
+    {
+      "source": "web",
+      "content": "**Best alternative(s) to Lastpass**",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/Lastpass/comments/1g02pla/best_alternatives_to_lastpass/)",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Compare LastPass Alternatives & Features**",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Best LastPass Alternative in 2025**",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "There are plenty of alternatives to LastPass, but one stands out. Manage your passwords for free with Bitwarden, the best LastPass alternative.Read more",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**Top 7 LastPass Alternatives and Competitors (Updated 2026)**",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.securden.com/blog/lastpass-alternatives.html)",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Here is the list of the 7 alternative password managers to LastPass with their features, best suited for, and pricing plans.Read more",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "**The best enterprise-grade alternative to LastPass for 2025**",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.manageengine.com/products/passwordmanagerpro/lastpass-alternative.html)",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    },
+    {
+      "source": "web",
+      "content": "Check out how ManageEngine's Password Manager Pro would be the best LastPass alternative for your organization. Sign up for 30 days free trial now!",
+      "query": "\"LastPass\" alternative OR \"switched from\" OR replacement"
+    }
+  ],
+  "enterprise_pain": [
+    {
+      "source": "web",
+      "content": "**Why do I get a message that I can't link an account with ...**",
+      "query": "\"LastPass\" enterprise OR B2B problems OR issues"
+    },
+    {
+      "source": "web",
+      "content": "Why do I get a message that I can't link an account with another linked account or LastPass Business account?Read more",
+      "query": "\"LastPass\" enterprise OR B2B problems OR issues"
+    },
+    {
+      "source": "web",
+      "content": "Email templates for new LastPass Business and LastPass Teams users ... What are the limitations for LastPass users with federated login?Read more",
+      "query": "\"LastPass\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "**SOLVED: Can't add second remote template (LastPass ...**",
+      "query": "\"LastPass\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "(https://support.lastpass.com/help/lastpass-sample-import-sheet)",
+      "query": "\"LastPass\" template OR \"can't customize\" OR limitations"
+    },
+    {
+      "source": "web",
+      "content": "**Lastpass slows down my browser by over 40%**",
+      "query": "site:reddit.com \"LastPass\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/Lastpass/comments/1ahebvl/lastpass_slows_down_my_browser_by_over_40/)",
+      "query": "site:reddit.com \"LastPass\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "**Is LastPass broken right now?**",
+      "query": "site:reddit.com \"LastPass\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/Lastpass/comments/1r1y40z/is_lastpass_broken_right_now/)",
+      "query": "site:reddit.com \"LastPass\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "**LastPass on Chrome unusably slow**",
+      "query": "site:reddit.com \"LastPass\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "(https://www.reddit.com/r/Lastpass/comments/13ujz67/lastpass_on_chrome_unusably_slow/)",
+      "query": "site:reddit.com \"LastPass\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "Suddenly, in 2024, the Lastpass extension has almost completely broken and it is so frustrating that I am very close to quitting their service.Read more",
+      "query": "site:reddit.com \"LastPass\" frustrating OR broken OR slow"
+    },
+    {
+      "source": "web",
+      "content": "Users often face browser extension issues with LastPass, including slow performance and intrusive interface elements. See 43 mentions. See Related User Reviews.Read more",
+      "query": "site:g2.com \"LastPass\" cons OR negative"
+    }
+  ],
+  "sentiment_signals": [],
+  "competitors": [],
+  "unbundle_opportunity": {
+    "viable": true,
+    "local_first_possible": true,
+    "estimated_market_size": 0,
+    "saas_hostage_indicators": [
+      "Export friction detected",
+      "Pricing complaints prevalent",
+      "Enterprise frustration documented"
+    ]
+  },
+  "verdict": {
+    "strike_worthy": true,
+    "priority": "high",
+    "rationale": "Strong market gap: 77 pain signals, 3 hostage indicators",
+    "total_signals": 77
+  }
+}

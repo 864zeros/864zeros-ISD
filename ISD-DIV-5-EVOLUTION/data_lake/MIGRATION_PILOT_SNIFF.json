@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "strike_id": "864z-2026-PILOT-MIGRATION-001",
+    "type": "migration_sniff",
+    "scan_timestamp": "2026-05-07T14:50:12",
+    "scan_mode": "custom_3query",
+    "engine_version": "tool_wrapper-via-DIV-5-hub",
+    "queries_executed": 3,
+    "apify_queries_spent": 3,
+    "purpose": "Validate Migration/Liberation thesis (Option C lane) by probing the export-tool space directly rather than running standard incumbent-anchored find_competitors."
+  },
+  "queries": [
+    {
+      "query": "Web Highlights to Obsidian Export",
+      "results_count": 8,
+      "incumbent_self_references": 4,
+      "demand_signals": 3,
+      "real_competitors": ["Glasp"],
+      "real_count": 1,
+      "demand_quotes": [
+        "I'm looking for a solution to sync my web highlights to my Obsidian Vault so I can quickly search my web history (aka my web highlights) while writing notes",
+        "EDIT: If only paid solutions exist, I'm looking for solutions without a monthly paid subscription. One time fee is fine though.",
+        "I am trying to highlight and annotate web pages. Then sync these highlights to obsidian for further organization. What extension/plugin should I use for it?"
+      ]
+    },
+    {
+      "query": "Capacities data migration tools",
+      "results_count": 7,
+      "incumbent_self_references": 5,
+      "off_category_results": 2,
+      "real_competitors": [],
+      "real_count": 0,
+      "notes": "All results are either Capacities own first-party docs (5/7) or Microsoft Fabric (2/7 — wrong domain entirely). Zero third-party migration utilities surfaced for this niche."
+    },
+    {
+      "query": "Browser highlight extractors",
+      "results_count": 8,
+      "off_category_pdf": 3,
+      "off_category_youtube": 1,
+      "off_category_links": 1,
+      "incumbent_self_references": 2,
+      "code_question": 1,
+      "real_competitors": [],
+      "real_count": 0,
+      "notes": "No tools surfaced that specifically migrate browser highlights to vault destinations. PDF highlight extractors exist but operate on a different source surface."
+    }
+  ],
+  "aggregate": {
+    "real_competitors": ["Glasp"],
+    "adjacent_competitors": ["Highlight Extract (PDF/Word focused)"],
+    "real_count": 1,
+    "adjacent_count": 1,
+    "total_strict_count": 1,
+    "total_inclusive_count": 2,
+    "scarcity_threshold_directive": 2,
+    "scarcity_verdict": "PASS",
+    "verdict_reasoning": "Real direct competitor: Glasp (1). Adjacent competitor: Highlight Extract (PDF/Word, different surface). Both interpretations fall within the directive's <=2 threshold."
+  },
+  "demand_signals": {
+    "count": 3,
+    "platforms": ["Obsidian forum (forum.obsidian.md)", "Reddit r/ObsidianMD", "Obsidian forum"],
+    "signal_pattern": "Users actively asking for solutions that don't surface in the search; demand exists, supply is thin."
+  },
+  "thesis": [
+    "Web Highlights users articulate migration intent in public forums",
+    "Web Highlights' own docs describe Markdown export — but it's a manual copy-paste, not a programmatic migrator",
+    "Glasp is the only third-party tool that programmatically exports web highlights to Obsidian/Notion/Capacities",
+    "Capacities migration tooling space has zero third-party tools (all first-party)",
+    "Browser-highlight migration as a category has no recognizable product cluster"
+  ]
+}
