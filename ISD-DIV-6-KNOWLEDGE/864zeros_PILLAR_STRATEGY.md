@@ -1,7 +1,7 @@
 # 864zeros: Pillar Strategy [v1.0]
 
 **Authority:** Cross-cutting brand and product doctrine. Synthesizes [`GTM_MANIFEST.md`](../../864zeros-llc/GTM_MANIFEST.md) (v1.1) into a single ingestion-ready strategic view.
-**Loaded:** Always — alongside `64zeros_MASTER_CONTEXT.md.md` and the `BUILD_KIT_RULES.md` rule set.
+**Loaded:** Always — alongside `864zeros_MASTER_CONTEXT.md` and the `BUILD_KIT_RULES.md` rule set.
 **Authored:** 2026-05-09 by 864z-OA (Office Architect) under RULE-000.
 **Update protocol:** Append-only. Pillar additions, palette evolutions, or hook revisions require Office Architect sign-off per [`ROLES/OFFICE_ARCHITECT.md`](../../864zeros-llc/ROLES/OFFICE_ARCHITECT.md) §VI.
 **Format note:** Follows the inferred `864z-markdown-standard` (BUILD_KIT_RULES.md metadata header + MASTER_CONTEXT.md.md atomic body). Standard not yet codified — pending Office Architect sign-off as a future RULE.

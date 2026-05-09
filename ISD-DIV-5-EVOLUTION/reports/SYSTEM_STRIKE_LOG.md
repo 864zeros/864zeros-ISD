@@ -428,3 +428,39 @@ The next strike begins at a higher floor than this one did, by exactly the size 
 **Active Sprint state after this entry:** unchanged from prior entry (1 HIGH-deferred Clipboard Phase 2 + 1 MEDIUM ScriptureScout pre-flight scarcity OR). The DIV-6 master docs are documentation deliverables, not Sprint items — they do not consume sprint capacity but DO unlock NotebookLM ingestion for downstream agents.
 
 ---
+
+### `2026-05-09T-STRIKE-012-FINAL-CLEANUP-STRIKE` — SOS Governance + Security Compliance: DELIVERED
+**Strike:** Final Cleanup Strike for the Strike-012 lifecycle (closes the Strike-012 chapter — no further Strike-012 work expected after this entry)
+**Component:** Cross-repo — `864z-build-kit/references/core/BUILD_KIT_RULES.md` + `ISD-DIV-0-CORE/{BRICK_REGISTRY.json, SECURITY_ROTATION_LOG.md}` + `ISD-DIV-6-KNOWLEDGE/{864zeros_MASTER_CONTEXT.md, README.md, 864zeros_PILLAR_STRATEGY.md, 864zeros_2026_ROADMAP.md}` + `ISD-DIV-5-EVOLUTION/STRIKE_012_COMPLETE_SESSION.md`
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit directive: "execute the Final Clean-Up Strike for Strike 012"
+
+**Deliverables:**
+
+1. **DIV-6 Master Context filename corrected** — `64zeros_MASTER_CONTEXT.md.md` → `864zeros_MASTER_CONTEXT.md` via `git mv` (preserves history). Five reference files updated to point at the corrected name: DIV-6 README, PILLAR_STRATEGY.md, 2026_ROADMAP.md, STRIKE_012_COMPLETE_SESSION.md, and (forward-link from this very entry) the corrected name is now canonical. Old typo'd path no longer exists on disk.
+
+2. **RULE-008 (Semantic Markdown Standard / `864z-markdown-standard`) codified** in BUILD_KIT_RULES.md. Documentation contract — no canonical brick (the rule applies to authored documents, not code primitives). Closes the "inferred — pending codification" escape valve that 9 prior documents (3 Master Docs + 6 cross-repo READMEs) had been citing. Required mechanics codified: H1-with-version, metadata header (Authority/Loaded/Authored/Update protocol), Roman-numeral atomic body, Cross-References section, Versioning table, italic closing identification line. Acceptable variants codified for rule-codification documents (BUILD_KIT_RULES.md style) and atomic 5-line READMEs.
+
+3. **RULE-006 amended to v1.1** — extends scope from rendered surfaces (sidepanel header + Options heading) to ALSO include `manifest.json.name` (or `_locales/{default_locale}/messages.json` `extName.message` when name is `__MSG_extName__`). Pre-amendment compliance was 1/15 extensions for the `extName` dimension (only `scripture-scout` carried `[FHG] ScriptureScout`). Post-amendment, **14 of 15 extensions are formally non-compliant** on this newly-required dimension. Remediation queued in Compliance Migration backlog. Scope-of-amendment recorded in BRICK_REGISTRY.json v1.4 changelog entry.
+
+4. **`SECURITY_ROTATION_LOG.md`** authored in `ISD-DIV-0-CORE/`. Append-only attestation ledger for credential rotations. First entry: `2026-05-09T-Q2-HYGIENE-ROTATION` confirms rotation of Anthropic, OpenAI, and Apify provider keys per RULE-007 §Operational hygiene clause. Disclosure discipline preserved: **only the FACT of rotation is logged, never key values, prefixes, suffixes, or fingerprints.** Operator + Office Architect attestation block included. Compliance-posture snapshot table established (6 RULE-007 questions answered with evidence).
+
+5. **`BRICK_REGISTRY.json` updated** to v1.4 — `registry_meta.changelog` records both the RULE-008 codification AND the RULE-006 v1.1 amendment. `audit_summary.by_authority_rule` extended to track RULE-008 (count: 0 — documentation rule, no brick mapping).
+
+6. **`.gitignore` hardening** (LLC repo) — secret-related patterns added: `.env`, `.env.master`, `.env.local`, `*.env`, `migration-stuff/.env.master`. Operator-initiated; bundled into this strike's commit because it directly supports RULE-007 compliance and the SECURITY_ROTATION_LOG attestation.
+
+**Two commits planned (one per repo):**
+- **864zeros-ISD**: rename + reference updates + SECURITY_ROTATION_LOG + BRICK_REGISTRY changelog + STRIKE_012_COMPLETE_SESSION (untracked from prior message) + this SYSTEM_STRIKE_LOG entry.
+- **864zeros-llc**: BUILD_KIT_RULES.md (RULE-008 + RULE-006 v1.1) + 2 untracked READMEs (DIV-1, DIV-3 — pending from Phase 2) + .gitignore secret-related additions.
+- Both commits use the message: `chore: finalize SOS governance and security compliance`
+
+**Compliance posture after this strike:**
+- **9 active rules:** RULE-000 (Governance) → RULE-001 (Options) → RULE-002 (SW Download) → RULE-003 (Selection UI) → RULE-004 (Accordion) → RULE-005 (Two-Tap Confirm) → RULE-006 v1.1 (Brand-Prefix Pill + extName) → RULE-007 (Secret Sovereignty) → **RULE-008 (Semantic Markdown Standard) NEW**.
+- **Brick registry: 24 bricks at v1.4.** No new bricks this strike (pure governance + security work).
+- **Active Sprint state unchanged:** 1 HIGH-deferred (Clipboard Phase 2 — scope NOW includes RULE-006 v1.1 manifest.json.name compliance) + 1 MEDIUM (ScriptureScout pre-flight scarcity OR).
+- **New Compliance Migration backlog item:** RULE-006 v1.1 `extName` remediation across 14 extensions (mechanical fix — append `[OIA]` / `[864F]` / `[FHG]` to `_locales/en/messages.json` `extName.message` per pillar; ~5 min × 14 = ~1.5h batched).
+
+**Strike-012 lifecycle status: CLOSED.** Strike 012 is sealed — no further work expected on the Strike-012 charter. Future work on FHG pillar moves under net-new strike charters (ScriptureScout pre-flight scarcity OR is the next gated activity; Bible-Insight charter is queued post-Founding-100).
+
+---

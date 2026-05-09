@@ -116,7 +116,7 @@ These are explicit guardrails — **NOT** roadmap items. Drift here triggers Off
 | RULE-001 backlog (7 violations) blocking any non-compliant Web Store release | MEDIUM | Q2 scaffold sweep planned (~7-8h batched) |
 | `864z-chronical` RULE-007 audit (secret-adjacent AI capture) | MEDIUM | Q2 scheduled; defer any public release until cleared |
 | **DIV-2 numbering gap** in division layout (jumps from DIV-1 to DIV-3) | LOW | Queued for OFFICE_ARCHITECT.md §VI reconciliation; no operational impact |
-| **DIV-6 source-of-truth filename typo** (`64zeros_MASTER_CONTEXT.md.md`) | LOW | Rename queued for next cleanup pass with NotebookLM re-index coordination — not renamed in-place to avoid breaking active ingestion |
+| **DIV-6 source-of-truth filename typo** (`864zeros_MASTER_CONTEXT.md`) | LOW | Rename queued for next cleanup pass with NotebookLM re-index coordination — not renamed in-place to avoid breaking active ingestion |
 | Compliance audit backlog: 10+ extensions UNAUDITED for RULE-001/002/003/005/006 | MEDIUM | Q2 burndown queue published in TECH_STACK_AUDIT §VI |
 | 864z-markdown-standard not codified despite being cited | LOW | Inferred standard documented in this doc and the other DIV-6 masters; formal codification queued as a new RULE candidate |
 

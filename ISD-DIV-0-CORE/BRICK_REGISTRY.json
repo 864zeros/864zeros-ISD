@@ -37,6 +37,11 @@
         "date": "2026-05-08",
         "version": "1.3",
         "change": "BRK-UI-003 (two-tap-arm-pattern) authority_rule promoted from \"RULE-001 §3\" to \"RULE-005\". Three new rules codified in BUILD_KIT_RULES.md: RULE-005 (Two-Tap Destructive Confirmation, brick-backed), RULE-006 (Brand-Prefix Pill on Surface Titles, no brick), RULE-007 (Secret Sovereignty / BYOK, no brick). Atomic READMEs written for all 6 cross-repo Divisions (DIV-0, DIV-1, DIV-3, DIV-4, DIV-5, DIV-6)."
+      },
+      {
+        "date": "2026-05-09",
+        "version": "1.4",
+        "change": "Strike-012 Final Cleanup Strike. Two rule changes recorded: (1) RULE-008 (Semantic Markdown Standard / 864z-markdown-standard) codified in BUILD_KIT_RULES.md — documentation contract, no canonical brick (rule applies to authored documents, not code primitives). (2) RULE-006 amended to v1.1 — extends scope from rendered surfaces to ALSO include manifest.json.name (or _locales/{lang}/messages.json extName.message when name is __MSG_extName__). Pre-amendment, only scripture-scout was extName-compliant; 14 extensions now formally non-compliant on this dimension and require remediation per Compliance Migration backlog."
       }
     ]
   },
@@ -759,7 +764,8 @@
       "RULE-003": 1,
       "RULE-004": 1,
       "no_rule_yet": 20,
-      "RULE-005": 1
+      "RULE-005": 1,
+      "RULE-008": 0
     },
     "by_format": {
       "flat_file": 23,
