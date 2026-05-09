@@ -551,3 +551,69 @@ The two new docs (`SOVEREIGN_LINK_PROPOSAL.md` + `TIER_0_5_BLUEPRINT.md`) jointl
 - 9 RULES still active (RULE-000 through RULE-008); no new rules this strike (pure remediation + design work).
 
 ---
+
+### `2026-05-09T-STRIKE-013-CHRONICLE-SOVEREIGN-VAULT` — Chronicle Sovereign Vault: SHIPPED
+**Strike:** 013 (Chronicle Sovereign Vault)
+**Component:** `LLC-DIV-3-FACTORY/extensions/864z-chronical/` — 4 new files + 4 modified files
+**Status:** ✅ DELIVERED (UI complete; payment stubbed)
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit directive to "Execute Strike 013 on Chronicle"
+
+**Deliverables (8 files):**
+
+| File | Status | Lines | Purpose |
+|---|---|---|---|
+| `options/options.html` | NEW | 206 | RULE-001-compliant Options page with all 3 mandatory sections + 2 optional + standardized footer |
+| `options/options.css` | NEW | 553 | Tier-card grayed-out spec (opacity 0.60, ⊘ glyphs, LOCKED watermark) + RULE-005 arm animation + dark-mode |
+| `options/options.js` | NEW | 396 | Tier state, vault inventory, 3 export flows, RULE-005 two-tap for Clear All, stub Unlock Vault |
+| `lib/tier.js` | NEW | 38 | Tier state helper (getTier / setTier / isVaultUnlocked) — chrome.storage.local only per RULE-007 |
+| `manifest.json` | MOD | 65 | name → `[OIA] Chronicle` (RULE-006 v1.1); version 1.0.0 → 1.1.0; `options_ui` block added |
+| `sidepanel/panel.html` | MOD | 90 | Brand-prefix pill + Liberate Vault header button + in-panel toast; inline settings view REMOVED (50 lines deleted) |
+| `sidepanel/panel.js` | MOD | 697 | Settings cog → `chrome.runtime.openOptionsPage()` (RULE-001 canonical); `initLiberateButton()` + `liberateVaultJson()` + `panelToast()` added; broken bindings removed |
+| `sidepanel/panel.css` | MOD | 503 | `.brand-prefix` + `.header-liberate` (sage stroke + arm pulse animation) + `.panel-toast` styles |
+
+**RULE compliance changes:**
+- ✅ RULE-001 (Options page) — VIOLATION CLOSED (Chronicle was on the TECH_STACK_AUDIT §IV.a P0 list)
+- ✅ RULE-005 (Two-tap destructive) — Clear All migrated from `confirm()` to inline arm pattern
+- ✅ RULE-006 v1.0 (Brand-prefix pill on surfaces) — pill in sidepanel header AND Options hero
+- ✅ RULE-006 v1.1 (Brand-prefix in `manifest.json.name`) — `[OIA] Chronicle`
+- 🟢 RULE-007 — Chronicle remains compliant: tier flag in `chrome.storage.local`, no `.sync` for state, no 864zeros proxy. NEW Strike 013 stub for `setTier(VAULT)` flips local flag only (no payment); two-tap arm on the stub button to ensure operator notices it's not real before any public release.
+
+**Tier-0.5 implementation status:**
+- **UI: COMPLETE.** Free vs Vault tier card; grayed-out locked state with full-opacity CTA + price; per-feature ⊘/✓ glyphs; LOCKED/UNLOCKED watermark; auto-relabeling Markdown export button; all transitions smooth.
+- **Payment: STUBBED.** "Unlock Vault — $2.99" button currently flips `chrome.storage.local.tier = 'vault'` directly with no checkout. Two-tap arm + label "Stub-unlock (no payment)" before commit. **Operator MUST replace with ExtPay (or equivalent) checkout integration before any public release.** Tracked as the canonical TIER_0_5_BLUEPRINT §VII.1 open question.
+
+**Sovereign Link UX — discoverability gap closed:**
+The Sovereign Gap Report v1.0 §IX.1 had identified Chronicle's export as "buried in Settings". The new "Liberate Vault" button in the sidepanel header is now persistently visible on every panel open. RULE-005 two-tap arm: first tap → button turns sage-on-sage with pulse animation + toast "Tap again to liberate N entries to JSON." Second tap within 4s → JSON vault export fires. Outside-click or 4s timeout cancels silently. Empty-vault case handled with friendly toast.
+
+**Settings migration:**
+The previously-inline settings view (provider toggles + Export All Data + Clear All Data + About) was REMOVED from `sidepanel/panel.html`. All settings now live in the new Options page. Settings cog opens it via `chrome.runtime.openOptionsPage()` (canonical RULE-001 pattern).
+
+**Follow-up — dead code in `sidepanel/panel.js` (left intentionally):**
+~150 lines of now-orphaned functions remain in panel.js: `openSettings`, `closeSettings`, `loadSettings`, `saveSettings`, `exportData`, `clearAllData`. Safe to delete; left in place to minimize Strike 013 surface area. Cleanup queued for next routine touch on panel.js.
+
+**Per-card / per-message Markdown download buttons (panel.js:172-178, panel.js:246-252) — PRESERVED.** These predate Strike 013 and serve a different use case (single-conversation export from the entry list / detail view). The new Sovereign Link header button is the bulk-vault path; these stay as the single-record path. Both coexist cleanly.
+
+**Charter completion (vs blueprint scope):**
+| Blueprint item | Status |
+|---|---|
+| Promote Sovereign Link to header (proposal §III.a) | ✅ |
+| Add first-run sovereignty nudge (proposal §III.b) | DEFERRED (out of explicit operator scope) |
+| Build RULE-001 Options page | ✅ |
+| Migrate `clearAllData` to two-tap (RULE-005) | ✅ |
+| Add brand-prefix pill in sidepanel header (RULE-006 v1.0) | ✅ |
+| Update `extName` to `[OIA] Chronicle` (RULE-006 v1.1) | ✅ (via manifest.json `name`) |
+| Tier-0.5 Markdown-vault-folder export (proposal §III.c) | ✅ (UI + logic; gated by tier flag) |
+| Tier-0.5 paywall integration (real payment) | STUB (operator follow-up) |
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2 — RULE-001 / 003 / 004 / 005 / 006 / 007 deep refactor)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR — competitive recon)
+- 1 MEDIUM-batched (RULE-006 v1.1 `extName` remediation across 13 remaining extensions; Chronicle now compliant — was 14)
+- **1 NEW LOW** (Chronicle ExtPay payment integration — replace Strike 013 stub before public release)
+- **1 NEW LOW** (Chronicle panel.js dead-code cleanup — ~150 orphaned lines)
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Strike 013 charter status: SHIPPED.** Chronicle is now the second OIA-pillar reference impl for the post-Strike-012 rule set (joins TabVault). Per-extension RULE-001/005/006 violation count drops from 7 → 6.
+
+---
