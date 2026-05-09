@@ -784,3 +784,68 @@ First-pass verification reported "5 of 8 incomplete" because my regex was matchi
 **Strike charter status: SHIPPED.** Closes both Strike-014 follow-up items in a single ~1.5h consolidation pass. Net codebase delta: -736 lines of duplication removed; +9 files added (1 canonical + 8 distributed copies, each linked from the corresponding options.html). The 9 added files together contain less than the duplication they replace because the canonical is single-source.
 
 ---
+
+### `2026-05-09T-CHRONICLE-CSS-FINALIZATION-STRIKE` — Chronicle CSS Consolidation + Factory Zero-Point Sync: DELIVERED
+**Strike:** Chronicle CSS finalization (closes the LOW item from prior consolidation strike) + Zero-Point Audit verification + Factory Manifest authoring.
+**Component:** `LLC-DIV-3-FACTORY/extensions/864z-chronical/` (3 files: options.css trimmed, options.html link added, lib/transparency-tier.css copied) + `ISD-DIV-6-KNOWLEDGE/864zeros_FACTORY_MANIFEST.md` (NEW)
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 4-task directive
+
+**Deliverables:**
+
+1. **Chronicle CSS refactor — closes Strike-014's NEW LOW deduplication item.**
+   - Removed from `chronicle/options/options.css` (-152 lines): `.tier-card*` block (12 rules across 95 lines), `.brand-footer*` block (8 rules across 58 lines), dark-mode `.tier-card--locked` rule (3 lines).
+   - Preserved in `chronicle/options/options.css`: `.tier-display` + `.tier-badge*` + `.tier-display__description` + `.tier-pro-note` (chronicle-specific UI extras NOT in shared canonical), `.dev-override*` (URL-gated dev panel — Strike 014 work, untouched), all other chronicle-specific styles.
+   - Added: marker comments at the deletion sites pointing to `../lib/transparency-tier.css` so future readers know where the styles moved.
+   - Created `chronicle/lib/transparency-tier.css` (4881 bytes) — copy of canonical from build-kit.
+   - Added link in `chronicle/options/options.html` after the existing `oia-design-system.css` link, before the local `options.css` link (cascade order: design-system → shared transparency → chronicle-specific overrides).
+   - Final `chronicle/options/options.css` line count: 631 → **479 lines** (-24% reduction).
+
+2. **Zero-Point Audit verification — RULE-006 v1.1 fleet compliance.**
+   - Programmatic check of all 15 extensions: every `manifest.json.name` (or `_locales/{locale}/messages.json` `appName.message` / `extName.message` when name is `__MSG_*__`) starts with one of `[OIA]` / `[864F]` / `[FHG]`.
+   - Result: **15 / 15 compliant (100%).**
+   - **Naming convention discrepancy flagged:** Operator wrote `[FLUX]` in this turn's directive, but the codified RULE-006 v1.1 prefix is `[864F]` (the bracketed form for code; `864-Flux` is the full pillar name used in marketing copy and the standardized brand-footer). Audit ran against the codified `[864F]` form. Discrepancy documented in Factory Manifest §I.
+
+3. **Factory Manifest authored** at `ISD-DIV-6-KNOWLEDGE/864zeros_FACTORY_MANIFEST.md` (RULE-008 compliant; ~14 KB).
+   - Per-extension manifest table: name, pillar, version, options page, Tier-0.5 status (15 extensions).
+   - Tier-0.5 Readiness Ladder (Rung 0 → Rung 4) with per-rung effort estimates:
+     - Rung 0: Cog-triggered Options page (RULE-001) — 6 extensions BLOCKED here
+     - Rung 1: Transparency baseline (CSS + brand-footer + pill) — 8 extensions on Rung 1+
+     - Rung 2: Tier-card markup wired — 3 extensions on Rung 2+ (chronicle, migration-pilot, scripture-scout)
+     - Rung 3: Tier state machine — 1 extension (chronicle)
+     - Rung 4: Paywall + dev-override + DEV_NOTES — 1 extension (chronicle, with stubbed payment)
+   - Recommended strike sequence (priority-ordered) for advancing the fleet up the ladder.
+   - Per-pillar snapshot: OIA 11 ext / Rung-1.0 avg, 864-Flux 2 / Rung-1.5, FHG 2 / Rung-1.5.
+
+4. **Chronicle `?dev=1` URL gate — verified intact post-CSS-refactor.**
+   - The dev-override panel + initDevOverride() function + `.dev-override*` styles remain untouched.
+   - The new `lib/transparency-tier.css` link does NOT shadow or conflict with any `.dev-override*` selector (canonical CSS contains 0 `.dev-override` rules).
+   - Cascade order verified: oia-design-system → transparency-tier → chronicle's options.css. Local `.dev-override*` rules in options.css load LAST (highest cascade priority for chronicle-specific styles).
+
+**Final fleet state after this strike:**
+
+| Metric | Value |
+|---|---|
+| Total extensions | 15 |
+| RULE-006 v1.1 fleet compliance | 15 / 15 (100%) |
+| Tier-0.5 Rung 4 (SHIPPED) | 1 (chronicle) |
+| Tier-0.5 Rung 2-3 (markup wired) | 2 (migration-pilot, scripture-scout) |
+| Tier-0.5 Rung 1 (CSS-ready) | 6 |
+| RULE-001 violations (Rung 0 blocked) | 6 |
+| Per-extension copies of `lib/transparency-tier.css` | 9 (8 Strike-014 + 1 chronicle Strike-015) |
+| Single source of truth (canonical CSS) | `864z-build-kit/references/core/transparency-tier.css` |
+| Chronicle CSS line count | 479 (down from 631) |
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2 — RULE-001/003/004/005/006/007 deep refactor)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR — competitive recon)
+- 1 LOW (Chronicle ExtPay payment integration — replace stub before public release)
+- ~~1 LOW (Chronicle CSS dedupe with shared lib/transparency-tier.css)~~ → ✅ CLOSED in this strike
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Per the Factory Manifest §V, P0 is now**: RULE-001 batch scaffold for the 6 BLOCKED extensions (5 `oia.focus.*` Focus-class + `who-is-watching`). This is the largest single advance available for the fleet — clears 6 RULE-001 violations + promotes 6 extensions from Rung 0 → Rung 1 in a single ~5-6h batched strike.
+
+**Strike charter status: SHIPPED.** Three sub-tasks delivered + one verification confirmed. The Factory Manifest now serves as the canonical readiness ledger for future tier-rollout planning and operator dashboards.
+
+---
