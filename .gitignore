@@ -1,0 +1,3 @@
+# Claude Code session raw dumps (per-session transcripts; large + ephemeral)
+# Curated session records (e.g., STRIKE_012_COMPLETE_SESSION.md) ARE tracked separately.
+session_raw_dump_*.md

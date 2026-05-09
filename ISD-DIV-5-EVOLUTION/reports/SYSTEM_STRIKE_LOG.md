@@ -464,3 +464,90 @@ The next strike begins at a higher floor than this one did, by exactly the size 
 **Strike-012 lifecycle status: CLOSED.** Strike 012 is sealed — no further work expected on the Strike-012 charter. Future work on FHG pillar moves under net-new strike charters (ScriptureScout pre-flight scarcity OR is the next gated activity; Bible-Insight charter is queued post-Founding-100).
 
 ---
+
+### `2026-05-09T-SOVEREIGN-AUDIT-STRIKE` — Sovereign Gap Report v1.0: DELIVERED
+**Strike:** Inter-strike privacy/data-sovereignty audit (under RULE-000 Office Architect authority + RULE-007 §Disclosure discipline)
+**Component:** `ISD-DIV-6-KNOWLEDGE/864zeros_SOVEREIGN_GAP_REPORT.md` (NEW — 499 lines / ~40 KB)
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit directive: "execute the Sovereign Audit on the 15-extension fleet"
+
+**Deliverables:**
+
+1. **`864zeros_SOVEREIGN_GAP_REPORT.md` v1.0** authored in `ISD-DIV-6-KNOWLEDGE/`. 12 Roman-numeral sections per RULE-008: Methodology & Scope · Storage Mapping · Data Exit Points · PII Pattern Findings · AI Provider Risk Assessment · "If user clears cache today" Risk Gap · "If they use AI today" Risk Gap · Per-Extension Sovereign Score · Critical Findings · Recommendations · Cross-References · Versioning. Closing italic identification line per RULE-008.
+2. **Audit method:** Read-only static analysis across 15 extensions. Four orthogonal dimensions (storage / exit points / PII / AI). Source-code-level companion to the manifest-level [`864zeros_TECH_STACK_AUDIT.md`](../../ISD-DIV-6-KNOWLEDGE/864zeros_TECH_STACK_AUDIT.md). Disclosure discipline preserved per RULE-007 — zero secret values, prefixes, suffixes, or fingerprints in the report; only structural/pattern findings.
+3. **Per-extension Sovereign Score table** (§VIII) — fleet RULE-007 average: 9.4 / 10. No bundled secrets, no `.sync` for secrets, no active 864zeros-relay AI proxy. Two extensions have soft disclosure gaps; one carries dead-code regression risk.
+
+**Headline findings (P0/P1):**
+
+- **P0 — Chronicle has no Liberation path.** `864z-chronical` captures the user's full AI conversation history (gemini.google.com / claude.ai / chatgpt.com / aistudio / chat.openai.com) into `chronicle` IndexedDB but provides ZERO export action — uninstall = 100% loss. Remediation: port BRK-DL-001 + RULE-002 SW download pattern; add `LIBERATE_TO_MARKDOWN` handler. Est. 1–2 h.
+- **P0 — clipboard's dead-code 864zeros AI proxy.** `clipboard/lib/ai/ai-client.js` references `clipboard-864z.864zeros.workers.dev` (would be a RULE-007 §1 violation if wired). Currently UNUSED — SW imports `lib/api-client.js` (BYOK direct). README still describes the proxy architecture. Regression risk: one re-import away from re-introducing a sovereignty violation. Remediation: delete or fence the file; sync README. Est. 15 min.
+- **P1 — Bible-Insight + clipboard missing per-call AI prompt-preview gate.** Soft RULE-007 §"user can audit before send" miss.
+- **P1 — Bible-Insight + clipboard missing plain-English secret disclosure block in Options.** RULE-007 §Operations soft non-compliance. Founding-100 trust gate depends on this disclosure being VISIBLE (not just behaviorally true).
+- **P1 — Bible-Insight has no content redaction layer** (clipboard's `lib/redactor.js` is brick-promotion candidate BRK-AI-002).
+- **P1 — TabVault placeholder OAuth `client_id`** (`YOUR_CLIENT_ID.apps.googleusercontent.com`) — Drive-sync feature non-functional until operator provisions a real client_id.
+
+**RULE-007 violations discovered:** ZERO active violations. One AT-RISK item (clipboard dead-code proxy) flagged for immediate removal. Two soft compliance items (disclosure block missing).
+
+**Coverage gaps acknowledged:**
+- `who-is-watching/lib/d3.v7.min.js` is third-party minified (D3); `fetch` references inside are D3 source, not extension exfiltration. Audited only the extension's own SW + content scripts for exit points.
+- `clipboard` lib contains TWO AI clients (proxy `lib/ai/ai-client.js` + BYOK `lib/api-client.js`); audit treats only the actually-imported BYOK path as the shipping behavior. Dead path flagged.
+- Source SHA at audit time not pinned; re-audit triggers documented in §XII Versioning of the report.
+
+**Compliance posture after this strike:**
+- **9 active rules unchanged:** RULE-000 → RULE-008. No new rules codified.
+- **Brick registry:** unchanged at 24 bricks. BRK-AI-002 (`redactor-v1`) flagged as harvest candidate from this strike (deferred to next harvest pass — not promoted in this entry per RULE-000 brick-promotion sign-off discipline).
+- **No code modifications.** This strike is read-only — only the report and this log entry are produced.
+
+**Active Sprint deltas (queued in BACKLOG.md):**
+- **NEW HIGH:** Chronicle Liberation flow (P0 finding §IX.1).
+- **NEW HIGH:** clipboard dead-code resolution + README sync (P0 finding §IX.2).
+- **NEW MEDIUM:** "About your AI key" disclosure block authoring (Bible-Insight + clipboard) (P1 finding §IX.4).
+- **NEW MEDIUM:** Per-call AI prompt-preview gate (Bible-Insight + clipboard) (P1 finding §IX.3).
+- **NEW MEDIUM:** Promote `clipboard/lib/redactor.js` to build-kit brick BRK-AI-002 + import into Bible-Insight (P1 finding §IX.6).
+- **NEW LOW:** `who-is-watching/CLAUDE.md` exfiltration guard rail (P2 finding §IX.8).
+- **Operator-action:** TabVault OAuth `client_id` provisioning (P1 finding §IX.5).
+
+**Why it matters:**
+This strike establishes the **first authoritative source-code-level sovereignty baseline** for the 15-extension fleet. Prior documents (TECH_STACK_AUDIT) were manifest-level — they answered "what does each extension declare?" This report answers "what does each extension actually DO with user data, and what would leak if a user used AI today?" The Founding 100 trust gate for ScriptureScout (and downstream FHG launches) explicitly hinges on a defensible answer to that question. We now have one: zero active 864zeros relay; BYOK throughout; one dead-code regression risk to be resolved this week.
+
+**Strike charter status: CLOSED.** No further audit work expected from this entry. Remediation items move forward as independent Active-Sprint tasks under standard RULE-000 protocol.
+
+---
+
+### `2026-05-09T-CHRONICLE-SOVEREIGN-PROPOSAL-STRIKE` — Audit Remediation + Chronicle Strike-013 Charter Foundation: DELIVERED
+**Strike:** Audit remediation pass + engineering proposal/blueprint authoring for Chronicle's Sovereign Vault feature (no Strike # yet — these are pre-charter design docs that scope a future Strike 013 / Chronicle Sovereign Vault).
+**Component:** `LLC-DIV-3-FACTORY/extensions/clipboard/lib/ai/ai-client.js` (DELETED) + `LLC-DIV-3-FACTORY/extensions/864z-chronical/{SOVEREIGN_LINK_PROPOSAL.md, TIER_0_5_BLUEPRINT.md}` (NEW)
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 3-task directive
+
+**Deliverables:**
+
+1. **Dead-code proxy DELETED** — `clipboard/lib/ai/ai-client.js` (3552 bytes; the `clipboard-864z.864zeros.workers.dev` 864zeros AI proxy from the pre-RULE-007 era flagged as Sovereign Gap Report §IX.2 P0). `git rm` used (history preserved). The empty `lib/ai/` directory was auto-cleaned by git's directory pruning. **Pre-delete verification:** zero live JS imports across the clipboard subtree (only stale references remain in `clipboard/README.md` lines 106-109 + 165-168 and a 2025-02-18 daily log — flagged below for follow-up; those are docs, not executable risks).
+
+2. **`SOVEREIGN_LINK_PROPOSAL.md` AUTHORED** at `extensions/864z-chronical/`. Identifies 3 injection points for the Sovereign Link feature in Chronicle. **AUDIT CORRECTION finding (§I of the proposal):** the Sovereign Gap Report v1.0 §IX.1 was **partially wrong** — Chronicle DOES have Liberation paths (3 of them: per-entry Markdown via `downloadFullConversation` panel.js:397, per-message Markdown via `downloadExchangeAsMarkdown` panel.js:472, full-vault JSON via `exportData` panel.js:530). The audit agent searched only for `chrome.downloads.download` calls and missed the sidepanel `Blob + URL.createObjectURL + a.click()` pattern (which is the correct mechanic for sidepanel-context downloads — RULE-002 scopes only to SW-context downloads). Real risk gap is **discoverability** (export buried in Settings), not **capability**. Sovereign Gap Report v1.1 amendment recommended.
+
+3. **`TIER_0_5_BLUEPRINT.md` AUTHORED** at `extensions/864z-chronical/`. Codifies a $2.99 perpetual-unlock Tier-0.5 (Vault) tier between Free and a hypothetical Pro tier. Includes: full Options page section structure (RULE-001 compliant + 2 optional sections), grayed-out tier-card visual & interaction spec (CSS + UX states with `opacity: 0.60`, `⊘` glyphs, `LOCKED` watermark, sage CTA at full opacity), Free-vs-Tier-0.5 capability matrix, pricing-model rationale, concrete file-change inventory, 5 open questions for Operator review.
+
+**Bundled defect inventory (surfaced during the proposal work — to be remediated alongside Strike 013):**
+- `chronicle/sidepanel/panel.js:562` uses `confirm()` for `clearAllData()` — **RULE-005 violation** (banned native primitive); migrate to BRK-UI-003 two-tap pattern.
+- Chronicle's sidepanel header lacks the `[OIA]` brand-prefix pill — **RULE-006 v1.0 violation**.
+- Chronicle's `extName` lacks `[OIA]` prefix — **RULE-006 v1.1 violation** (codified 2026-05-09 in this same week's Final Cleanup Strike).
+- Chronicle has no `options_ui` page — **RULE-001 violation** (already in TECH_STACK_AUDIT §IV.a). The Tier-0.5 blueprint closes this gap.
+
+**Follow-up needed (operator-action):**
+- `clipboard/README.md` lines 106-109 + 165-168 still reference the deleted `lib/ai/ai-client.js` and the 864zeros AI proxy architecture. Documentation cleanup pass needed before next clipboard release. Not in scope for this strike (separate concern from the dead-code-deletion task that the Operator scoped).
+- `clipboard/daily-2025-02-18-start-here.md` (a stale daily log from Feb 2025) also references the deleted file — left in place as historical artifact; safe to delete in a separate cleanup if desired.
+
+**Strike-013 charter recommendation:**
+The two new docs (`SOVEREIGN_LINK_PROPOSAL.md` + `TIER_0_5_BLUEPRINT.md`) jointly scope a coherent **Strike 013 — Chronicle Sovereign Vault** charter at ~10-12h focused work. Bundles: Sovereign Link UX promotion + first-run nudge + RULE-001 Options page + RULE-005 destructive-action migration + RULE-006 v1.0/v1.1 brand-prefix compliance + Tier-0.5 paywall implementation + Markdown-vault-folder export. Charter draft is implicit in the two docs; formalize at next planning gate.
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2 — RULE-001 / 003 / 004 / 005 / 006 / 007 deep refactor)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR — competitive recon)
+- **1 NEW MEDIUM-batched** (RULE-006 v1.1 `extName` remediation across 14 extensions)
+- **1 NEW PROPOSED HIGH** (Strike 013 — Chronicle Sovereign Vault — pending charter formalization)
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike (pure remediation + design work).
+
+---
