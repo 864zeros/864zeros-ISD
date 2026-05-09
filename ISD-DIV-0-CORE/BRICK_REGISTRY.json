@@ -15,7 +15,13 @@
       "C:/dev/864zeros-ISD/ISD-DIV-5-EVOLUTION/BACKLOG.md (extraction protocol)",
       "C:/dev/864zeros-ISD/ISD-DIV-5-EVOLUTION/reports/SYSTEM_STRIKE_LOG.md (#BrickCandidate tags)"
     ],
-    "categories": ["capture", "analysis", "export", "infrastructure", "ui-pattern"],
+    "categories": [
+      "capture",
+      "analysis",
+      "export",
+      "infrastructure",
+      "ui-pattern"
+    ],
     "complexity_legend": {
       "XS": "<= 50 LOC, single-purpose, no external deps beyond Chrome APIs",
       "S": "50-200 LOC, single concern, may have one external dep",
@@ -25,9 +31,15 @@
     "total_bricks": 24,
     "missing_bricks_flagged": 1,
     "v1_1_changelog": "Added 3 build-kit bricks harvested from Strike 011 (BRK-DL-001, BRK-UI-002, BRK-UI-003); added ui-pattern category; added authority_chain pointing at BUILD_KIT_RULES.md and BACKLOG.md.",
-    "v1_2_changelog": "Added BRK-UI-004 (accordion-record-v1) harvested from Strike 012 ScriptureScout. First directory-format brick. Status: PROMOTED. Pillar compatibility: Global (OIA, Flux, FHG). Authored under RULE-000 sign-off by Office Architect 2026-05-08."
+    "v1_2_changelog": "Added BRK-UI-004 (accordion-record-v1) harvested from Strike 012 ScriptureScout. First directory-format brick. Status: PROMOTED. Pillar compatibility: Global (OIA, Flux, FHG). Authored under RULE-000 sign-off by Office Architect 2026-05-08.",
+    "changelog": [
+      {
+        "date": "2026-05-08",
+        "version": "1.3",
+        "change": "BRK-UI-003 (two-tap-arm-pattern) authority_rule promoted from \"RULE-001 §3\" to \"RULE-005\". Three new rules codified in BUILD_KIT_RULES.md: RULE-005 (Two-Tap Destructive Confirmation, brick-backed), RULE-006 (Brand-Prefix Pill on Surface Titles, no brick), RULE-007 (Secret Sovereignty / BYOK, no brick). Atomic READMEs written for all 6 cross-repo Divisions (DIV-0, DIV-1, DIV-3, DIV-4, DIV-5, DIV-6)."
+      }
+    ]
   },
-
   "bricks": [
     {
       "brick_id": "agent-dom-scraper",
@@ -41,8 +53,15 @@
         "output": "{ url, title, lang, description, keywords, links[], text, html, host, canonicalUrl, slug, siteName, section, author, publisher, datePublished, dateModified, contentType }"
       },
       "complexity": "S",
-      "dependencies": ["chrome.runtime", "DOM APIs", "window.location"],
-      "extracted_from": ["webinsights", "clipboard"],
+      "dependencies": [
+        "chrome.runtime",
+        "DOM APIs",
+        "window.location"
+      ],
+      "extracted_from": [
+        "webinsights",
+        "clipboard"
+      ],
       "notes": "Two variants exist. webinsights returns rich identifier metadata; clipboard returns simpler {text, url, title}. Recommend canonicalizing on the richer webinsights pattern.",
       "migration_pilot_essential": true,
       "migration_pilot_role": "Required to extract Web Highlights' annotation data via DOM inspection if no public API."
@@ -50,14 +69,20 @@
     {
       "brick_id": "agent-page-metadata",
       "category": "capture",
-      "source_paths": ["webinsights/js/lib/metadata.js"],
+      "source_paths": [
+        "webinsights/js/lib/metadata.js"
+      ],
       "contract": {
         "input": "Document",
         "output": "{ lang, metaDescription, og: {title, description, image, siteName, type}, twitter: {title, description, image} }"
       },
       "complexity": "XS",
-      "dependencies": ["DOM APIs only"],
-      "extracted_from": ["webinsights"],
+      "dependencies": [
+        "DOM APIs only"
+      ],
+      "extracted_from": [
+        "webinsights"
+      ],
       "notes": "Pure function. Companion mergeMetadataIntoItem() helper merges into a content item.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Useful for enriching migrated highlights with source-page metadata (og:title, og:image)."
@@ -65,14 +90,23 @@
     {
       "brick_id": "agent-marquee-capture",
       "category": "capture",
-      "source_paths": ["webinsights/js/content.js (selectionOverlay logic)", "webinsights/background.js (INITIATE_AREA_CAPTURE / CAPTURE_AREA_FROM_CONTENT)"],
+      "source_paths": [
+        "webinsights/js/content.js (selectionOverlay logic)",
+        "webinsights/background.js (INITIATE_AREA_CAPTURE / CAPTURE_AREA_FROM_CONTENT)"
+      ],
       "contract": {
         "input": "User mouse drag on viewport",
         "output": "{ imageDataUrl: base64 png, bounds: {x, y, width, height} }"
       },
       "complexity": "M",
-      "dependencies": ["chrome.tabs.captureVisibleTab", "DOM events", "background↔content message protocol"],
-      "extracted_from": ["webinsights"],
+      "dependencies": [
+        "chrome.tabs.captureVisibleTab",
+        "DOM events",
+        "background↔content message protocol"
+      ],
+      "extracted_from": [
+        "webinsights"
+      ],
       "notes": "Spans content script + background. Spec from CLAUDE.md: 'Marquee Selection (Critical): Reuse INITIATE_AREA_CAPTURE and CAPTURE_AREA_FROM_CONTENT logic'. Genuine differentiator vs other clippers.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Not needed for highlight migration; relevant for ClipGenius/visual-capture lanes."
@@ -89,8 +123,14 @@
         "output": "{ pdfDataUrl: base64, filename, sizeBytes }"
       },
       "complexity": "S",
-      "dependencies": ["chrome.debugger (CDP — Page.printToPDF)", "debugger permission in manifest"],
-      "extracted_from": ["clipboard", "webinsights"],
+      "dependencies": [
+        "chrome.debugger (CDP — Page.printToPDF)",
+        "debugger permission in manifest"
+      ],
+      "extracted_from": [
+        "clipboard",
+        "webinsights"
+      ],
       "notes": "Uses Chrome DevTools Protocol via debugger API. Four ready-to-use presets. Privacy-friendly (local generation, no cloud round-trip).",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Migration target is Markdown into vaults, not PDF. Skip for Strike 011."
@@ -98,30 +138,41 @@
     {
       "brick_id": "agent-screenshot-visible",
       "category": "capture",
-      "source_paths": ["referenced in webinsights/background.js patterns; CLAUDE.md spec"],
+      "source_paths": [
+        "referenced in webinsights/background.js patterns; CLAUDE.md spec"
+      ],
       "contract": {
         "input": "{ tabId, format: 'png'|'jpeg', quality }",
         "output": "{ imageDataUrl: base64 }"
       },
       "complexity": "XS",
-      "dependencies": ["chrome.tabs.captureVisibleTab"],
-      "extracted_from": ["webinsights"],
+      "dependencies": [
+        "chrome.tabs.captureVisibleTab"
+      ],
+      "extracted_from": [
+        "webinsights"
+      ],
       "notes": "Trivial wrapper around captureVisibleTab. Worth registering for canonical-shape consistency.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "n/a"
     },
-
     {
       "brick_id": "agent-anonymizer-pii",
       "category": "analysis",
-      "source_paths": ["extensions/clipboard/lib/redactor.js"],
+      "source_paths": [
+        "extensions/clipboard/lib/redactor.js"
+      ],
       "contract": {
         "input": "{ text: string }",
         "output": "{ redactedText: string, redactions: [{type, original, replacement, index}] }"
       },
       "complexity": "S",
-      "dependencies": ["pure regex; no external deps"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "pure regex; no external deps"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Marked BRK-PRIVACY-001. Patterns: EMAIL, PHONE, SSN, CC, IP, ADDRESS. Reversible via restore(text, redactions). Pure function. High-trust building block for any LLM-call privacy boundary.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Optional — useful if migrating highlights might leak PII into a synced vault. Recommend enabling by default in migration tools handling user-generated text."
@@ -129,14 +180,21 @@
     {
       "brick_id": "agent-ai-summarize",
       "category": "analysis",
-      "source_paths": ["extensions/clipboard/lib/ai/ai-client.js (summarize)"],
+      "source_paths": [
+        "extensions/clipboard/lib/ai/ai-client.js (summarize)"
+      ],
       "contract": {
         "input": "{ text: string, maxLength: int }",
         "output": "{ summary: string, model: string }"
       },
       "complexity": "XS",
-      "dependencies": ["fetch", "Cloudflare Worker proxy at clipboard-864z.864zeros.workers.dev"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "fetch",
+        "Cloudflare Worker proxy at clipboard-864z.864zeros.workers.dev"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Worker URL is per-extension; for reuse, factor out the worker base URL into pricing.js or constants. Keys never leave the worker.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Migration tools don't need summarization. Useful for downstream products."
@@ -144,14 +202,21 @@
     {
       "brick_id": "agent-ai-autotag",
       "category": "analysis",
-      "source_paths": ["extensions/clipboard/lib/ai/ai-client.js (autoTag)"],
+      "source_paths": [
+        "extensions/clipboard/lib/ai/ai-client.js (autoTag)"
+      ],
       "contract": {
         "input": "{ text: string, existingTags: string[] }",
         "output": "{ tags: string[], model: string }"
       },
       "complexity": "XS",
-      "dependencies": ["fetch", "AI proxy worker"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "fetch",
+        "AI proxy worker"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Same proxy pattern as summarize. Stateless.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "n/a"
@@ -159,14 +224,21 @@
     {
       "brick_id": "agent-ai-vision",
       "category": "analysis",
-      "source_paths": ["extensions/clipboard/lib/ai/ai-client.js (analyzeImage)"],
+      "source_paths": [
+        "extensions/clipboard/lib/ai/ai-client.js (analyzeImage)"
+      ],
       "contract": {
         "input": "{ imageBase64: string, prompt: string }",
         "output": "{ description: string, model: string }"
       },
       "complexity": "XS",
-      "dependencies": ["fetch", "AI proxy worker (Gemini Vision under the hood)"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "fetch",
+        "AI proxy worker (Gemini Vision under the hood)"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Pairs naturally with agent-marquee-capture. Together they form the 'Capture-and-Analyze' flow described in CLAUDE.md ClipGenius spec.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "n/a"
@@ -174,14 +246,21 @@
     {
       "brick_id": "agent-ai-chat",
       "category": "analysis",
-      "source_paths": ["extensions/clipboard/lib/ai/ai-client.js (chat)"],
+      "source_paths": [
+        "extensions/clipboard/lib/ai/ai-client.js (chat)"
+      ],
       "contract": {
         "input": "{ messages: [{role, content}], context: string }",
         "output": "{ response: string, model: string }"
       },
       "complexity": "XS",
-      "dependencies": ["fetch", "AI proxy worker"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "fetch",
+        "AI proxy worker"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Multi-turn conversation primitive. Useful for Q&A-over-clips features.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "n/a"
@@ -189,30 +268,41 @@
     {
       "brick_id": "agent-local-ai-keywords",
       "category": "analysis",
-      "source_paths": ["webinsights/js/lib/local-ai.js (LocalAI class)"],
+      "source_paths": [
+        "webinsights/js/lib/local-ai.js (LocalAI class)"
+      ],
       "contract": {
         "input": "{ text: string, existingTags: string[] }",
         "output": "{ suggestedTags: string[], confidence: number }"
       },
       "complexity": "S",
-      "dependencies": ["pure JS, no API calls (keyword/stopword/frequency analysis)"],
-      "extracted_from": ["webinsights"],
+      "dependencies": [
+        "pure JS, no API calls (keyword/stopword/frequency analysis)"
+      ],
+      "extracted_from": [
+        "webinsights"
+      ],
       "notes": "Free, offline, no AI bill. Inferior recall vs LLM, but zero-cost and zero-privacy-leak. Capabilities: tag_suggestions, similarity_matching, keyword_extraction. Good fallback / free-tier feature.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Optional — could auto-tag migrated highlights during the export step. Free-tier-friendly."
     },
-
     {
       "brick_id": "agent-drawio-converter",
       "category": "export",
-      "source_paths": ["webinsights/js/lib/drawio-generator.js"],
+      "source_paths": [
+        "webinsights/js/lib/drawio-generator.js"
+      ],
       "contract": {
         "input": "{ structured_diagram_json (matches DRAWIO_EXTRACTION_SCHEMA — diagram_type, title, layout_direction, grid_dimensions, legend, containers, nodes, edges) }",
         "output": "{ drawioXml: string }"
       },
       "complexity": "M",
-      "dependencies": ["pure JS XML construction; pairs with Gemini Structured Output (DRAWIO_EXTRACTION_SCHEMA)"],
-      "extracted_from": ["webinsights"],
+      "dependencies": [
+        "pure JS XML construction; pairs with Gemini Structured Output (DRAWIO_EXTRACTION_SCHEMA)"
+      ],
+      "extracted_from": [
+        "webinsights"
+      ],
       "notes": "Sophisticated. Includes a Gemini Structured Output schema for diagram extraction from images. Together with agent-ai-vision and agent-marquee-capture, forms the 'image-to-diagram' pipeline. Genuinely differentiated IP.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "n/a — different output format. But worth noting as an Option C lane in its own right (image-to-drawio is a niche export utility)."
@@ -230,8 +320,15 @@
         "additional_methods": "init(clientId), connect() -> {success, email}, listBackups(), restore(fileId), delete(fileId)"
       },
       "complexity": "M",
-      "dependencies": ["chrome.identity.launchWebAuthFlow", "Google Drive API v3", "OAuth client_id (per-app)"],
-      "extracted_from": ["clipboard", "webinsights"],
+      "dependencies": [
+        "chrome.identity.launchWebAuthFlow",
+        "Google Drive API v3",
+        "OAuth client_id (per-app)"
+      ],
+      "extracted_from": [
+        "clipboard",
+        "webinsights"
+      ],
       "notes": "Marked '864zeros Feature Brick - Reusable across all extensions' in source. Uses drive.appdata scope (hidden app folder, no user-visible files). Auto-rotation up to MAX_BACKUPS = 5. Per-app namespacing via appSlug.",
       "migration_pilot_essential": true,
       "migration_pilot_role": "VITAL — one of two viable migration destinations (Drive vault folder). Pairs with agent-markdown-converter (MISSING — see below) for the Web Highlights → Drive→Obsidian/Capacities flow."
@@ -239,30 +336,43 @@
     {
       "brick_id": "agent-local-backup",
       "category": "export",
-      "source_paths": ["extensions/clipboard/lib/backup.js"],
+      "source_paths": [
+        "extensions/clipboard/lib/backup.js"
+      ],
       "contract": {
         "input": "exportLocal: ()=>void / importLocal: File",
         "output": "exportLocal: triggers .json download with shape {app, version, exportedAt, stores: {...}} / importLocal: {success, recordsImported, errors}"
       },
       "complexity": "S",
-      "dependencies": ["IndexedDB (via db.js exportAll/importAll)", "Blob+URL.createObjectURL for download trigger", "FileReader for import"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "IndexedDB (via db.js exportAll/importAll)",
+        "Blob+URL.createObjectURL for download trigger",
+        "FileReader for import"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Pure local: no cloud round-trip. Free tier. Schema-versioned (app+version fields). Pairs naturally with agent-drive-sync for Pro tier.",
       "migration_pilot_essential": true,
       "migration_pilot_role": "Pattern for the JSON intermediate: scrape Web Highlights → produce a versioned JSON dump → user downloads OR pipes to vault. Use this brick's shape verbatim."
     },
-
     {
       "brick_id": "agent-indexeddb-store",
       "category": "infrastructure",
-      "source_paths": ["extensions/clipboard/lib/db.js"],
+      "source_paths": [
+        "extensions/clipboard/lib/db.js"
+      ],
       "contract": {
         "input": "Standard CRUD: get(store, key), put(store, value), delete(store, key), getAll(store), exportAll(), importAll(data)",
         "output": "Promise of value | array | success status"
       },
       "complexity": "S",
-      "dependencies": ["IndexedDB API"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "IndexedDB API"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Wrapper with schema-versioning support and exportAll/importAll for backup interop. The data spine of every panel-extension product the office has shipped.",
       "migration_pilot_essential": true,
       "migration_pilot_role": "Storage for staged migration data before final export. Standard pattern."
@@ -270,15 +380,22 @@
     {
       "brick_id": "agent-chrome-storage-store",
       "category": "infrastructure",
-      "source_paths": ["extensions/clipboard/lib/store.js"],
+      "source_paths": [
+        "extensions/clipboard/lib/store.js"
+      ],
       "contract": {
         "input": "{key, value} or {key}",
         "output": "Promise of value or success",
         "additional": "reactive listeners via chrome.storage.onChanged"
       },
       "complexity": "XS",
-      "dependencies": ["chrome.storage.local", "chrome.storage.onChanged"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "chrome.storage.local",
+        "chrome.storage.onChanged"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Per-extension settings + reactive UI updates. Single source of truth for settings (per CLAUDE-extension.md guidance).",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Useful for migration progress state (where the user left off in a multi-step migration)."
@@ -295,8 +412,12 @@
         "output": "{ allowed: bool, requiredTier: string|null, currentTier: string }"
       },
       "complexity": "S",
-      "dependencies": ["pricing.js (per-app config)"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "pricing.js (per-app config)"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Standard 864z tier check. Pairs with agent-payment-extpay. Skip entirely in --free build mode.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Not needed if MigrationPilot is OSS/free per recommendation in OR-2026-05-07-MIGRATION-PILOT.md."
@@ -304,15 +425,23 @@
     {
       "brick_id": "agent-payment-extpay",
       "category": "infrastructure",
-      "source_paths": ["extensions/clipboard/lib/payments/extpay-wrapper.js"],
+      "source_paths": [
+        "extensions/clipboard/lib/payments/extpay-wrapper.js"
+      ],
       "contract": {
         "input": "{ planId: string }",
         "output": "{ user: ExtPayUser, paid: bool, plan: object, expiresAt: ISO8601 }",
         "additional_methods": "initPayments(), getUser(), openUpgrade(tier), openLogin(), onPaid(callback)"
       },
       "complexity": "S",
-      "dependencies": ["ExtPay.js library (npm extpay)", "extpayId in PRICING_CONFIG", "fixed extension key in manifest"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "ExtPay.js library (npm extpay)",
+        "extpayId in PRICING_CONFIG",
+        "fixed extension key in manifest"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Wraps ExtPay (which brokers Stripe under the hood). 5% ExtPay fee + ~2.9% Stripe fee = ~8% total transaction cost.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "Not needed — MigrationPilot recommended OSS."
@@ -330,8 +459,13 @@
         "additional_methods": "getBalance(), addCredits(amount, source), deduct(feature), canAfford(feature), getHistory(limit)"
       },
       "complexity": "S",
-      "dependencies": ["chrome.storage.local", "PRICING_CONFIG.credits"],
-      "extracted_from": ["clipboard"],
+      "dependencies": [
+        "chrome.storage.local",
+        "PRICING_CONFIG.credits"
+      ],
+      "extracted_from": [
+        "clipboard"
+      ],
       "notes": "Pay-per-use system for AI features. Initial free credits configurable. Append-only history (last 100 entries). Independent of tier-gating; can coexist.",
       "migration_pilot_essential": false,
       "migration_pilot_role": "n/a"
@@ -339,7 +473,9 @@
     {
       "brick_id": "agent-markdown-converter",
       "category": "export",
-      "source_paths": ["LLC-DIV-3-FACTORY/shared/bricks/agent-markdown-converter.js"],
+      "source_paths": [
+        "LLC-DIV-3-FACTORY/shared/bricks/agent-markdown-converter.js"
+      ],
       "version": "1.0.0",
       "contract": {
         "input": "Single: {content, title, source_url, timestamp, tags, note, extra?} | Batch: array of items + options",
@@ -348,13 +484,17 @@
       },
       "complexity": "S",
       "actual_loc": 290,
-      "dependencies": ["zero runtime dependencies", "Node.js standard library only"],
-      "extracted_from": ["NEW — built fresh for Strike 011 MigrationPilot"],
+      "dependencies": [
+        "zero runtime dependencies",
+        "Node.js standard library only"
+      ],
+      "extracted_from": [
+        "NEW — built fresh for Strike 011 MigrationPilot"
+      ],
       "notes": "Pure ES2020. Self-test harness embedded (run with: node agent-markdown-converter.js — 5 tests, all pass). Public API: convertItem(), convertBatch(), htmlToMarkdown(), buildFrontmatter(), sanitizeFilename(). Defines the 864z-metadata spec v1.0 (frontmatter shape).",
       "migration_pilot_essential": true,
       "migration_pilot_role": "VITAL — was the gating brick blocking Strike 011. Now built. Pairs with agent-drive-sync and agent-local-backup to complete the Web Highlights -> Markdown -> Obsidian/Capacities flow. Also unlocks 'Export to Obsidian' as a feature for clipboard, Bible-Insight, Chronicle, OIA-series."
     },
-
     {
       "brick_id": "headless-download-uri",
       "brick_short_id": "BRK-DL-001",
@@ -372,8 +512,12 @@
       },
       "complexity": "XS",
       "actual_loc": 122,
-      "dependencies": ["chrome.downloads (downloads permission required)"],
-      "extracted_from": ["migration-pilot (Strike 011 SW-DL-FIX 2026-05-08)"],
+      "dependencies": [
+        "chrome.downloads (downloads permission required)"
+      ],
+      "extracted_from": [
+        "migration-pilot (Strike 011 SW-DL-FIX 2026-05-08)"
+      ],
       "notes": "Solves MV3 service worker URL.createObjectURL unreliability via Base64 data URI encoding chain (btoa(unescape(encodeURIComponent(content)))). Pure ESM. No DOM access. Per RULE-002: URL.createObjectURL is FORBIDDEN inside background/service-worker.js — this brick is the canonical replacement. Public API: downloadAsDataURI, downloadAsMarkdown, downloadAsJson, encodeUtf8Base64.",
       "applicable_strikes": "any extension with SW-context downloads (export flows, Recovery PDF, JSON backups)",
       "compliance_check": "grep -r 'URL.createObjectURL' background/ → must return no matches outside comments"
@@ -395,8 +539,13 @@
       },
       "complexity": "S",
       "actual_loc": 199,
-      "dependencies": ["DOM APIs", "OIA design system (oia-checkbox class for sage-green checked styling)"],
-      "extracted_from": ["migration-pilot (Strike 011 selective-liberation refactor 2026-05-08)"],
+      "dependencies": [
+        "DOM APIs",
+        "OIA design system (oia-checkbox class for sage-green checked styling)"
+      ],
+      "extracted_from": [
+        "migration-pilot (Strike 011 selective-liberation refactor 2026-05-08)"
+      ],
       "notes": "Per RULE-003: any extension with a record/note/clip queue MUST use this pattern (or equivalent). Selective-action button must be disabled when 0 selected; action handler must refuse empty-selection requests server-side, not just rely on disabled UI.",
       "applicable_strikes": "any extension with a record queue + selective-action surface (clipboard, TabVault, Bible-Insight, ScriptureScout)",
       "compliance_check": "Action functions operate on getSelectedRecords(), not getAllRecords(); master checkbox + per-item checkboxes present in queue UI"
@@ -406,11 +555,11 @@
       "brick_short_id": "BRK-UI-003",
       "category": "ui-pattern",
       "build_kit_brick": true,
-      "authority_rule": "RULE-001 §3 (Destructive Actions home: Options page)",
+      "authority_rule": "RULE-005",
       "source_paths": [
         "864z-build-kit/templates/bricks/two-tap-arm-pattern.js"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "contract": {
         "input": "{ button: HTMLButtonElement, onConfirm: ()=>any, hintEl?, defaultLabel?, armedLabel?, defaultHint?, armedHint?, armClass?, timeoutMs?, disableDuringConfirm? }",
         "output": "controller — { cancelArm(), isArmed(), destroy() }",
@@ -418,9 +567,13 @@
       },
       "complexity": "S",
       "actual_loc": 142,
-      "dependencies": ["DOM APIs only — no Chrome APIs, no design-system dependency"],
-      "extracted_from": ["migration-pilot (Strike 011 RULE-001 implementation 2026-05-08)"],
-      "notes": "Compliant with CLAUDE-base.md copy rules: no alert(), no confirm(), no 'Are you sure?' spam. The canonical destructive-confirmation primitive. Per RULE-001 §3: every Options page Clear-DB / Reset / Export-all action must use this pattern.",
+      "dependencies": [
+        "DOM APIs only — no Chrome APIs, no design-system dependency"
+      ],
+      "extracted_from": [
+        "migration-pilot (Strike 011 RULE-001 implementation 2026-05-08)"
+      ],
+      "notes": "Compliant with CLAUDE-base.md copy rules: no alert(), no confirm(), no 'Are you sure?' spam. The canonical destructive-confirmation primitive. Per RULE-001 §3: every Options page Clear-DB / Reset / Export-all action must use this pattern. Promoted to first-class RULE-005 (Two-Tap Destructive Confirmation) on 2026-05-08 — was previously cited only as a sub-clause of RULE-001 §3.",
       "applicable_strikes": "any extension with destructive controls (Clear DB, Reset to defaults, Wipe local cache)",
       "compliance_check": "grep -r 'window.alert\\|window.confirm\\|window.prompt' → must return no matches; destructive buttons in options/ wired through armDestructiveButton()"
     },
@@ -450,14 +603,18 @@
       },
       "complexity": "M",
       "actual_loc": 268,
-      "dependencies": ["DOM APIs", "OIA Design System tokens (--oia-* variables)"],
-      "extracted_from": ["scripture-scout (Strike 012 sidepanel accordion refactor 2026-05-08)"],
+      "dependencies": [
+        "DOM APIs",
+        "OIA Design System tokens (--oia-* variables)"
+      ],
+      "extracted_from": [
+        "scripture-scout (Strike 012 sidepanel accordion refactor 2026-05-08)"
+      ],
       "notes": "FIRST DIRECTORY-FORMAT brick in the build-kit (ships JS + CSS + docs as a cohesive unit). Versioned suffix (-v1) anticipates v2 living alongside without breaking imports. Pillar-agnostic via --oia-* tokens — works in OIA Sage / 864-Flux Graphite / FHG Bronze without modification. Includes the Parchment Reading Surface standard (light reading panel even in dark themes). Promoted under RULE-000 sign-off (Office Architect 864z-OA) on 2026-05-08.",
       "applicable_strikes": "any extension with a queue-of-records UI (captures, notes, logs, todos, drafts, downloads, history)",
       "compliance_check": "Each record element has data-record-id; AccordionController instantiated with shiftMultiExpand: true (default OK); grid-template-rows transition present; chevron has rotation rule for .accordion-record--expanded; Shift+Click opens multiple records simultaneously"
     }
   ],
-
   "missing_bricks": [
     {
       "brick_id": "agent-fs-vault-writer",
@@ -473,7 +630,6 @@
       "recommended_action": "Defer to Strike 011 build. If Drive flow ships first and works, add FS as v2."
     }
   ],
-
   "roi_mapping": {
     "migration_liberation_thesis": {
       "linked_strike": "OR-2026-05-07-MIGRATION-PILOT (Web Highlights → Obsidian/Capacities)",
@@ -500,7 +656,6 @@
       ],
       "build_estimate": "5/5 essential bricks ready. agent-markdown-converter shipped (290 LOC, 0 deps, 5/5 self-test pass). Estimated ~6-10h remaining to integrate bricks into MigrationPilot v1 scaffold."
     },
-
     "clipboard_gtm_readiness": {
       "linked_target": "Move Clipboard from internal-build to Chrome Web Store launch",
       "fully_built_in_clipboard": [
@@ -527,33 +682,54 @@
       ],
       "synergy_with_migration_pilot": "agent-markdown-converter is now built and registered. Clipboard can integrate it directly to gain an 'Export to Obsidian / Capacities' feature with no additional engineering — opens cross-promotion narrative ('rescue your clips into your vault')."
     },
-
     "historical_strikes_brick_dependency": {
       "864z-2026-003_INSTARESCUE": {
-        "essential": ["custom Instapaper CSV parser (NOT in this registry — strike-specific)", "agent-indexeddb-store", "agent-local-backup"],
-        "useful": ["agent-pdf-generator (article-to-PDF reading mode)"],
+        "essential": [
+          "custom Instapaper CSV parser (NOT in this registry — strike-specific)",
+          "agent-indexeddb-store",
+          "agent-local-backup"
+        ],
+        "useful": [
+          "agent-pdf-generator (article-to-PDF reading mode)"
+        ],
         "notes": "Strike-specific custom parser is the bulk of work; bricks are foundational support."
       },
       "864z-2026-004_PASSVAULT": {
-        "essential": ["custom password CSV parser (Dashlane/LastPass formats)", "custom crypto-vault module", "agent-indexeddb-store"],
-        "useful": ["agent-anonymizer-pii (audit/compliance features if added)"],
+        "essential": [
+          "custom password CSV parser (Dashlane/LastPass formats)",
+          "custom crypto-vault module",
+          "agent-indexeddb-store"
+        ],
+        "useful": [
+          "agent-anonymizer-pii (audit/compliance features if added)"
+        ],
         "notes": "Highly custom build — security primitives dominate. Bricks are minimal here."
       },
       "864z-2026-005_READFLOW": {
-        "essential": ["custom EPUB builder (factory has it under lib/)", "agent-indexeddb-store", "agent-local-backup"],
-        "useful": ["agent-page-metadata (for article identifiers)"],
+        "essential": [
+          "custom EPUB builder (factory has it under lib/)",
+          "agent-indexeddb-store",
+          "agent-local-backup"
+        ],
+        "useful": [
+          "agent-page-metadata (for article identifiers)"
+        ],
         "notes": "Phase 1-6 complete per OR-2026-03-18-READFLOW. Outstanding work is polish/proof, not new bricks."
       },
       "864z-2026-006_ROAMRESCUE": {
-        "essential": ["custom Roam JSON parser", "agent-indexeddb-store", "agent-local-backup"],
-        "useful": ["agent-anonymizer-pii"],
+        "essential": [
+          "custom Roam JSON parser",
+          "agent-indexeddb-store",
+          "agent-local-backup"
+        ],
+        "useful": [
+          "agent-anonymizer-pii"
+        ],
         "notes": "Same pattern as 003: custom parser is the core differentiator."
       }
     },
-
     "strategic_observation": "Across 4 historical strikes (003, 004, 005, 006), the per-strike custom code is dominated by FORMAT-SPECIFIC PARSERS (Instapaper CSV, Dashlane CSV, Roam JSON). The bricks in this registry are foundational support — necessary but not the differentiator. For Strike 011 MigrationPilot, the Web Highlights data extraction will be similar: a custom scraper + the existing capture/storage/export bricks. The single missing brick (agent-markdown-converter) is the only non-strike-specific work needed to unblock the migration thesis lane."
   },
-
   "audit_summary": {
     "total_bricks_cataloged": 24,
     "by_category": {
@@ -582,7 +758,8 @@
       "RULE-002": 1,
       "RULE-003": 1,
       "RULE-004": 1,
-      "no_rule_yet": 20
+      "no_rule_yet": 20,
+      "RULE-005": 1
     },
     "by_format": {
       "flat_file": 23,

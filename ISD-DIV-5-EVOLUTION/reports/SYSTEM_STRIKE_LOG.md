@@ -347,3 +347,84 @@ The next strike begins at a higher floor than this one did, by exactly the size 
 - All other Active-Sprint items ✅ closed
 
 ---
+
+### `2026-05-08T-DIVISIONS-ATOMIC-READMES-STRIKE` — 6 Atomic READMEs + 3 New Rules: DELIVERED
+**Strike:** Inter-strike governance/documentation push (no Strike # — falls under RULE-000 Office Architect authority for documentation alignment)
+**Component:** `864z-build-kit/references/core/BUILD_KIT_RULES.md` + 6 cross-repo Division READMEs + `BRICK_REGISTRY.json`
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit directive to codify 3 rules + write 6 READMEs in single strike
+
+**Deliverables:**
+
+1. **3 new rules codified in `BUILD_KIT_RULES.md`** (append-only, per RULE-000):
+   - **RULE-005 — Two-Tap Destructive Confirmation** (brick-backed: BRK-UI-003 / two-tap-arm-pattern). Promoted from informal RULE-001 §3 sub-clause to first-class rule. Mandates 4-second arm window, label + color shift, no `alert()/confirm()/prompt()`, no `<dialog>` confirmations, no "Type DELETE" friction patterns. Cross-pillar applicable.
+   - **RULE-006 — Brand-Prefix Pill on Surface Titles** (no brick — copy-paste DOM idiom). Mandates `[OIA]` / `[864F]` / `[FHG]` pillar pill on every side-panel header AND every Options page heading; pillar token mapping codified; inline-text prefix forbidden.
+   - **RULE-007 — Secret Sovereignty** (no brick — architectural constraint). Mandates BYOK-only credential model; `chrome.storage.local` ONLY for secrets (`.sync` forbidden — leaks via Google relay); zero proxy through 864zeros-owned servers; plain-English secret-handling disclosure required in Options. Founding-100 trust gate.
+
+2. **6 cross-repo atomic READMEs written** (≤5 lines each, NotebookLM-optimized, "Source of Truth" focus):
+   - `ISD-DIV-0-CORE/README.md` — canonical registries (BRICK_REGISTRY.json), gated by RULE-000
+   - `LLC-DIV-1-INTELLIGENCE/README.md` — Vulture-Nest recon (Vulture_Nest.md, analyzed_hosts.json), gated by RULE-000 + 8.64 financial threshold
+   - `LLC-DIV-3-FACTORY/README.md` — build factory; cites all 7 rules (RULE-001 through RULE-007) as governing
+   - `ISD-DIV-4-STUDIO/README.md` — GTM aggregation (EXTENSION_MANIFEST_INDEX.md), gated by RULE-006 + RULE-000
+   - `ISD-DIV-5-EVOLUTION/README.md` — strike tracking (BACKLOG.md, STRIKE_HISTORY_MASTER.md, SYSTEM_STRIKE_LOG.md), append-only per RULE-000
+   - `ISD-DIV-6-KNOWLEDGE/README.md` — AI ingestion layer (64zeros_MASTER_CONTEXT.md.md — filename-typo flagged inline for cleanup); cites RULE-000 through RULE-007
+
+3. **`BRICK_REGISTRY.json` updated** (DIV-0):
+   - `BRK-UI-003.authority_rule` promoted from `"RULE-001 §3 (Destructive Actions home: Options page)"` → `"RULE-005"`
+   - `BRK-UI-003.version` bumped 1.0.0 → 1.1.0
+   - Notes appended with promotion provenance
+   - `registry_meta.changelog` v1.3 entry recorded
+   - `audit_summary.by_authority_rule` re-tabulated (RULE-005 count incremented; RULE-001 §3 sub-count decremented)
+
+**Cross-repo path discipline:**
+- 4 READMEs landed in `864zeros-ISD/` (DIV-0, DIV-4, DIV-5, DIV-6 — actually inside the ISD repo)
+- 2 READMEs landed in `864zeros-llc/` (DIV-1, DIV-3 — live in the LLC repo per the workspace's actual division layout)
+- The "6 Divisions" framing thus spans BOTH repos. Operator confirmed this scope explicitly via question (chose "All 6 cross-repo (0,1,3,4,5,6)").
+
+**Operator follow-ups flagged in deliverables:**
+- DIV-6 source-of-truth filename typo: `64zeros_MASTER_CONTEXT.md.md` should be `864zeros_MASTER_CONTEXT.md`. NOT renamed in this strike (would break any existing NotebookLM ingestion that points at the typo'd filename); rename queued for next cleanup pass with NotebookLM re-index coordination.
+- DIV-2 does not exist on disk in either repo. The 6-division layout skips DIV-2 (0, 1, 3, 4, 5, 6). If DIV-2 is reserved for a future division, no action required; if it's a numbering bug, reconciliation goes through OFFICE_ARCHITECT.md §VI.
+
+**Active Sprint state after this entry:**
+- 1 HIGH (Clipboard Phase 2 — RULE-001/003/004/005/006/007 deep refactor; scope grew from 3 rules to 6, retains ~6-10h estimate but coverage now spans secret-sovereignty audit + brand-prefix migration too)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR — competitive recon)
+- 7 RULES now active: RULE-000 (governance), RULE-001 (options structure), RULE-002 (SW download), RULE-003 (selection UI), RULE-004 (accordion), RULE-005 (two-tap confirm), RULE-006 (brand-prefix pill), RULE-007 (secret sovereignty)
+
+---
+
+### `2026-05-09T-DIV-6-MASTER-DOCS-STRIKE` — 3 Master Documents Authored: DELIVERED
+**Strike:** Inter-strike documentation push (under RULE-000 Office Architect authority for documentation alignment + DIV-6 NotebookLM ingestion enablement)
+**Component:** `ISD-DIV-6-KNOWLEDGE/`
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit directive: "generate three final Master Documents for DIV-6-KNOWLEDGE"
+
+**Deliverables:**
+
+1. **`864zeros_PILLAR_STRATEGY.md`** (116 lines / 8.1 KB) — synthesis of [`GTM_MANIFEST.md`](../../864zeros-llc/GTM_MANIFEST.md) v1.1 into ingestion-ready strategic view. Covers Parent Manifesto, Brand Firewall (3 pillars), per-pillar doctrine (OIA / 864-Flux / FHG), cross-pillar constants, pillar assignment protocol, and pillar inventory (11 OIA + 2 Flux + 2 FHG). All 8 rules referenced (RULE-000 through RULE-007).
+
+2. **`864zeros_TECH_STACK_AUDIT.md`** (204 lines / 12.7 KB) — programmatic audit of all 15 manifests in `LLC-DIV-3-FACTORY/extensions/`. Stack baseline (15/15 MV3 panel-only ✅; 14/15 module SW; 8/15 with options_ui = 7 RULE-001 violations identified). Class taxonomy established (Liberation / Tab-mgmt / Focus / Recon). Compliance gap analysis per RULE-001 through RULE-007. 5 cross-extension inconsistencies flagged (naming convention drift, icon path divergence, 32px coverage gap, author field, SW module type). Migration priority queue published in blast-radius order.
+
+3. **`864zeros_2026_ROADMAP.md`** (145 lines / 10.6 KB) — strategic synthesis derived from [`BACKLOG.md`](../BACKLOG.md), [`STRIKE_HISTORY_MASTER.md`](../STRIKE_HISTORY_MASTER.md), and this `SYSTEM_STRIKE_LOG.md`. Active Sprint snapshot, last-7-days shipped retro, Q2 strategic targets (compliance burndown + active charters + Founding 100 cohort), Q3 themes (brand-firewall hardening + RULE-007 universalization + brick compounding + pillar diversification + public-launch playbook), 7 strategic constants, 7 risks tracked.
+
+**Format compliance:**
+- All 3 docs follow the inferred `864z-markdown-standard` (BUILD_KIT_RULES.md metadata header + MASTER_CONTEXT.md.md atomic body).
+- Standard explicitly flagged in each doc's header as "inferred — pending Office Architect codification as a future RULE."
+- Per directive: every doc references RULE-000 through RULE-007 (verified — coverage: PILLAR_STRATEGY 17 total refs, TECH_STACK_AUDIT 28 refs, ROADMAP 33 refs).
+
+**Operator follow-ups flagged inside the deliverables:**
+- 7 RULE-001 violations (extensions missing `options_ui`) — TECH_STACK_AUDIT §VI publishes the migration priority list (P0).
+- `864z-markdown-standard` not yet codified — flagged in all 3 docs' Format Note + listed as Risk in ROADMAP §VII; potential future RULE-008 candidate.
+- DIV-6 source-of-truth filename typo (`64zeros_MASTER_CONTEXT.md.md` should be `864zeros_MASTER_CONTEXT.md`) flagged in DIV-6 README and ROADMAP §VII risks; rename queued for next cleanup pass with NotebookLM re-index coordination.
+
+**DIV-6 contents after strike:**
+- `64zeros_MASTER_CONTEXT.md.md` (pre-existing, terse v1.0 — 784 bytes; format precedent)
+- `README.md` (Strike of 2026-05-08; 854 bytes)
+- `864zeros_PILLAR_STRATEGY.md` ✨ NEW
+- `864zeros_TECH_STACK_AUDIT.md` ✨ NEW
+- `864zeros_2026_ROADMAP.md` ✨ NEW
+
+**Active Sprint state after this entry:** unchanged from prior entry (1 HIGH-deferred Clipboard Phase 2 + 1 MEDIUM ScriptureScout pre-flight scarcity OR). The DIV-6 master docs are documentation deliverables, not Sprint items — they do not consume sprint capacity but DO unlock NotebookLM ingestion for downstream agents.
+
+---
