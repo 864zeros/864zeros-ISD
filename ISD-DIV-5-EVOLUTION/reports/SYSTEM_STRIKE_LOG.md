@@ -617,3 +617,98 @@ The previously-inline settings view (provider toggles + Export All Data + Clear 
 **Strike 013 charter status: SHIPPED.** Chronicle is now the second OIA-pillar reference impl for the post-Strike-012 rule set (joins TabVault). Per-extension RULE-001/005/006 violation count drops from 7 → 6.
 
 ---
+
+### `2026-05-09T-FLEET-POLISH-STRIKE` — Post-Strike-013 Fleet Polish + Refused Backdoor: DELIVERED
+**Strike:** Post-Strike-013 multi-task polish pass (RULE-006 v1.1 mass remediation + Transparency Card injection across all options-bearing extensions + Chronicle console.log scrub + new URL-gated dev override). No formal Strike # — operator-directed cross-cutting cleanup.
+**Component:** 27 files across 14 extensions in `LLC-DIV-3-FACTORY/extensions/`
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com)
+
+**🛑 IMPORTANT — One sub-task was REFUSED.** The operator's original directive included a fifth item: *"Inject a STEALTH backdoor into lib/tier.js: the tier-unlock function should only be exposed to the window object if a specific local storage key (`__864z_internal_flag: 'aether_alpha_99'`) is present."* The Office Architect refused this task on the grounds that:
+
+| Conflict | Where it bites |
+|---|---|
+| Hidden monetization-bypass shipped to all users | RULE-001 §2 ("Tier disclosures live in one auditable place; users... don't hunt for it") |
+| Undocumented mechanism | RULE-007 §Disclosure ("Options page MUST contain plain-English text...") |
+| Brand-promise contradiction | GTM_MANIFEST §6 standardized footer ("No ads. No tracking. Your data stays yours.") |
+| Trust-gate erosion | OR_STRIKE_012_PREFLIGHT §1 Founding-100 trust contract |
+| Recently-signed attestation | SECURITY_ROTATION_LOG (Operator + 864z-OA attested to "no covert mechanisms") |
+| Web Store policy | Chrome Web Store deceptive-functionality clause |
+
+The operator approved a legitimate alternative (option **B: ?dev=1 URL flag**) — a documented developer-only override panel that is gated by the URL parameter, fully visible in HTML source, and described in `extensions/864z-chronical/DEV_NOTES.md` §I. The mechanism honors the same `setTier()` path as the production stub. **No magic localStorage flag, no hidden activation surface, no shipped covert behavior.** This precedent is preserved in the audit ledger as a positive case of operator + architect course-correction.
+
+**Deliverables (4 sub-tasks executed):**
+
+**Sub-task 1 — RULE-006 v1.1 prefix sweep (12 extensions updated, 1 deferred):**
+
+| Extension | Pillar | Action |
+|---|---|---|
+| `clipboard` | 864-Flux | `appName.message`: `"ClipBoard"` → `"[864F] ClipBoard"` |
+| `migration-pilot` | 864-Flux | `extName.message`: `"MigrationPilot — Web to Obsidian"` → `"[864F] MigrationPilot — Web to Obsidian"` |
+| `oia-focus-note` | OIA | `appName.message`: prefixed `[OIA] oia.focus.note` |
+| `oia-focus-timer` | OIA | `appName.message`: prefixed `[OIA] oia.focus` |
+| `oia-focus-wall` | OIA | `appName.message`: prefixed `[OIA] oia.focus.wall` |
+| `oia.focus.signal` | OIA | `appName.message`: prefixed `[OIA] oia.focus.signal` |
+| `oia.focus.sound` | OIA | `appName.message`: prefixed `[OIA] oia.focus.sound` |
+| `Signal2Noise` | OIA | `appName.message`: `"Signal2Noise"` → `"[OIA] Signal2Noise"` |
+| `TabVault` | OIA | `appName.message`: `"TabVault (864z)"` → `"[OIA] TabVault (864z)"` |
+| `Time2Focus` | OIA | `appName.message`: `"Time2Focus"` → `"[OIA] Time2Focus"` |
+| `TuneOut2FocusIn` | OIA | `appName.message`: `"Tune Out 2 Focus In"` → `"[OIA] Tune Out 2 Focus In"` |
+| `who-is-watching` | OIA | `appName.message`: `"Who Is Watching"` → `"[OIA] Who Is Watching"` |
+| **`Bible-Insight`** | **PENDING** | **DEFERRED** — pillar unassigned per TECH_STACK_AUDIT §IV. Operator must confirm FHG vs OIA before prefix application. Flagged in commit message + this entry. |
+
+Already compliant (skipped): `864z-chronical` (Strike 013), `scripture-scout` (Strike 012). RULE-006 v1.1 fleet compliance: **14 / 15** (was 1 / 15 pre-strike).
+
+**Sub-task 2 — Replace #2 (refused backdoor → dev-override URL flag in Chronicle):**
+- `extensions/864z-chronical/options/options.html`: NEW yellow-bordered `#dev-override-panel` section, hidden by default, just before the brand-footer.
+- `extensions/864z-chronical/options/options.css`: NEW `.dev-override*` styles (mustard border, monospace gate label).
+- `extensions/864z-chronical/options/options.js`: NEW `initDevOverride()` function with URL-flag detection (`URLSearchParams.get('dev') === '1'`); wires `Force tier: vault` and `Force tier: free` buttons through the same `setTier()` path as production.
+- `extensions/864z-chronical/DEV_NOTES.md`: NEW §I documents the URL flag, contrasts it explicitly against a hidden backdoor in a comparison table, and provides a removal protocol if needed for any release.
+
+**Sub-task 3 — Transparency Card + Tier-0.5 CSS injection across 8 options-bearing extensions:**
+- 8 extensions had `options_ui` declared (chronicle already compliant; 7 needed work).
+- All 8 now have:
+  - Standardized 4-line brand-footer per GTM_MANIFEST §6 (with the 4 lines: `{Product} v{Version} | {Pillar} | 864zeros LLC` / lock SVG + `No ads. No tracking. Your data stays yours.` / Terms · Privacy / © 2026)
+  - Inline `<style>` block with the Tier-0.5 visual contract (`tier-card`, `tier-card--locked` with opacity 0.60, `⊘` glyphs for locked features, `LOCKED` watermark, sage CTA at full opacity)
+- Required two passes due to a marker-collision bug in the first sweep (the brand-footer's marker comment matched the CSS-injection idempotency check). Phase-2 fix script handled the 5 affected extensions cleanly.
+- 7 extensions still skipped (no `options_ui` at all): `oia-focus-note/timer/wall/signal/sound`, `who-is-watching`, plus the 5 oia.focus.*. Per the operator's accepted scope, those remain RULE-001 violations queued for a separate strike.
+- `Bible-Insight`'s page is at non-standard `html/options.html` (not `options/options.html`); the script handled it via the manifest's declared path.
+
+**Sub-task 4 — Chronicle console.log strip (production polish):**
+- 47 `console.log` / `console.debug` / `console.info` calls removed across `sidepanel/panel.js` (15), `service-worker.js` (15), `content-script.js` (15), `options/options.js` (2).
+- 21 `console.error` calls preserved (genuine error paths).
+- 1 `console.warn` preserved (operationally useful warning in service-worker).
+- Implemented via temporary Node strip script with balanced-paren walking + quote skipping (handles multi-line `console.log({ ... })` cases). Helper script deleted post-run.
+- File line deltas: panel.js -22 / service-worker.js -14 / content-script.js -15 / options.js -2 = **53 lines removed total** (some calls spanned multiple lines).
+
+**Honest defects encountered + resolved:**
+1. **Heredoc backslash-escaping ate the regex** in the first attempt at the strip script. Fixed by writing the script to a tempfile and invoking it from disk.
+2. **Marker-collision bug** in the first transparency-card injection pass: the brand-footer's "Strike 014" comment matched the CSS-injection idempotency guard, causing 5 extensions to get brand-footer-only. Fixed by phase-2 script that uses the actual `tier-card--locked` CSS class as the marker.
+
+**Bible-Insight pillar — explicit operator decision pending:**
+TECH_STACK_AUDIT §IV listed Bible-Insight as "Unassigned (audit-flagged) — Author field null; charter labels FHG planned, but not yet pillar-assigned in manifest." For this strike, Bible-Insight was DEFERRED on the RULE-006 v1.1 sweep (no `[PILLAR]` prefix applied) but DID receive the brand-footer + Tier-0.5 CSS injection (which is pillar-agnostic — the footer just reads "Bible Insight v{X} | 864zeros | 864zeros LLC" pending pillar confirmation). **Operator action: confirm Bible-Insight's pillar** (likely FHG per the planning), then a 5-minute follow-up update will complete its RULE-006 v1.1 compliance.
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2 — RULE-001 / 003 / 004 / 005 / 006 / 007 deep refactor)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR — competitive recon)
+- ~~1 MEDIUM-batched (RULE-006 v1.1 `extName` remediation across 13 extensions)~~ → ✅ CLOSED (12 done; Bible-Insight deferred for pillar confirmation)
+- ~~1 NEW LOW (panel.js dead-code cleanup ~150 orphaned lines)~~ → ✅ Adjacent: console.log strip done in this strike; orphaned function cleanup still pending
+- 1 LOW (Chronicle ExtPay payment integration — replace stub before public release)
+- **1 NEW MICRO** (Bible-Insight pillar confirmation + RULE-006 v1.1 prefix application — ~5 min after operator decides)
+- **1 NEW MEDIUM** (extract injected `<style>` blocks from 8 options.html files into a shared `lib/transparency-tier.css`; Strike 014 chose inline injection for speed; consolidation candidate for next routine touch)
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Compliance scoreboard delta:**
+| Rule | Pre-strike compliance | Post-strike compliance |
+|---|---|---|
+| RULE-006 v1.1 (`extName` prefix) | 1 / 15 (scripture-scout) + 1 (chronicle from Strike 013) = 2 / 15 | **14 / 15** (Bible-Insight pending) |
+| RULE-007 §Disclosure (Options-page secret-handling text) | spotty | unchanged (no change to RULE-007 surfaces in this strike) |
+| GTM_MANIFEST §6 (standardized footer on Options pages) | 4 / 8 options-bearing | **8 / 8** options-bearing (100%) |
+| Tier-0.5 CSS (locked-state visual contract) | 1 / 8 options-bearing (chronicle) | **8 / 8** options-bearing (100%) |
+| Console.log hygiene (Chronicle production) | 47 logs across 4 files | **0 logs**; all errors + 1 warn preserved |
+
+**Refusal precedent:**
+This strike is the first in the SYSTEM_STRIKE_LOG where the Office Architect formally refused an operator-issued sub-task on RULE-001/RULE-007/GTM-grounds and proposed legitimate alternatives. Operator accepted alternative B (?dev=1 URL flag) and the strike proceeded. The refusal + alternative + acceptance pattern is now part of the audit trail and may be cited as precedent for future ambiguous-intent requests. **The architect did not act unilaterally — refused, surfaced reasons + alternatives, awaited operator decision.**
+
+---
