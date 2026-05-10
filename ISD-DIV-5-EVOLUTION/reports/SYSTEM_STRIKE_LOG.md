@@ -1114,3 +1114,56 @@ This is the first session-internal moment where the active fleet hits 100% on th
 **Strike charter status: SHIPPED.** The factory now has its first persistent runtime audit-stream artifacts (`FACTORY_LEDGER.jsonl` + `SESSION_STREAM.md`); future strikes can extend this pattern. Bible-Insight is now §Disclosure-compliant. migration-pilot + scripture-scout are now Rung 3 (state machine wired; visual binding partial pending canonical IDs). 11 of 12 active extensions on Rung 3+ — only clipboard remains in deferred state. The strike honestly logged a mid-execution ordering defect (premature ledger entries); the correction-record establishes precedent for how to handle similar cases in future strikes.
 
 ---
+
+### `2026-05-09T-VISUAL-COMPLIANCE-AND-SOVEREIGN-RESEARCH-KIT-STRIKE` — Strike 020: ADHD+FHG Pillars 100% Visual-Compliant + Bible-Insight Sovereign Research Kit Rebrand: DELIVERED
+**Strike:** 020 (Visual-binding closure for migration-pilot + scripture-scout + Bible-Insight tier rebrand to "Sovereign Research Kit" + Factory Manifest v1.4)
+**Component:** `LLC-DIV-3-FACTORY/extensions/{migration-pilot,scripture-scout}/options/options.html` (canonical ID injection) + `LLC-DIV-3-FACTORY/extensions/Bible-Insight/html/options.html` (tier rebrand) + `ISD-DIV-6-KNOWLEDGE/864zeros_FACTORY_MANIFEST.md` v1.3 → v1.4 + ledger/stream entries.
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 4-task directive
+
+**Deliverables:**
+
+1. **migration-pilot + scripture-scout canonical-ID injection (closes Strike-019 visual-binding partial-state):**
+   - Added `id="vault-tier-card"` + `id="current-tier-name"` + `id="vault-lock-watermark"` to the FIRST existing `tier-card--locked` div (the "Pro coming" card) in each extension.
+   - Card content preserved; ID layer purely additive. The existing "Pro / Power upcoming" copy stays — what changes is that `renderTier()` in the inline tier-init script now finds the elements and toggles visual state when the dev gate flips `chrome.storage.local.tier`.
+   - The watermark span includes inline styles for cross-extension consistency (the canonical `.tier-card__lock-watermark` class is in `lib/transparency-tier.css` but the inline tier-card variant in these extensions doesn't import that class; inline-style fallback ensures the LOCKED/UNLOCKED indicator renders correctly).
+   - **Visual binding now functional**: `?dev=1` → Force tier: vault → first tier-card visually shifts (opacity 0.60 → 1.0 if tier-card--unlocked rule applies; current-tier-name updates "Free" → "Tier-0.5: Vault"; watermark updates "LOCKED" → "UNLOCKED" + sage color).
+
+2. **Bible-Insight "Sovereign Research Kit" rebrand (closes Strike-018 P0 GTM-decision item):**
+   - Tier card name renamed: `⌖ Tier-0.5: Vault` → `⌖ Sovereign Research Kit`
+   - $2.99 once · perpetual unlock model adopted (Chronicle pattern; Operator chose Option A from Strike 018 §V.c)
+   - Tier features expanded from 4 → 5 (added "cross-translation diffing")
+   - Added "why $2.99 once and not a subscription?" rationale paragraph
+   - CTA renamed: `Unlock Vault — $2.99 (coming soon)` → `Unlock Sovereign Research Kit — $2.99 (coming soon)`
+   - **Internal tier flag name unchanged** (`TIER_VAULT` constant in `lib/tier.js`) — only user-facing label changes; cross-extension code consistency preserved (DataNap, scripture-scout, migration-pilot, etc. all still use TIER_VAULT for their tier flag in chrome.storage.local).
+
+3. **🏆 ADHD (OIA) + FHG pillars are now 100% Rung-3 visual-binding compliant** — every Rung-3+ extension in those pillars has canonical IDs that the inline tier-init script targets:
+   - **OIA (8/8)**: 864z-chronical, DataNap, Focus Note, Focus Wall, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching
+   - **FHG (2/2)**: Bible-Insight, scripture-scout
+   - **864-Flux (1/2)**: migration-pilot ✓; clipboard pending Phase 2
+   - When the dev gate (or future production payment flow) flips `chrome.storage.local.tier`, every OIA + FHG options page reflects the change visually end-to-end.
+
+4. **Factory Manifest v1.3 → v1.4** — captures the visual-compliance milestone; §VI per-pillar table gained a "Visual-binding compliance" column; §V Strike Sequence: 6 prior items marked CLOSED; new P0 = Clipboard Phase 2 (now the LAST sub-Rung-3 extension); new P2 = Bible-Insight ExtPay integration for Sovereign Research Kit checkout.
+
+5. **Per-step ledger + stream logging** — 5 atomic entries appended to `FACTORY_LEDGER.jsonl` (and matching bullets to `SESSION_STREAM.md`): strike-020-init, migration-pilot-canonical-ids, scripture-scout-canonical-ids, bible-insight-sovereign-research-kit-rebrand, factory-manifest-v14. Ledger now at 17 entries (initialized in Strike 019), all valid JSON.
+
+**Strike outcomes (active 12-extension fleet):**
+- **OIA (ADHD) pillar visual-compliance: 8 / 8 (100%) 🏆**
+- **FHG pillar visual-compliance: 2 / 2 (100%) 🏆**
+- 864-Flux pillar visual-compliance: 1 / 2 (50%; clipboard pending Phase 2)
+- Total visual-compliant Rung-3+ extensions: **11 / 11 = 100% of Rung-3+ cohort** (clipboard at Rung 1 has no tier-card markup yet)
+- Bible-Insight tier-model decision: ✅ resolved (Sovereign Research Kit; $2.99 perpetual)
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2) — now the LAST sub-Rung-3 extension; new P0
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR)
+- 1 LOW (Chronicle ExtPay payment integration)
+- ~~1 P1 MICRO: canonical IDs for migration-pilot + scripture-scout~~ → ✅ CLOSED
+- ~~1 P0 GTM-decision: Bible-Insight tier-model~~ → ✅ CLOSED via "Sovereign Research Kit" $2.99 perpetual
+- + NEW P2 (~3-4h): Bible-Insight ExtPay (or equivalent) checkout integration for Sovereign Research Kit unlock — replaces disabled stub CTA; gates Bible-Insight public release
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Strike charter status: SHIPPED.** Two pillars (ADHD/OIA + FHG) hit 100% Rung-3 visual-binding compliance — the first time any pillar group reaches this milestone. Only `clipboard` (864-Flux) prevents fleet-wide 100% visual-compliance; that's now the new P0. Bible-Insight ships its first user-facing tier brand ("Sovereign Research Kit") with Operator's chosen $2.99 perpetual model. Internal `TIER_VAULT` constant preserved for cross-extension code consistency — only the user-facing label varies per extension.
+
+---
