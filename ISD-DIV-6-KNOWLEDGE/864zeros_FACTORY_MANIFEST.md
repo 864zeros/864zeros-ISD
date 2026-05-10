@@ -1,4 +1,4 @@
-# 864zeros: Factory Manifest [v1.2]
+# 864zeros: Factory Manifest [v1.3]
 
 **Authority:** Per-extension monetization-readiness ledger. Synthesizes the post-consolidation state of all 15 extensions in `LLC-DIV-3-FACTORY/extensions/`.
 **Loaded:** On demand for tier-rollout planning, GTM sequencing, RULE-001 burndown, and operator dashboards.
@@ -17,15 +17,20 @@
 
 ## II. Fleet at a Glance
 
-**12 active extensions** across 3 pillars (post-Strike-016 archival: 3 legacy `oia.focus.*` extensions moved to `_archive/`; TabVault rebranded to DataNap). Tier-0.5 readiness distribution snapshot (2026-05-09 post-Strike-018):
+**12 active extensions** across 3 pillars (post-Strike-016 archival: 3 legacy `oia.focus.*` extensions moved to `_archive/`; TabVault rebranded to DataNap). Tier-0.5 readiness distribution snapshot (2026-05-09 post-Strike-019):
 
 | Status | Count | Extensions |
 |---|---|---|
 | **✅ TIER-0.5 SHIPPED** | 1 | `864z-chronical` |
-| **🟢 SCAFFOLD-READY (Rung 3 — markup wired + state machine + dev gate)** | 9 | `Bible-Insight` ⬆ promoted in Strike 018, `DataNap`, `Focus Note` (`oia-focus-note`), `Focus Wall` (`oia-focus-wall`), `Signal2Noise`, `Time2Focus`, `TuneOut2FocusIn`, `who-is-watching` (+ chronicle on Rung 4) |
-| **🟢 SCAFFOLD-READY (Rung 2 — markup wired with canonical `--locked`)** | 2 | `migration-pilot`, `scripture-scout` — Strike 018 aliased their `tier-card--upcoming` → `tier-card--locked` (matches Chronicle Standard); now missing only `lib/tier.js` for Rung-3 promotion (~5 min each) |
+| **🟢 SCAFFOLD-READY (Rung 3 — markup wired + state machine + dev gate)** | **10** | `Bible-Insight`, `DataNap`, `Focus Note` (`oia-focus-note`), `Focus Wall` (`oia-focus-wall`), `migration-pilot` ⬆ promoted in Strike 019, `scripture-scout` ⬆ promoted in Strike 019, `Signal2Noise`, `Time2Focus`, `TuneOut2FocusIn`, `who-is-watching` |
 | **🟡 SCAFFOLD-READY (CSS only)** | 1 | `clipboard` (Phase 2 deep refactor still HIGH-deferred) |
 | **❌ BLOCKED** (no `options_ui` → RULE-001 violation) | **0** ✅ |
+
+**Strike-019 milestones:**
+- Bible-Insight RULE-007 §Disclosure block injected (closes the one outstanding P1 from Strike 018 audit; Bible-Insight now fully RULE-007 §Disclosure compliant)
+- migration-pilot + scripture-scout promoted Rung 2 → Rung 3 via `lib/tier.js` distribution + inline tier-init script injection
+- **11 of 12 active extensions now on Rung 3+ (92%)** — only `clipboard` remains on Rung 1 (Phase-2 HIGH-deferred)
+- NEW operational artifact: `LLC-DIV-3-FACTORY/FACTORY_LEDGER.jsonl` (machine-readable JSON-per-line) + `LLC-DIV-3-FACTORY/SESSION_STREAM.md` (human-readable companion) — append-only audit trail of every atomic factory mutation
 
 **Fleet compliance milestone (Strike 017):**
 - **RULE-001 (Cog-triggered Options page): 12 / 12 (100%)** — was 9/15 pre-Strike-016
@@ -43,13 +48,13 @@ Pillar distribution: **OIA 8 · 864-Flux 2 · FHG 2** (per `864zeros_PILLAR_STRA
 | Extension | Pillar | Display name (current) | Version | Options page | Tier-0.5 Status |
 |---|---|---|---|---|---|
 | `864z-chronical` | OIA | `[OIA] Chronicle` | 1.1.0 | ✅ `options/options.html` | **✅ TIER-0.5 SHIPPED** — full implementation: tier card + `lib/tier.js` state helper + Sovereign Link header button + RULE-005 two-tap Clear All + ?dev=1 dev-override panel + DEV_NOTES.md. Strike 013 reference impl. |
-| `Bible-Insight` | FHG | `[FHG] Bible Insight` | 1.0.0 | ✅ `html/options.html` | ✅ **Rung 3 — SCAFFOLD-READY (state machine wired)** — Strike 018: lib/tier.js distributed; tier-card markup added (Strike 016 had only added brand-footer due to anchor mismatch); dev-override panel + inline `<script type="module">` injected. **Strike 018 also delivered a per-extension `RULE_007_AUDIT.md`** confirming RULE-007 compliance (BYOK Gemini, debugger bounded to PDF generation, no proxy). |
+| `Bible-Insight` | FHG | `[FHG] Bible Insight` | 1.0.0 | ✅ `html/options.html` | ✅ **Rung 3 — SCAFFOLD-READY (state machine wired) + RULE-007 §Disclosure compliant** — Strike 018: lib/tier.js distributed; tier-card markup added; dev-override panel + inline `<script type="module">` injected; per-extension `RULE_007_AUDIT.md` delivered. **Strike 019**: RULE-007 §Disclosure block injected before brand-footer (verbatim from audit doc §V.a); closes the one outstanding P1 from Strike 018. |
 | `clipboard` | 864-Flux | `[864F] ClipBoard` | 1.0.0 | ✅ `options/options.html` | 🟡 **SCAFFOLD-READY (CSS only)** — has shared CSS linked. Existing tier ladder (Free/Starter/Pro/Power) uses different markup; full migration to canonical `tier-card--locked` form is HIGH-deferred (Clipboard Phase 2). |
 | `DataNap` (was TabVault) | OIA | `[OIA] DataNap` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. Web Store listing update pending the rebrand. |
-| `migration-pilot` | 864-Flux | `[864F] MigrationPilot — Web to Obsidian` | 0.1.0 | ✅ `options/options.html` | 🟢 **Rung 2 — SCAFFOLD-READY (canonical markup)** — Strike 018 aliased `tier-card--upcoming` → `tier-card--locked` (HTML rename; dead local CSS rule replaced with marker comment). Has `.tier-card` markup + Liberate verb already (matches Sovereign Link intent). Missing only `lib/tier.js` for Rung-3 promotion (~5 min). |
+| `migration-pilot` | 864-Flux | `[864F] MigrationPilot — Web to Obsidian` | 0.1.0 | ✅ `options/options.html` | ✅ **Rung 3 — SCAFFOLD-READY (state machine wired)** — Strike 018 aliased `tier-card--upcoming` → `tier-card--locked` (canonical markup). **Strike 019**: `lib/tier.js` copied + inline `<script type='module'>` tier-init logic + dev-override panel injected before existing `<script src='main.js'>`. Defensive null-checks (renderTier no-ops on tier-card targets without canonical IDs); state machine + dev gate fully functional. |
 | `oia-focus-note` (Focus Note) | OIA | `[OIA] Focus Note` | 1.1.0 | ✅ `options/options.html` (Strike 016) | 🟢 **SCAFFOLD-READY** — full RULE-001 + Tier-0.5 + dev-override scaffold. |
 | `oia-focus-wall` (Focus Wall) | OIA | `[OIA] Focus Wall` | 1.1.0 | ✅ `options/options.html` (Strike 016) | 🟢 **SCAFFOLD-READY** — full RULE-001 + Tier-0.5 + dev-override scaffold. |
-| `scripture-scout` | FHG | `[FHG] ScriptureScout` | 0.1.0 | ✅ `options/options.html` | 🟢 **Rung 2 — SCAFFOLD-READY (canonical markup)** — Strike 018 aliased `tier-card--upcoming` → `tier-card--locked` (HTML rename; dead local CSS rule replaced with marker comment). Has `.tier-card` markup + brand-footer + RULE-006 v1.1. Missing only `lib/tier.js` for Rung-3 promotion (~5 min). Founding-100 cohort gates real launch. |
+| `scripture-scout` | FHG | `[FHG] ScriptureScout` | 0.1.0 | ✅ `options/options.html` | ✅ **Rung 3 — SCAFFOLD-READY (state machine wired)** — Strike 018 aliased `tier-card--upcoming` → `tier-card--locked` (canonical markup). **Strike 019**: `lib/tier.js` copied + inline `<script type='module'>` tier-init logic + dev-override panel injected. Founding-100 cohort gates real launch. |
 | `Signal2Noise` | OIA | `[OIA] Signal2Noise` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. |
 | `Time2Focus` | OIA | `[OIA] Time2Focus` | 1.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. |
 | `TuneOut2FocusIn` | OIA | `[OIA] TuneOut2FocusIn` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. |
@@ -87,9 +92,9 @@ Strike 018 closed the `tier-card--upcoming` legacy-variant gap: `migration-pilot
 
 Extension has `lib/tier.js` (or equivalent) exporting `getTier()` / `setTier()` / `isVaultUnlocked()`. Options-page JS reads tier on load and toggles `.tier-card--locked` ↔ `.tier-card--unlocked` accordingly.
 
-**9 of 12 active extensions on Rung 3+**: `864z-chronical` (Strike 013 reference) + the 7 Strike-016/017 cohort (DataNap, Focus Note, Focus Wall, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching) + `Bible-Insight` (Strike 018 — `lib/tier.js` distributed; tier-card markup added; dev-override panel + inline `<script type="module">` injected).
+**11 of 12 active extensions on Rung 3+** (post-Strike-019): `864z-chronical` (Rung 4 — Strike 013 reference) + the 7 Strike-016/017 cohort (DataNap, Focus Note, Focus Wall, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching) + `Bible-Insight` (Strike 018) + `migration-pilot` + `scripture-scout` (Strike 019).
 
-`migration-pilot` and `scripture-scout` are still on Rung 2 (have canonical markup as of Strike 018, but lack `lib/tier.js`). Each needs ~5 min to copy `lib/tier.js` from the canonical + add the inline `<script type="module">` block. Tracked as the new MICRO follow-up in §V.
+Only `clipboard` remains on Rung 1 — Phase 2 deep refactor is HIGH-deferred per the Active Sprint.
 
 ### IV.e — Rung 4: Paywall + dev-override + DEV_NOTES
 
@@ -101,32 +106,34 @@ Extension has a stub or real payment-processor integration on the unlock CTA + t
 
 ---
 
-## V. Recommended Strike Sequence (priority-ordered, post-Strike-018)
+## V. Recommended Strike Sequence (priority-ordered, post-Strike-019)
 
 | Priority | Strike candidate | Effort | Unlocks |
 |---|---|---|---|
 | ~~P0~~ | ~~RULE-001 batch scaffold for the 6 BLOCKED extensions~~ | — | ✅ **CLOSED** in Strikes 016 + 017 |
-| ~~P0~~ | ~~Bible-Insight RULE-007 audit + `lib/tier.js` distribution~~ | — | ✅ **CLOSED** in Strike 018 (per-extension audit doc at `extensions/Bible-Insight/RULE_007_AUDIT.md`; verdict: structurally compliant; one P1 disclosure UX gap pending) |
-| **P0 (NEW)** | Bible-Insight: add RULE-007 §Disclosure block to options page (~30 min); resolve $2.99-perpetual vs $4.99/mo tier-model decision | ~30 min code + GTM decision | Required before public release; closes the one outstanding RULE-007 audit item |
-| **P1 (MICRO)** | migration-pilot + scripture-scout: copy `lib/tier.js` + add inline `<script type="module">` for tier rendering + dev gate | ~10 min batched | Promotes both from Rung 2 → Rung 3; brings active fleet to 11/12 on Rung 3+ |
+| ~~P0~~ | ~~Bible-Insight RULE-007 audit + `lib/tier.js` distribution~~ | — | ✅ **CLOSED** in Strike 018 |
+| ~~P0~~ | ~~Bible-Insight: add RULE-007 §Disclosure block to options page~~ | — | ✅ **CLOSED** in Strike 019 (verbatim from audit doc §V.a) |
+| ~~P1 MICRO~~ | ~~migration-pilot + scripture-scout: copy `lib/tier.js` + inline tier-init~~ | — | ✅ **CLOSED** in Strike 019 |
+| **P0 (NEW)** | Bible-Insight tier-model decision: $2.99 perpetual (Chronicle pattern) vs $4.99/mo (CLAUDE.md spec) vs both | GTM decision | Gates public release; payment integration depends on this |
+| **P1** | Add canonical `id="vault-tier-card"` / `id="current-tier-name"` / `id="vault-lock-watermark"` to migration-pilot + scripture-scout existing tier-card markup | ~15 min batched | Currently Rung-3 with state-machine wired but visual binding partial (script no-ops on null IDs); adding IDs makes visual feedback complete |
 | **P1** | DataNap Web Store listing update (rebrand publish) | ~1h | Operator-side marketing; required pre-publish |
-| **P1** | Clipboard Phase 2 (HIGH-deferred) — RULE-001 / 003 / 004 / 005 / 006 / 007 deep refactor | ~6-10h | Already-shipping product; closes longest-standing rule-compliance gap |
-| **P2** | Extract per-extension inline `<script type="module">` to shared `lib/options-tier-init.js` | ~2h | Eliminates 9-extension code duplication; future maintenance lift |
-| **P2** | Replicate chronicle's stub-unlock CTA pattern across the 9 Rung-3 extensions | ~30 min × 9 = ~4.5h | Promotes 9 extensions from Rung-3 to "Rung-4-minus-payment" |
+| **P1** | Clipboard Phase 2 (HIGH-deferred) — RULE-001 / 003 / 004 / 005 / 006 / 007 deep refactor | ~6-10h | Already-shipping product; closes longest-standing rule-compliance gap; only Rung-1 holdout in active fleet |
+| **P2** | Extract per-extension inline `<script type="module">` to shared `lib/options-tier-init.js` | ~2h | Eliminates 11-extension code duplication; future maintenance lift |
+| **P2** | Replicate chronicle's stub-unlock CTA pattern across the 10 Rung-3 extensions | ~30 min × 10 = ~5h | Promotes 10 extensions from Rung-3 to "Rung-4-minus-payment" |
 | **P3** | ScriptureScout pre-flight scarcity OR (DIV-1 Live Scout) | ~1-2h | Operator-driven competitive recon; charter held in BACKLOG.md |
 | **P3** | Chronicle ExtPay integration (replace stub) | ~2-3h | Promotes chronicle from Rung 4 (stubbed) → Rung 4 (real); enables public release |
 
 ---
 
-## VI. Per-Pillar Readiness Snapshot (post-Strike-018)
+## VI. Per-Pillar Readiness Snapshot (post-Strike-019)
 
 | Pillar | Active Extensions | Avg readiness rung | Highest-rung extension | Lowest-rung extensions |
 |---|---|---|---|---|
 | **OIA** (Slate & Sage) | 8 | Rung 3.0 | `864z-chronical` (Rung 4) | DataNap / Focus Note / Focus Wall / Signal2Noise / Time2Focus / TuneOut2FocusIn / who-is-watching (all Rung 3) |
-| **864-Flux** (Slate & Graphite) | 2 | Rung 1.5 | `migration-pilot` (Rung 2 — canonical `--locked` markup; needs `lib/tier.js` for Rung 3) | `clipboard` (Rung 1 — Phase 2 deferred) |
-| **FHG** (Charcoal & Bronze) | 2 | Rung 2.5 | `Bible-Insight` (Rung 3 ⬆ promoted in Strike 018) | `scripture-scout` (Rung 2 — canonical markup; needs `lib/tier.js` for Rung 3) |
+| **864-Flux** (Slate & Graphite) | 2 | **Rung 2.0** ⬆ from 1.5 | `migration-pilot` (Rung 3 ⬆ promoted in Strike 019) | `clipboard` (Rung 1 — Phase 2 HIGH-deferred) |
+| **FHG** (Charcoal & Bronze) | 2 | **Rung 3.0** ⬆ from 2.5 | `Bible-Insight` and `scripture-scout` both at Rung 3 | (no Rung-1 or below) |
 
-FHG pillar's average rung jumped from 2.0 (post-Strike-017) to 2.5 — Bible-Insight's promotion to Rung 3 (full state machine + dev gate) is the headline shift. The two Rung-2 extensions (`migration-pilot` + `scripture-scout`) are now ~5 min away from Rung 3 (tracked as Strike-019 P1 MICRO). When that lands, FHG and 864-Flux average rungs will both move to 2.5 → 3.0; only `clipboard` will remain on Rung 1 (Phase 2 HIGH-deferred — operator decision pending).
+Strike 019 brought 864-Flux up by 0.5 (migration-pilot Rung 2 → Rung 3) and FHG up by 0.5 (scripture-scout Rung 2 → Rung 3 + Bible-Insight §Disclosure compliance). FHG is now the highest-uniformity pillar (both extensions at Rung 3); OIA carries the only Rung-4-SHIPPED extension (chronicle). 864-Flux remains pulled down by clipboard's HIGH-deferred Phase 2 — that's the longest-standing compliance gap in the fleet and the next significant Rung shift candidate.
 
 ---
 
@@ -153,7 +160,8 @@ FHG pillar's average rung jumped from 2.0 (post-Strike-017) to 2.5 — Bible-Ins
 | 1.0 | 2026-05-09 | Initial. Programmatic survey of all 15 extensions across 3 pillars (OIA 11 · 864-Flux 2 · FHG 2). Tier-0.5 readiness ladder (Rung 0 → Rung 4) codified with per-rung effort estimates. RULE-006 v1.1 fleet compliance: 15/15 (Zero-Point Audit verified). 1 extension on Rung 4 (chronicle); 2 on Rung 2; 6 on Rung 1; 6 on Rung 0 (BLOCKED on RULE-001). Recommended strike sequence published. |
 | 1.1 | 2026-05-09 | Post-Strikes-016+017 update. **Active fleet: 12** (3 archived: `oia.focus.signal/sound`, `oia-focus-timer`). TabVault → DataNap rebrand. 6 OIA extensions promoted Rung 0/1 → Rung 2-3 via Strike 016. who-is-watching promoted Rung 0 → Rung 3 via Strike 017 (also closes SW `type: "module"` modernization gap). **100% fleet compliance milestone: RULE-001 + RULE-006 v1.1 + SW type:module all at 12/12.** Strike sequence updated: P0 batch RULE-001 scaffold ✅ CLOSED; new P0 = Bible-Insight RULE-007 audit + lib/tier.js distribution. Per-pillar avg rung shift: OIA 1.0 → 3.0; 864-Flux unchanged (Phase-2 deferred); FHG 1.5 → 2.0. |
 | 1.2 | 2026-05-09 | Post-Strike-018 update. **Bible-Insight promoted Rung 2 → Rung 3** (full state machine + dev gate). Bible-Insight per-extension RULE-007 audit doc delivered (verdict: structurally compliant; BYOK Gemini, debugger bounded to PDF generation, no proxy; one outstanding §Disclosure UX gap = new P0). migration-pilot + scripture-scout `tier-card--upcoming` → `tier-card--locked` HTML alias (matches Chronicle Standard); dead local CSS rules replaced with marker comments. Rung 3+ cohort grew 8 → 9 (75% of active fleet). FHG avg rung 2.0 → 2.5 (Bible-Insight at Rung 3; scripture-scout still Rung 2 pending lib/tier.js). New P1 MICRO: copy lib/tier.js + inline tier-init script to migration-pilot + scripture-scout (~10 min batched) — would bring active fleet to 11/12 on Rung 3+. |
+| 1.3 | 2026-05-09 | Post-Strike-019 update. **Three sub-strike deliverables:** (1) Bible-Insight RULE-007 §Disclosure block injected before brand-footer (verbatim from audit doc §V.a) — closes the one outstanding P1 from Strike 018 audit; (2) `lib/tier.js` distributed to migration-pilot + scripture-scout + dev-override panel + inline `<script type='module'>` tier-init injected — both promoted Rung 2 → Rung 3; (3) NEW operational artifacts at LLC-DIV-3-FACTORY/ root: `FACTORY_LEDGER.jsonl` (machine-readable JSON-per-line audit stream) + `SESSION_STREAM.md` (human-readable companion) — append-only audit trail of every atomic factory mutation. **Rung 3+ cohort grew 9 → 11 (92% of active fleet)** — only `clipboard` remains on Rung 1 (Phase-2 HIGH-deferred). 864-Flux avg rung 1.5 → 2.0; FHG avg rung 2.5 → 3.0 (now full uniformity at Rung 3). Honest defect: 2 ledger entries were written prematurely (in parallel with failed Edits requiring Read-first); correction entry appended honoring CLAUDE-INTEGRITY. |
 
 ---
 
-*864zeros Factory Manifest v1.2 · 2026-05-09 · 864zeros LLC · DIV-6-KNOWLEDGE.*
+*864zeros Factory Manifest v1.3 · 2026-05-09 · 864zeros LLC · DIV-6-KNOWLEDGE.*

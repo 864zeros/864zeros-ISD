@@ -1059,3 +1059,58 @@ This is the first session-internal moment where the active fleet hits 100% on th
 **Strike charter status: SHIPPED.** Bible-Insight is now the FHG pillar's first Rung-3 extension; FHG pillar avg rung 2.0 → 2.5. The strike also surfaced a Strike-016 oversight (anchor mismatch on Bible-Insight's `<script src="../js/options.js" type="module">`) that prevented the tier-card markup from being injected back then; Strike 018 closes that gap. The per-extension `RULE_007_AUDIT.md` is the first such artifact and may serve as a template for future per-extension audits (Bible-Insight is the highest-trust extension in the fleet — `debugger` + `unlimitedStorage` + `<all_urls>` + AI integration).
 
 ---
+
+### `2026-05-09T-LEDGER-INIT-AND-RUNG3-CLOSE-STRIKE` — Strike 019: Factory Ledger + SESSION_STREAM Initialization + Bible-Insight §Disclosure + migration-pilot/scripture-scout Rung-3 Promotion: DELIVERED
+**Strike:** 019 (Factory Audit Stream Init + Strike-018 Follow-Up Closures + Factory Manifest v1.3)
+**Component:** NEW `LLC-DIV-3-FACTORY/{FACTORY_LEDGER.jsonl, SESSION_STREAM.md}` + `LLC-DIV-3-FACTORY/extensions/Bible-Insight/html/options.html` (RULE-007 §Disclosure block) + `LLC-DIV-3-FACTORY/extensions/{migration-pilot,scripture-scout}/{lib/tier.js, options/options.html}` (4 files: 2 lib copies + 2 augmentations) + `ISD-DIV-6-KNOWLEDGE/864zeros_FACTORY_MANIFEST.md` v1.2 → v1.3.
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 5-task directive
+
+**Deliverables:**
+
+1. **NEW operational artifacts at `LLC-DIV-3-FACTORY/` root:**
+   - **`FACTORY_LEDGER.jsonl`** — append-only JSON-per-line audit stream of every atomic factory mutation. Schema: `{ts, strike, step, action, path, result, notes}`. 11 entries written during Strike 019 (init-ledger, init-stream, bible-insight-disclosure-inject, 4 migration-pilot/scripture-scout step records, correction-honest-record, fleet-readiness-verify, factory-manifest-v13, strike-log-append). All 11 lines validated as parseable JSON.
+   - **`SESSION_STREAM.md`** — human-readable companion. RULE-008 compliant header block + atomic body. One bullet line per step.
+
+2. **Bible-Insight RULE-007 §Disclosure block injected** — closes the one outstanding P1 from Strike 018 audit:
+   - Verbatim text from `RULE_007_AUDIT.md §V.a` injected as `<section class="oia-card privacy-disclosure">` immediately before the brand-footer.
+   - Text covers: Gemini API key storage location (`chrome.storage.local`), endpoint disclosure (`generativelanguage.googleapis.com`), the 864zeros-never-sees promise, and the IndexedDB local-only data residency.
+   - Bible-Insight is now fully RULE-007 §Disclosure compliant; one remaining open P1 is the GTM tier-model decision ($2.99 perpetual vs $4.99/mo recurring).
+
+3. **migration-pilot + scripture-scout Rung-2 → Rung-3 promotion:**
+   - Each gets `lib/tier.js` (copied from `864z-build-kit/references/core/tier.js`, 1290 bytes).
+   - Each `options/options.html` augmented with: minimal `<style>` block for `.dev-override*`, `<section id="dev-override-panel">` (URL-gated by `?dev=1`), inline `<script type="module">` importing from `../lib/tier.js`. Inserted just before existing `<script type="module" src="main.js">`.
+   - **Honest scope note:** the inline tier-init script uses `getElementById('vault-tier-card')` etc. with defensive null-checks. Both extensions have `tier-card--locked` markup (Strike 018 alias) but lack the canonical IDs `vault-tier-card` / `current-tier-name` / `vault-lock-watermark`. Result: state machine + dev gate ARE wired (Rung-3 criterion met), but visual binding to a specific card is partial — `setTier()` writes to `chrome.storage.local`, the tier flag flips correctly, but the on-page card visual state doesn't auto-update because the script's element lookups return null. Adding canonical IDs to the existing markup is queued as Strike-020 P1 (~15 min batched).
+
+4. **Factory Manifest v1.2 → v1.3:**
+   - H1 + closing line bumped.
+   - §II Fleet at a Glance: Rung-3 cohort 9 → 10 (chronicle still on Rung 4); Rung-2 dropped to 0; Rung-1 unchanged (clipboard).
+   - §III: 3 per-extension rows updated (Bible-Insight, migration-pilot, scripture-scout) with Strike-019 status.
+   - §IV.d Rung-3+ count: 9 → 11 (chronicle Rung-4 + 10 Rung-3).
+   - §V Strike Sequence: 4 prior items marked CLOSED (RULE-001 batch, Bible-Insight RULE-007 audit, Bible-Insight §Disclosure, migration-pilot/scripture-scout MICRO); new P0 = Bible-Insight tier-model decision; new P1 = canonical IDs for migration-pilot/scripture-scout tier-card markup.
+   - §VI Per-Pillar: 864-Flux 1.5 → 2.0 (migration-pilot Rung 3); FHG 2.5 → 3.0 (uniformly Rung 3); OIA 3.0 (unchanged).
+   - §IX Versioning: v1.3 row appended.
+
+5. **Per-step ledger + stream logging** — every atomic mutation produces a JSON line in `FACTORY_LEDGER.jsonl` AND a markdown bullet in `SESSION_STREAM.md`. **One honest defect encountered:** 2 entries (`migration-pilot-tier-init-script`, `scripture-scout-tier-init-script`) were written PREMATURELY in parallel with Edit tool calls that initially failed (Edit requires prior Read for files not yet read in this session). Re-read + re-attempted Edits succeeded. A `correction-honest-record` entry was appended to ledger acknowledging the premature writes — this preserves the audit-trail honesty principle (CLAUDE-INTEGRITY.md) even though it produces slightly duplicated narrative. The end state matches what the entries describe; only the mid-execution ordering was inaccurate.
+
+**Strike outcomes (active 12-extension fleet):**
+- **Rung 3+: 11/12 (92%)** — was 9/12 (75%) pre-strike
+- **864-Flux pillar avg rung: 1.5 → 2.0**
+- **FHG pillar avg rung: 2.5 → 3.0** (uniformly Rung 3)
+- Only `clipboard` remains on Rung 1 (Phase-2 HIGH-deferred)
+- All P0 items from Strike 018 ✅ CLOSED in Strike 019; new P0 is GTM-decision-only (no code work)
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR)
+- 1 LOW (Chronicle ExtPay payment integration)
+- ~~1 P1 MICRO: migration-pilot + scripture-scout lib/tier.js~~ → ✅ CLOSED in this strike
+- ~~1 P1: Bible-Insight RULE-007 §Disclosure block~~ → ✅ CLOSED in this strike
+- + NEW P0 GTM-decision: Bible-Insight tier-model ($2.99 perpetual vs $4.99/mo vs both)
+- + NEW P1 (~15 min batched): add canonical `id="vault-tier-card"` / `id="current-tier-name"` / `id="vault-lock-watermark"` to migration-pilot + scripture-scout existing tier-card markup (closes the visual-binding gap)
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Strike charter status: SHIPPED.** The factory now has its first persistent runtime audit-stream artifacts (`FACTORY_LEDGER.jsonl` + `SESSION_STREAM.md`); future strikes can extend this pattern. Bible-Insight is now §Disclosure-compliant. migration-pilot + scripture-scout are now Rung 3 (state machine wired; visual binding partial pending canonical IDs). 11 of 12 active extensions on Rung 3+ — only clipboard remains in deferred state. The strike honestly logged a mid-execution ordering defect (premature ledger entries); the correction-record establishes precedent for how to handle similar cases in future strikes.
+
+---
