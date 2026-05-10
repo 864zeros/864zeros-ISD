@@ -1167,3 +1167,85 @@ This is the first session-internal moment where the active fleet hits 100% on th
 **Strike charter status: SHIPPED.** Two pillars (ADHD/OIA + FHG) hit 100% Rung-3 visual-binding compliance — the first time any pillar group reaches this milestone. Only `clipboard` (864-Flux) prevents fleet-wide 100% visual-compliance; that's now the new P0. Bible-Insight ships its first user-facing tier brand ("Sovereign Research Kit") with Operator's chosen $2.99 perpetual model. Internal `TIER_VAULT` constant preserved for cross-extension code consistency — only the user-facing label varies per extension.
 
 ---
+
+### `2026-05-09T-CLIPBOARD-PHASE-2-CLOSURE-AND-FLEET-100-MILESTONE-STRIKE` — Strike 021: clipboard Phase-2 Closure + Fleet-Wide 100% Rung-3 Milestone: DELIVERED
+**Strike:** 021 (clipboard Phase-2 closure: lib/tier.js + Sovereign History tier card + dev-override + RULE-007 audit; Factory Manifest v1.5)
+**Component:** `LLC-DIV-3-FACTORY/extensions/clipboard/{lib/tier.js, options/options.html, RULE_007_AUDIT.md}` + `ISD-DIV-6-KNOWLEDGE/864zeros_FACTORY_MANIFEST.md` v1.4 → v1.5 + 7 ledger/stream entries.
+**Status:** ✅ DELIVERED — **🏆🏆🏆 FLEET-WIDE 100% RUNG-3 MILESTONE.**
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 5-task directive
+
+**Pre-strike clipboard state (honest recon — clipboard was in BETTER shape than the original Strike-014 audit suggested):**
+- ✅ `[864F]` prefix in `_locales/en/messages.json` `appName.message` (from Strike 014)
+- ✅ Background SW `type: "module"` (already in manifest pre-strike)
+- ✅ Options page exists at `options/options.html` (226 lines pre-strike)
+- ✅ `lib/transparency-tier.css` linked (from Strike 014 transparency consolidation)
+- ✅ Standardized 4-line brand-footer (from Strike 014)
+- ✅ Existing tier-display + tier-badge with "Free / Starter / Pro / Power" tier ladder + ExtPay-driven upgrade flow
+
+**What was actually missing → delivered in Strike 021:**
+- ❌ → ✅ `lib/tier.js` (canonical copy)
+- ❌ → ✅ Tier-0.5 "Sovereign History" LOCKED card (NEW separate `<div class="oia-card">` adjacent to existing "Your Plan" card; sits ALONGSIDE the existing product-tier ladder, not replacing it)
+- ❌ → ✅ Canonical IDs (`vault-tier-card`, `current-tier-name`, `vault-lock-watermark`)
+- ❌ → ✅ Dev-override panel (URL-gated by `?dev=1`)
+- ❌ → ✅ Inline `<script type="module">` tier-init script importing `../lib/tier.js`
+- ❌ → ✅ Per-extension `RULE_007_AUDIT.md` (clipboard's audit surface is the largest in fleet — debugger + identity + management + AI + Google Drive OAuth + ExtPay)
+
+**Deliverables:**
+
+1. **clipboard `lib/tier.js`** copied from canonical (`864z-build-kit/references/core/tier.js`, 1290 bytes). 12 of 12 active extensions now have `lib/tier.js` — fleet-wide tier-state-helper distribution complete.
+
+2. **clipboard Sovereign History tier card** added as a NEW `<div class="oia-card">` directly after the existing "Your Plan" card. Contains:
+   - `<div class="tier-card tier-card--locked" id="vault-tier-card">` with canonical IDs
+   - 5-feature list (Sovereign Link Backup of full clip history; Markdown vault folder export; scheduled snapshots; bulk export by filter; all-future-features)
+   - "Why $2.99 once and not part of the Pro subscription?" rationale (clipboard-specific framing: "Your clip history outlives any subscription billing cycle")
+   - Disabled stub CTA: "Unlock Sovereign History — $2.99 (coming soon)"
+   - **Internal `TIER_VAULT` constant preserved** — user-facing label is "Sovereign History" (clipboard-specific); cross-extension code consistency maintained.
+
+3. **clipboard dev-override panel + inline tier-init script** injected just before the existing `<script type="module" src="options.js">` tag. Includes minimal `<style>` for `.dev-override*`, the canonical `<section id="dev-override-panel">`, and the canonical inline `<script type="module">` that imports from `../lib/tier.js` and renders tier state on load.
+
+4. **clipboard RULE-007 audit doc** (`extensions/clipboard/RULE_007_AUDIT.md`, ~16 KB / 163 lines, RULE-008 compliant; 8 sections):
+   - **§I Verdict: ✅ STRUCTURALLY COMPLIANT** with operator-action items
+   - **§II `chrome.debugger`** — bounded to PDF generation in `lib/pdf-generator.js:104-141` (identical pattern to Bible-Insight)
+   - **§III `chrome.identity`** — Google OAuth via `launchWebAuthFlow()` in `lib/google-drive/drive-client.js:363-389`; BYOA pattern; access_token stored in `chrome.storage.local.drive_access_token`
+   - **§IV AI fetch** — direct-to-Gemini at `https://generativelanguage.googleapis.com/v1beta` (`lib/api-client.js:111, 163`); BYOK from `chrome.storage.local.${appSlug}_ai_api_key`; Anthropic fallback path uses `'x-api-key'` header (line 212)
+   - **§V ExtPay 3rd-party** — explicitly NOT a 864zeros proxy; ExtPay handles credit card data directly (PCI-scope); 864zeros is ExtPay's MERCHANT, not a co-recipient. Recommend disclosing ExtPay as 3rd-party processor.
+   - **§VI Operator action items** — P1 §Disclosure block (verbatim text covering all 5 high-trust permissions), P2 Sovereign-History-vs-Pro-subscription clarification, P3 ExtPay merchant-account documentation in SECURITY_ROTATION_LOG
+   - clipboard becomes the SECOND per-extension audit doc (after Bible-Insight); pattern established as a template for high-trust extensions in the fleet.
+
+5. **Factory Manifest v1.4 → v1.5** — captures the fleet-wide 100% milestone:
+   - §II Fleet at a Glance: SCAFFOLD-READY-CSS-only category dropped to 0; Rung 3+ cohort to 11 (excluding chronicle Rung 4) = effective 12/12; Rung 0/1/2 buckets all empty
+   - §III clipboard row promoted to ✅ Rung 3+ visual-compliant
+   - §IV.d: 12 of 12 active extensions on Rung 3+
+   - §V Strike Sequence: ALL prior P0 items marked CLOSED; new P0 = clipboard RULE-007 §Disclosure block (~30 min)
+   - §VI per-pillar: 864-Flux avg rung 2.0 → 3.0; ALL 3 pillars at 100% visual-compliance
+   - §IX v1.5 row appended
+
+6. **Per-step ledger logging** — 7 atomic entries appended this strike (init, tier.js copy, 3 options.html edits, audit doc creation, fleet-readiness verify, Factory Manifest update). Ledger now at 27 entries total across Strikes 019/020/021, all valid JSON.
+
+**🏆🏆🏆 Fleet-Wide 100% Rung-3 Milestone (active 12-extension fleet):**
+
+| Compliance metric | Pre-strike | Post-strike |
+|---|---|---|
+| Rung 3+ extensions | 11 / 12 (92%) | **12 / 12 (100%) 🏆** |
+| Visual-binding compliant (canonical IDs) | 11 / 12 (92%) | **12 / 12 (100%) 🏆** |
+| OIA pillar | 8/8 visual-compliant | 8/8 (unchanged) |
+| 864-Flux pillar | 1/2 visual-compliant | **2/2 visual-compliant 🏆** |
+| FHG pillar | 2/2 visual-compliant | 2/2 (unchanged) |
+| RULE-001 + RULE-006 v1.1 + SW type:module | 12/12 each | 12/12 each (unchanged) |
+
+This is the historic finish: every active extension across all 3 pillars is now at minimum Rung 3 with full canonical-ID visual binding. The Tier-0.5 readiness ladder is no longer a per-extension shortlist; it is a fleet-wide property.
+
+**Active Sprint state after this entry:**
+- ~~1 HIGH-deferred (Clipboard Phase 2)~~ → ✅ CLOSED in this strike
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR)
+- 1 LOW (Chronicle ExtPay payment integration)
+- + NEW P0 (~30 min): clipboard RULE-007 §Disclosure block injection (verbatim text in audit doc §VI.a)
+- + NEW P1 (~3-4h batched): Bible-Insight + clipboard ExtPay (or equivalent) checkout integration replacing stub CTAs (Sovereign Research Kit + Sovereign History; both $2.99 perpetual)
+- + NEW P2 (~2h): extract per-extension inline `<script type="module">` to shared `lib/options-tier-init.js` (12-extension code duplication)
+- + NEW P2 (~4.5h batched): replicate chronicle's stub-unlock CTA across the remaining 9 Rung-3 extensions
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Strike charter status: SHIPPED.** clipboard's Phase-2 deep refactor is complete (the longest-deferred item in the active sprint, finally closed). The active 12-extension fleet now hits 100% on every primary compliance + readiness axis simultaneously. This is the high-water mark of the post-Strike-013 polish arc. From here forward, work moves UP the readiness ladder (Rung 3 → Rung 4 = paywall integration) rather than ACROSS to close compliance gaps. The factory has reached structural maturity.
+
+---

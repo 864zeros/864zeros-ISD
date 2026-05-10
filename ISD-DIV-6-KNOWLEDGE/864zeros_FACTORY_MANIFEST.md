@@ -1,4 +1,4 @@
-# 864zeros: Factory Manifest [v1.4]
+# 864zeros: Factory Manifest [v1.5]
 
 **Authority:** Per-extension monetization-readiness ledger. Synthesizes the post-consolidation state of all 15 extensions in `LLC-DIV-3-FACTORY/extensions/`.
 **Loaded:** On demand for tier-rollout planning, GTM sequencing, RULE-001 burndown, and operator dashboards.
@@ -17,13 +17,13 @@
 
 ## II. Fleet at a Glance
 
-**12 active extensions** across 3 pillars (post-Strike-016 archival: 3 legacy `oia.focus.*` extensions moved to `_archive/`; TabVault rebranded to DataNap). Tier-0.5 readiness distribution snapshot (2026-05-09 post-Strike-019):
+**12 active extensions** across 3 pillars (post-Strike-016 archival: 3 legacy `oia.focus.*` extensions moved to `_archive/`; TabVault rebranded to DataNap). Tier-0.5 readiness distribution snapshot (2026-05-09 post-Strike-021):
 
 | Status | Count | Extensions |
 |---|---|---|
 | **✅ TIER-0.5 SHIPPED** | 1 | `864z-chronical` |
-| **🟢 SCAFFOLD-READY (Rung 3 — markup wired + state machine + dev gate)** | **10** | `Bible-Insight`, `DataNap`, `Focus Note` (`oia-focus-note`), `Focus Wall` (`oia-focus-wall`), `migration-pilot` ⬆ promoted in Strike 019, `scripture-scout` ⬆ promoted in Strike 019, `Signal2Noise`, `Time2Focus`, `TuneOut2FocusIn`, `who-is-watching` |
-| **🟡 SCAFFOLD-READY (CSS only)** | 1 | `clipboard` (Phase 2 deep refactor still HIGH-deferred) |
+| **🏆 SCAFFOLD-READY (Rung 3+ — markup wired + state machine + dev gate + canonical IDs)** | **11** | `Bible-Insight`, `clipboard` ⬆ promoted in Strike 021, `DataNap`, `Focus Note`, `Focus Wall`, `migration-pilot`, `scripture-scout`, `Signal2Noise`, `Time2Focus`, `TuneOut2FocusIn`, `who-is-watching` |
+| **🟡 SCAFFOLD-READY (CSS only)** | **0** ✅ |
 | **❌ BLOCKED** (no `options_ui` → RULE-001 violation) | **0** ✅ |
 
 **Strike-019 milestones:**
@@ -37,6 +37,12 @@
 - 🏆 **FHG pillar: 2/2 Rung-3+ extensions are now visual-binding compliant** — Bible-Insight + scripture-scout both have canonical IDs. 100% visual-compliance.
 - **864-Flux: 1/2** — migration-pilot now visual-compliant (Strike 020 canonical IDs added); clipboard still Rung 1 (Phase-2 HIGH-deferred).
 - Bible-Insight tier rebranded **"⌖ Tier-0.5: Vault" → "⌖ Sovereign Research Kit"** per Operator GTM decision; closes Strike-018 P0 GTM-decision item. $2.99 perpetual unlock model adopted (matches Chronicle pattern).
+
+**🏆🏆🏆 Strike-021 FLEET-WIDE 100% milestone:**
+- **clipboard Phase-2 closure**: clipboard already had the [864F] prefix + SW `type: "module"` + brand-footer + linked `lib/transparency-tier.css` from prior strikes (Strike 014 transparency consolidation + earlier scaffold work). Strike 021 added the missing pieces: `lib/tier.js`, canonical IDs (`vault-tier-card` / `current-tier-name` / `vault-lock-watermark`), Tier-0.5 "Sovereign History" LOCKED card with $2.99 perpetual messaging, dev-override panel + inline tier-init script.
+- **clipboard RULE-007 audit delivered**: per-extension `RULE_007_AUDIT.md` (~16 KB; 8 sections). Verdict: ✅ STRUCTURALLY COMPLIANT. Covers BYOK Gemini + debugger bounded to PDF + chrome.identity Google OAuth (BYOA) + ExtPay 3rd-party (NOT a 864zeros proxy) + chrome.management bounded to extension enumeration.
+- **🏆 ACTIVE 12-EXTENSION FLEET: 12/12 (100%) Rung 3+ + 12/12 (100%) visual-binding compliant** — every extension in every pillar is now at minimum Rung 3 with full canonical-ID visual binding. Chronicle still holds the only Rung-4 (SHIPPED with stub paywall) position. The Tier-0.5 readiness ladder is no longer a per-extension shortlist; it is now a fleet-wide property.
+- 864-Flux pillar: 2/2 visual-compliant (was 1/2). All 3 pillars at 100% visual-compliance.
 
 **Fleet compliance milestone (Strike 017):**
 - **RULE-001 (Cog-triggered Options page): 12 / 12 (100%)** — was 9/15 pre-Strike-016
@@ -55,7 +61,7 @@ Pillar distribution: **OIA 8 · 864-Flux 2 · FHG 2** (per `864zeros_PILLAR_STRA
 |---|---|---|---|---|---|
 | `864z-chronical` | OIA | `[OIA] Chronicle` | 1.1.0 | ✅ `options/options.html` | **✅ TIER-0.5 SHIPPED** — full implementation: tier card + `lib/tier.js` state helper + Sovereign Link header button + RULE-005 two-tap Clear All + ?dev=1 dev-override panel + DEV_NOTES.md. Strike 013 reference impl. |
 | `Bible-Insight` | FHG | `[FHG] Bible Insight` | 1.0.0 | ✅ `html/options.html` | ✅ **Rung 3 — VISUAL-COMPLIANT + RULE-007 §Disclosure compliant + tier rebranded "Sovereign Research Kit"** — Strike 020 closed Strike-018 P0 GTM-decision item: tier renamed `⌖ Tier-0.5: Vault` → `⌖ Sovereign Research Kit`; $2.99 perpetual unlock (Chronicle pattern); 5-feature list (Sovereign Link Backup, Markdown vault export, PDF report archive, cross-translation diffing, all-future-features); "why $2.99 once" rationale. CTA: "Unlock Sovereign Research Kit — $2.99 (coming soon)". Internal tier flag name unchanged (TIER_VAULT) for cross-extension code consistency. |
-| `clipboard` | 864-Flux | `[864F] ClipBoard` | 1.0.0 | ✅ `options/options.html` | 🟡 **SCAFFOLD-READY (CSS only)** — has shared CSS linked. Existing tier ladder (Free/Starter/Pro/Power) uses different markup; full migration to canonical `tier-card--locked` form is HIGH-deferred (Clipboard Phase 2). |
+| `clipboard` | 864-Flux | `[864F] ClipBoard` | 1.0.0 | ✅ `options/options.html` | ✅ **Rung 3+ — VISUAL-COMPLIANT (state machine + binding) + per-extension RULE-007 audit delivered** — Strike 021 Phase-2 closure: `lib/tier.js` distributed; NEW Tier-0.5 "Sovereign History" LOCKED card with canonical IDs ($2.99 perpetual; sits ALONGSIDE existing Free/Starter/Pro/Power product tier ladder); existing tier-badge name span gained `id="current-tier-name"`; dev-override panel + inline tier-init script injected. `RULE_007_AUDIT.md` covers BYOK Gemini + debugger (PDF) + chrome.identity (Google OAuth BYOA) + ExtPay (3rd-party, NOT 864zeros proxy) + chrome.management (extension enumeration). |
 | `DataNap` (was TabVault) | OIA | `[OIA] DataNap` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. Web Store listing update pending the rebrand. |
 | `migration-pilot` | 864-Flux | `[864F] MigrationPilot — Web to Obsidian` | 0.1.0 | ✅ `options/options.html` | ✅ **Rung 3 — VISUAL-COMPLIANT (state machine + binding)** — Strike 020: canonical IDs (`vault-tier-card` / `current-tier-name` / `vault-lock-watermark`) added to first existing `tier-card--locked` div (the "Pro coming" card). Closes the Strike-019 visual-binding partial-state. Card content preserved; ID layer purely additive; renderTier() now toggles visual state when dev gate flips chrome.storage.local.tier. |
 | `oia-focus-note` (Focus Note) | OIA | `[OIA] Focus Note` | 1.1.0 | ✅ `options/options.html` (Strike 016) | 🟢 **SCAFFOLD-READY** — full RULE-001 + Tier-0.5 + dev-override scaffold. |
@@ -98,9 +104,9 @@ Strike 018 closed the `tier-card--upcoming` legacy-variant gap: `migration-pilot
 
 Extension has `lib/tier.js` (or equivalent) exporting `getTier()` / `setTier()` / `isVaultUnlocked()`. Options-page JS reads tier on load and toggles `.tier-card--locked` ↔ `.tier-card--unlocked` accordingly.
 
-**11 of 12 active extensions on Rung 3+** (post-Strike-019): `864z-chronical` (Rung 4 — Strike 013 reference) + the 7 Strike-016/017 cohort (DataNap, Focus Note, Focus Wall, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching) + `Bible-Insight` (Strike 018) + `migration-pilot` + `scripture-scout` (Strike 019).
+**🏆 12 of 12 active extensions on Rung 3+** (post-Strike-021 — fleet-wide 100% milestone): `864z-chronical` (Rung 4 — Strike 013 reference) + the 7 Strike-016/017 cohort (DataNap, Focus Note, Focus Wall, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching) + `Bible-Insight` (Strike 018) + `migration-pilot` + `scripture-scout` (Strike 019) + `clipboard` (Strike 021 Phase-2 closure).
 
-Only `clipboard` remains on Rung 1 — Phase 2 deep refactor is HIGH-deferred per the Active Sprint.
+**Rung 0/1/2 are now empty buckets** for the active fleet. The next ladder advance is Rung 3 → Rung 4 (paywall + dev-override + DEV_NOTES) — that's a per-extension upgrade with cumulative effort but no longer a structural compliance gap.
 
 ### IV.e — Rung 4: Paywall + dev-override + DEV_NOTES
 
@@ -112,35 +118,30 @@ Extension has a stub or real payment-processor integration on the unlock CTA + t
 
 ---
 
-## V. Recommended Strike Sequence (priority-ordered, post-Strike-020)
+## V. Recommended Strike Sequence (priority-ordered, post-Strike-021 — Fleet-Wide 100% Rung-3 Milestone)
 
 | Priority | Strike candidate | Effort | Unlocks |
 |---|---|---|---|
-| ~~P0~~ | ~~RULE-001 batch scaffold for the 6 BLOCKED extensions~~ | — | ✅ **CLOSED** in Strikes 016 + 017 |
-| ~~P0~~ | ~~Bible-Insight RULE-007 audit + `lib/tier.js` distribution~~ | — | ✅ **CLOSED** in Strike 018 |
-| ~~P0~~ | ~~Bible-Insight: add RULE-007 §Disclosure block to options page~~ | — | ✅ **CLOSED** in Strike 019 |
-| ~~P1 MICRO~~ | ~~migration-pilot + scripture-scout: copy `lib/tier.js` + inline tier-init~~ | — | ✅ **CLOSED** in Strike 019 |
-| ~~P0 GTM~~ | ~~Bible-Insight tier-model decision: $2.99 perpetual vs $4.99/mo~~ | — | ✅ **CLOSED** in Strike 020 — operator chose $2.99 perpetual ("Sovereign Research Kit"); Chronicle pattern adopted |
-| ~~P1~~ | ~~Canonical IDs for migration-pilot + scripture-scout existing tier-card markup~~ | — | ✅ **CLOSED** in Strike 020 — visual binding now complete on both extensions |
-| **P0 (NEW)** | Clipboard Phase 2 (HIGH-deferred) — RULE-001 / 003 / 004 / 005 / 006 / 007 deep refactor + Tier-0.5 wiring | ~6-10h | Now the LAST remaining sub-Rung-3 extension; closes the longest-standing rule-compliance gap; achieves 12/12 Rung-3+ across active fleet |
+| ~~P0~~ | ~~All prior Rung-0/1/2 closures + Bible-Insight audit + Bible-Insight §Disclosure + canonical-IDs + Bible-Insight tier-model + clipboard Phase 2~~ | — | ✅ **ALL CLOSED** across Strikes 016 → 021. Active fleet at 12/12 Rung 3+ (100%); 12/12 visual-binding compliant; 3/3 pillars at 100%. |
+| **P0 (NEW)** | clipboard: add the verbatim RULE-007 §Disclosure block (per `RULE_007_AUDIT.md §VI.a`) — covers AI + OAuth + ExtPay + debugger + management | ~30 min | Closes clipboard's only outstanding RULE-007 audit item; gates Phase-2 public release |
 | **P1** | DataNap Web Store listing update (rebrand publish) | ~1h | Operator-side marketing; required pre-publish |
-| **P2** | Extract per-extension inline `<script type="module">` to shared `lib/options-tier-init.js` | ~2h | Eliminates 11-extension code duplication; future maintenance lift |
-| **P2** | Replicate chronicle's stub-unlock CTA pattern across the 10 Rung-3 extensions | ~30 min × 10 = ~5h | Promotes 10 extensions from Rung-3 to "Rung-4-minus-payment" |
-| **P2** | Bible-Insight: real ExtPay (or equivalent) checkout integration for "Sovereign Research Kit" $2.99 unlock | ~3-4h | Replaces the disabled stub CTA with real payment; gates Bible-Insight public release |
+| **P1** | Bible-Insight + clipboard: real ExtPay (or equivalent) checkout integration replacing stub CTAs (Sovereign Research Kit + Sovereign History — both $2.99 perpetual) | ~4-6h batched | Promotes both from Rung-3-stub → Rung-4-stubbed-payment; gates public releases of both extensions |
+| **P2** | Extract per-extension inline `<script type="module">` to shared `lib/options-tier-init.js` | ~2h | Eliminates 12-extension code duplication; future maintenance lift |
+| **P2** | Replicate chronicle's stub-unlock CTA pattern across the remaining 11 Rung-3 extensions (those not in the Bible-Insight + clipboard payment cohort) | ~30 min × 9 = ~4.5h | Promotes 9 extensions from Rung-3 → "Rung-4-minus-payment" |
 | **P3** | ScriptureScout pre-flight scarcity OR (DIV-1 Live Scout) | ~1-2h | Operator-driven competitive recon; charter held in BACKLOG.md |
 | **P3** | Chronicle ExtPay integration (replace stub) | ~2-3h | Promotes chronicle from Rung 4 (stubbed) → Rung 4 (real); enables public release |
 
 ---
 
-## VI. Per-Pillar Readiness Snapshot (post-Strike-020 — Visual-Compliance Milestone)
+## VI. Per-Pillar Readiness Snapshot (post-Strike-021 — Fleet-Wide 100% Milestone)
 
 | Pillar | Active Extensions | Avg readiness rung | Visual-binding compliance | Highest-rung | Lowest-rung |
 |---|---|---|---|---|---|
-| **OIA / ADHD** (Slate & Sage) | 8 | Rung 3.0 | 🏆 **8 / 8 (100%)** | `864z-chronical` (Rung 4) | (no Rung-2 or below) |
-| **864-Flux** (Slate & Graphite) | 2 | Rung 2.0 | 🟡 **1 / 2 (50%)** — migration-pilot ✓; clipboard pending Phase 2 | `migration-pilot` (Rung 3, visual-compliant) | `clipboard` (Rung 1) |
-| **FHG** (Charcoal & Bronze) | 2 | Rung 3.0 | 🏆 **2 / 2 (100%)** | `Bible-Insight` & `scripture-scout` both Rung 3, visual-compliant | (no Rung-2 or below) |
+| **OIA / ADHD** (Slate & Sage) | 8 | Rung 3.0 | 🏆 **8 / 8 (100%)** | `864z-chronical` (Rung 4) | (no sub-Rung-3) |
+| **864-Flux** (Slate & Graphite) | 2 | Rung 3.0 ⬆ from 2.0 | 🏆 **2 / 2 (100%)** | `migration-pilot` & `clipboard` ⬆ promoted in Strike 021 | (no sub-Rung-3) |
+| **FHG** (Charcoal & Bronze) | 2 | Rung 3.0 | 🏆 **2 / 2 (100%)** | `Bible-Insight` & `scripture-scout` both Rung 3 | (no sub-Rung-3) |
 
-**🏆 Strike-020 Visual-Compliance Milestone:** the OIA (ADHD) and FHG pillars are now at **100% Rung-3 visual-binding compliance** — every Rung-3+ extension in those pillars has the canonical `vault-tier-card` / `current-tier-name` / `vault-lock-watermark` IDs that the inline tier-init script targets. When the dev gate (or future production payment flow) flips `chrome.storage.local.tier`, every OIA + FHG options page reflects the change visually (locked → unlocked, ⊘ → ✓, "LOCKED" → "UNLOCKED" + sage). Only 864-Flux is at partial visual-compliance (clipboard Rung 1, awaiting Phase 2). When clipboard's Phase 2 lands, the entire active fleet hits 12/12 Rung-3+ visual-compliance.
+**🏆🏆🏆 Strike-021 FLEET-WIDE 100% Milestone:** all 3 pillars at **100% Rung-3+ visual-binding compliance**. **Active fleet: 12 / 12 (100%)** on every primary axis: RULE-001 + RULE-006 v1.1 + SW `type: "module"` + Tier-0.5 Rung-3+ + canonical-ID visual binding. The Tier-0.5 readiness ladder is no longer a per-extension shortlist; it is now a fleet-wide property. The next ladder advance is Rung 3 → Rung 4 (paywall + DEV_NOTES) — that's a per-extension upgrade with cumulative effort but no longer a structural compliance gap.
 
 ---
 
@@ -169,7 +170,8 @@ Extension has a stub or real payment-processor integration on the unlock CTA + t
 | 1.2 | 2026-05-09 | Post-Strike-018 update. **Bible-Insight promoted Rung 2 → Rung 3** (full state machine + dev gate). Bible-Insight per-extension RULE-007 audit doc delivered (verdict: structurally compliant; BYOK Gemini, debugger bounded to PDF generation, no proxy; one outstanding §Disclosure UX gap = new P0). migration-pilot + scripture-scout `tier-card--upcoming` → `tier-card--locked` HTML alias (matches Chronicle Standard); dead local CSS rules replaced with marker comments. Rung 3+ cohort grew 8 → 9 (75% of active fleet). FHG avg rung 2.0 → 2.5 (Bible-Insight at Rung 3; scripture-scout still Rung 2 pending lib/tier.js). New P1 MICRO: copy lib/tier.js + inline tier-init script to migration-pilot + scripture-scout (~10 min batched) — would bring active fleet to 11/12 on Rung 3+. |
 | 1.3 | 2026-05-09 | Post-Strike-019 update. **Three sub-strike deliverables:** (1) Bible-Insight RULE-007 §Disclosure block injected before brand-footer (verbatim from audit doc §V.a) — closes the one outstanding P1 from Strike 018 audit; (2) `lib/tier.js` distributed to migration-pilot + scripture-scout + dev-override panel + inline `<script type='module'>` tier-init injected — both promoted Rung 2 → Rung 3; (3) NEW operational artifacts at LLC-DIV-3-FACTORY/ root: `FACTORY_LEDGER.jsonl` (machine-readable JSON-per-line audit stream) + `SESSION_STREAM.md` (human-readable companion) — append-only audit trail of every atomic factory mutation. **Rung 3+ cohort grew 9 → 11 (92% of active fleet)** — only `clipboard` remains on Rung 1 (Phase-2 HIGH-deferred). 864-Flux avg rung 1.5 → 2.0; FHG avg rung 2.5 → 3.0 (now full uniformity at Rung 3). Honest defect: 2 ledger entries were written prematurely (in parallel with failed Edits requiring Read-first); correction entry appended honoring CLAUDE-INTEGRITY. |
 | 1.4 | 2026-05-09 | Post-Strike-020 update. **🏆 Visual-compliance milestone**: OIA (ADHD) and FHG pillars are now **100% Rung-3 visual-binding compliant** — every options page in those pillars (10 of 10 active OIA+FHG extensions) has the canonical `vault-tier-card` / `current-tier-name` / `vault-lock-watermark` IDs that the inline tier-init script targets; visual state transitions on tier-flip work end-to-end. 864-Flux is at 1/2 (clipboard pending Phase 2). **Bible-Insight tier rebrand**: "⌖ Tier-0.5: Vault" → "⌖ Sovereign Research Kit" per Operator GTM decision; $2.99 perpetual unlock model (Chronicle pattern); closes Strike-018 P0 GTM-decision. 5-feature list expanded; "why $2.99 once" rationale added. Internal tier flag name unchanged (TIER_VAULT) for cross-extension code consistency. **Strike Sequence**: 6 prior items marked CLOSED; new P0 = Clipboard Phase 2 (now the LAST sub-Rung-3 extension); new P2 = Bible-Insight ExtPay integration for Sovereign Research Kit. |
+| 1.5 | 2026-05-09 | Post-Strike-021 — **🏆🏆🏆 FLEET-WIDE 100% RUNG-3 MILESTONE.** clipboard Phase-2 closure: prior strikes had already given clipboard the [864F] prefix + SW type:module + brand-footer + linked transparency-tier.css; Strike 021 added the missing pieces (`lib/tier.js`, NEW Sovereign History tier-card with canonical IDs, dev-override panel + inline tier-init, `id="current-tier-name"` on existing tier-badge). Per-extension `RULE_007_AUDIT.md` delivered (~16 KB; 8 sections covering BYOK Gemini + debugger + chrome.identity Google OAuth + ExtPay 3rd-party + chrome.management; verdict: structurally compliant; one P1 §Disclosure UX gap pending). **Active 12-extension fleet: 12/12 (100%) Rung 3+ AND 12/12 (100%) visual-binding compliant. All 3 pillars (OIA/ADHD + 864-Flux + FHG) at 100% Rung-3 visual-compliance.** The Tier-0.5 readiness ladder is now a fleet-wide property; Rung 0/1/2 buckets are empty. Per-pillar avg rung: OIA 3.0 (unchanged) · 864-Flux 2.0 → 3.0 · FHG 3.0 (unchanged). Strike Sequence: ALL prior P0 items CLOSED across Strikes 016-021; new P0 = clipboard RULE-007 §Disclosure block injection (~30 min). |
 
 ---
 
-*864zeros Factory Manifest v1.4 · 2026-05-09 · 864zeros LLC · DIV-6-KNOWLEDGE.*
+*864zeros Factory Manifest v1.5 · 2026-05-09 · 864zeros LLC · DIV-6-KNOWLEDGE.*
