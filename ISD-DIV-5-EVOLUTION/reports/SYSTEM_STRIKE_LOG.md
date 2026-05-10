@@ -1249,3 +1249,63 @@ This is the historic finish: every active extension across all 3 pillars is now 
 **Strike charter status: SHIPPED.** clipboard's Phase-2 deep refactor is complete (the longest-deferred item in the active sprint, finally closed). The active 12-extension fleet now hits 100% on every primary compliance + readiness axis simultaneously. This is the high-water mark of the post-Strike-013 polish arc. From here forward, work moves UP the readiness ladder (Rung 3 → Rung 4 = paywall integration) rather than ACROSS to close compliance gaps. The factory has reached structural maturity.
 
 ---
+
+### `2026-05-09T-CONSOLIDATION-AND-PAYMENT-SPEC-STRIKE` — Strike 022: clipboard §Disclosure + Shared options-tier-init.js + Chronicle Checkout Blueprint: DELIVERED
+**Strike:** 022 (clipboard §Disclosure injection + extract shared lib/options-tier-init.js across 11 extensions + Chronicle Checkout Blueprint + Factory Manifest v1.6)
+**Component:** `LLC-DIV-3-FACTORY/extensions/clipboard/options/options.html` (RULE-007 §Disclosure block) + NEW `864z-build-kit/references/core/options-tier-init.js` + 11 per-extension `lib/options-tier-init.js` distributed copies + 11 `options.html` link-replacement edits + NEW `extensions/864z-chronical/CHRONICLE_CHECKOUT_BLUEPRINT.md` + `ISD-DIV-6-KNOWLEDGE/864zeros_FACTORY_MANIFEST.md` v1.5 → v1.6 + ledger/stream entries.
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 4-task directive
+
+**Deliverables:**
+
+1. **clipboard RULE-007 §Disclosure block injected** (closes Strike-021 P1):
+   - Verbatim from `clipboard/RULE_007_AUDIT.md §VI.a` — `<section class="oia-card privacy-disclosure">` inserted immediately before the standardized brand-footer
+   - Covers all 5 high-trust surfaces: AI BYOK Gemini · Google Drive OAuth (BYOA) · ExtPay 3rd-party payments · `debugger` (PDF only) · `management` (extension enumeration only)
+   - clipboard now fully RULE-007 §Disclosure compliant
+
+2. **Shared `lib/options-tier-init.js` extraction** (closes Strike-021 P2 / Factory Manifest v1.5 §V P2):
+   - **NEW canonical** at `864z-build-kit/references/core/options-tier-init.js` (RULE-008 doc-style header; exports `renderTier()`, `initDevOverride()`, `refreshDevTierLabel()`; imports from sibling `./tier.js`; defensive null-checks for all 7 canonical IDs the host page may have)
+   - **Distributed to 11 extensions** as `lib/options-tier-init.js` (Bible-Insight, clipboard, DataNap, migration-pilot, oia-focus-note, oia-focus-wall, scripture-scout, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching). Chronicle excluded — its tier-init logic lives in `options/options.js` (not inline); migration to shared script queued as P1 follow-up
+   - **11 inline `<script type="module">` blocks replaced** with `<script type="module" src="../lib/options-tier-init.js"></script>` link references across 11 options.html files
+   - Eliminates ~80 LOC of cross-extension code duplication; future updates to tier-init logic now touch ONE canonical file instead of 11
+   - Marker-aware regex handled the substitution cleanly (matched the Strike-016/017/018/019/021 marker comments + the script blocks); 11 OK / 0 ERROR per the distribution-script verification
+
+3. **Chronicle Checkout Blueprint authored** at `extensions/864z-chronical/CHRONICLE_CHECKOUT_BLUEPRINT.md` (~15 KB / 203 lines / 8 RULE-008-compliant sections):
+   - **§I Goal**: replace Strike-013 stub-unlock CTA with real ExtPay checkout flow
+   - **§II ExtPay Architecture**: maps the existing fleet `extpay-wrapper.js` exports (`initPayments` / `getCurrentTier` / `onPaid`) to Chronicle's tier state machine
+   - **§III 3 Entry Points**: (a) SW `initPayments + onPaid` in `service-worker.js`; (b) Options page `onUnlockVault` swap to `extpay.openPaymentPage()` in `options/options.js`; (c) shared `TIER_UNLOCKED` broadcast listener as a one-line addition to `lib/options-tier-init.js`
+   - **§IV Operator Pre-Integration Checklist**: 6 items (ExtPay merchant slug registration, $2.99 ONE-TIME product config, privacy/terms URLs, `SECURITY_ROTATION_LOG.md` entry, Chronicle `RULE_007_AUDIT.md` follow-up, Chronicle Privacy section update)
+   - **§V Failure Modes**: 6 mitigations (network glitch, cross-device, ExtPay outage, refunds, two-tab race, merchant-key compromise)
+   - **§VI Generalization Path**: per-extension rollout pattern for the other 11 Rung-3 extensions (~5.5h batched)
+   - NOT an implementation — operator-gated; implementation will be the new P0
+
+4. **Factory Manifest v1.5 → v1.6**:
+   - H1 + closing line bumped
+   - §II Strike-022 milestones block added (3 sub-deliverables narrated)
+   - §III clipboard row updated (§Disclosure + shared script linkage noted)
+   - §V Strike Sequence: 3 prior items marked CLOSED; new P0 = Chronicle ExtPay implementation per blueprint; new P1 = chronicle migration to shared script
+   - §IX v1.6 row appended
+
+5. **Per-step ledger logging** — 7 atomic entries appended this strike (init, clipboard §Disclosure, canonical creation, distribution, options.html linkage, blueprint, factory manifest update). Ledger now at 35 entries total across Strikes 019/020/021/022, all valid JSON.
+
+**Strike outcomes (active 12-extension fleet):**
+- Rung 3+: 12 / 12 (unchanged — Strike 022 was consolidation + spec, not Rung promotion)
+- Visual-binding compliant: 12 / 12 (unchanged)
+- Cross-extension code duplication for tier-init: 11 inline blocks → 11 link references to single canonical (eliminated)
+- clipboard RULE-007 §Disclosure: missing → ✅ present (final outstanding clipboard audit item closed)
+- Chronicle ExtPay path: implicit/deferred → ✅ explicitly specified in blueprint
+
+**Active Sprint state after this entry:**
+- ~~1 P0: clipboard RULE-007 §Disclosure block~~ → ✅ CLOSED in this strike
+- ~~1 P2: extract shared options-tier-init.js (11-extension consolidation)~~ → ✅ CLOSED in this strike
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR)
+- 1 LOW → reframed: Chronicle ExtPay payment integration is now the **NEW P0** with a full implementation blueprint (`CHRONICLE_CHECKOUT_BLUEPRINT.md`)
+- + NEW P1 (~30 min careful surgery): migrate chronicle's `options.js` tier-init logic to use shared `lib/options-tier-init.js` (lone holdout)
+- + NEW P1 (~1h batched after Chronicle proves the pattern): Bible-Insight + clipboard ExtPay integration (per blueprint §VI generalization)
+- + NEW P2 (~30 min): vendor canonical `ExtPay.js` SDK to `864z-build-kit/references/core/payments/` (currently only in clipboard's lib)
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Strike charter status: SHIPPED.** clipboard's audit-loop is now closed (§Disclosure compliant). Cross-extension code duplication for tier-init is eliminated (11 inline blocks → 11 shared-script links). The Chronicle Checkout Blueprint converts the fleet's "real payment integration" from a vague follow-up into a concrete 3-entry-point spec with operator-actionable checklist + generalization path. From here, the next strike is the actual ExtPay implementation in Chronicle (per blueprint).
+
+---
