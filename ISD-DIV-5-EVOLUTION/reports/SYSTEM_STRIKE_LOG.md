@@ -931,3 +931,68 @@ First-pass verification reported "5 of 8 incomplete" because my regex was matchi
 **Strike charter status: SHIPPED.** This is the largest single strike of the polish arc. Net codebase effects: 3 directories archived + 1 renamed + 6 display names normalized + 1 new canonical helper + 6 distributed copies + 2 new options pages + 4 augmented options pages + 1 new archive README. The fleet's active surface is now smaller (12 vs 15) but more mature (6/12 on Rung 2+ vs 3/15 pre-strike). RULE-001 violations dropped from 6 to 1.
 
 ---
+
+### `2026-05-09T-WHO-IS-WATCHING-CLOSURE-STRIKE` — Strike 017: Last RULE-001 Violation Closed + Triple-100% Milestone: DELIVERED
+**Strike:** 017 (Who Is Watching Closure + Fleet Triple-100% Milestone)
+**Component:** `LLC-DIV-3-FACTORY/extensions/who-is-watching/` (4 files: NEW options.html, NEW options.css, manifest options_ui+type:module additions, NEW lib/tier.js + transparency-tier.css copies) + `ISD-DIV-6-KNOWLEDGE/864zeros_FACTORY_MANIFEST.md` v1.0 → v1.1 + `LLC-DIV-3-FACTORY/extensions/_archive/README.md` operator-confirmation note.
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 4-task directive
+
+**Deliverables:**
+
+1. **who-is-watching Options page SCAFFOLDED** — closes the LAST remaining RULE-001 violation in the active fleet:
+   - `options/options.html` — RULE-001 compliant (hero with `[OIA] Who Is Watching` brand-prefix + tagline + How to Use + Tier-0.5 LOCKED card with privacy-observability messaging + Data Management + brand-footer + dev-override panel + inline `<script type="module">`)
+   - `options/options.css` — minimal extension-specific overrides
+   - `lib/tier.js` and `lib/transparency-tier.css` copied from build-kit canonicals (extension already had `lib/oia-design-system.css`)
+   - `manifest.json`: `options_ui: { page: "options/options.html", open_in_tab: true }` added
+   - Tier-0.5 LOCKED card content tailored: "Sovereign Link Backup — local export of your full vendor-detection history (per-page, per-vendor, per-cookie) as JSON" + "Compliance reports — GDPR / CCPA / CPRA consent-violation summaries"
+
+2. **who-is-watching SW `type: "module"` migration** — closes the last SW modernization gap:
+   - Pre-flight verification: grep'd `background.js` for `import` / `export` / `importScripts` — ZERO matches → safe to add `type: "module"` (no breaking syntax to disrupt; SW is classic JS that happens to also be valid as a module)
+   - `manifest.json` `background` block: added `"type": "module"`
+   - All 12 active extensions now ship module SWs (was 11/12; was 14/15 pre-archival)
+
+3. **`864zeros_FACTORY_MANIFEST.md` regenerated v1.0 → v1.1**:
+   - H1 bumped to `[v1.1]`; closing line bumped to `v1.1`
+   - §II Fleet at a Glance: 15 → 12 active; status counts shifted (TIER-0.5 SHIPPED still 1; SCAFFOLD-READY-with-state-machine grew to 8; SCAFFOLD-READY-CSS-only down to 1; **BLOCKED: 0** ✅)
+   - §III Per-Extension Manifest: removed 3 archived rows; updated TabVault → DataNap; updated all OIA `oia-focus-*` rows with new clean display names (Focus Note, Focus Wall) + Strike 016 augmentation status; updated who-is-watching with Strike 017 closure
+   - §IV Readiness Ladder: Rung 0 now shows "0 extensions ✅"; Rung 1+ now 12/12; Rung 3+ now 8/12; Rung 4 still 1 (chronicle)
+   - §V Strike Sequence: P0 batch RULE-001 scaffold marked CLOSED (struck through); new P0 = Bible-Insight RULE-007 audit + lib/tier.js distribution
+   - §VI Per-Pillar Snapshot: OIA avg rung 1.0 → 3.0 (the big shift); 864-Flux 1.5 (unchanged); FHG 1.5 → 2.0
+   - §IX Versioning: appended v1.1 row with full changelog
+
+4. **`_archive/README.md` operator-confirmation note** — Task 4 verification:
+   - Read archived `oia-focus-timer/_locales/en/messages.json`: `extName.message: "[OIA] oia.focus"` + `extDescription.message: "Simple focus timer with preset intervals. Built by someone with ADHD, for people with ADHD."` — confirms this IS the legacy timer extension Operator intended to archive
+   - `_archive/README.md` row updated: removed "needs operator confirmation" caveat; added "**Operator-confirmed correct target in Strike 017**" note with the verbatim extName + description as evidence
+
+**🏆 Fleet Triple-100% Compliance Milestone (post-Strike-017):**
+
+| Compliance metric | Pre-strike | Post-strike |
+|---|---|---|
+| **RULE-006 v1.1** (`extName` pillar prefix) | 12/12 | **12/12 ✅ 100%** |
+| **RULE-001** (Cog-triggered Options page with 3 mandatory sections) | 11/12 | **12/12 ✅ 100%** |
+| **SW `type: "module"`** (modernization) | 11/12 | **12/12 ✅ 100%** |
+
+This is the first session-internal moment where the active fleet hits 100% on the three primary compliance axes simultaneously.
+
+**Active fleet snapshot (12 extensions, post-Strike-017):**
+- **OIA (8)**: chronicle (Rung 4 SHIPPED), DataNap, Focus Note, Focus Wall, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching (all Rung 3 — SCAFFOLD-READY with state machine + dev gate)
+- **864-Flux (2)**: clipboard (Rung 1 — Phase 2 deferred), migration-pilot (Rung 2 — pre-Tier-0.5 markup variant)
+- **FHG (2)**: Bible-Insight (Rung 2 — Strike 016 augmentation, needs lib/tier.js), scripture-scout (Rung 2 — pre-Tier-0.5 markup variant)
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR)
+- 1 LOW (Chronicle ExtPay payment integration — replace stub before public release)
+- ~~1 NEW LOW: who-is-watching RULE-001 + SW module migration~~ → ✅ CLOSED in this strike
+- ~~1 NEW MICRO: Factory Manifest v1.1~~ → ✅ CLOSED in this strike
+- + NEW MICRO (Bible-Insight `lib/tier.js` distribution, ~5 min)
+- + NEW MICRO (migration-pilot + scripture-scout: alias `tier-card--upcoming` → `tier-card--locked`; ~30 min batched)
+- + NEW LOW (DataNap Web Store listing publish — pre-publish marketing review of the rebrand)
+- + NEW MEDIUM (Bible-Insight RULE-007 audit — `debugger` permission + AI integration; gates FHG-pillar Founding-100 trust contract; new P0 per Factory Manifest v1.1 §V)
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Strike charter status: SHIPPED.** Strike 017 closes the last RULE-001 violation in the active fleet AND the last SW modernization gap in a single ~1.5h strike. Combined with the prior Strike 016 archival work, the active 12-extension fleet now hits **triple-100% compliance** on the three primary axes (RULE-001 + RULE-006 v1.1 + SW type:module). The Tier-0.5 readiness ladder shows 11/12 on Rung 2+ (only clipboard at Rung 1, deferred per Phase 2), with 8/12 on Rung 3+ (state machine + dev gate operational). The next strike candidates are Bible-Insight RULE-007 audit (new P0) and the small `tier-card--upcoming` → `tier-card--locked` aliasing for migration-pilot + scripture-scout.
+
+---

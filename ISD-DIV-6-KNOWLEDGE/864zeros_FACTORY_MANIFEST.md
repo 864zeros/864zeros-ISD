@@ -1,4 +1,4 @@
-# 864zeros: Factory Manifest [v1.0]
+# 864zeros: Factory Manifest [v1.1]
 
 **Authority:** Per-extension monetization-readiness ledger. Synthesizes the post-consolidation state of all 15 extensions in `LLC-DIV-3-FACTORY/extensions/`.
 **Loaded:** On demand for tier-rollout planning, GTM sequencing, RULE-001 burndown, and operator dashboards.
@@ -17,38 +17,45 @@
 
 ## II. Fleet at a Glance
 
-15 extensions across 3 pillars. Tier-0.5 readiness distribution snapshot (2026-05-09):
+**12 active extensions** across 3 pillars (post-Strike-016 archival: 3 legacy `oia.focus.*` extensions moved to `_archive/`; TabVault rebranded to DataNap). Tier-0.5 readiness distribution snapshot (2026-05-09 post-Strike-017):
 
 | Status | Count | Extensions |
 |---|---|---|
 | **✅ TIER-0.5 SHIPPED** | 1 | `864z-chronical` |
-| **🟢 SCAFFOLD-READY (markup present)** | 2 | `migration-pilot`, `scripture-scout` |
-| **🟢 SCAFFOLD-READY (CSS only)** | 6 | `Bible-Insight`, `clipboard`, `Signal2Noise`, `TabVault`, `Time2Focus`, `TuneOut2FocusIn` |
-| **❌ BLOCKED** (no `options_ui` → RULE-001 violation) | 6 | `oia-focus-note`, `oia-focus-timer`, `oia-focus-wall`, `oia.focus.signal`, `oia.focus.sound`, `who-is-watching` |
+| **🟢 SCAFFOLD-READY (markup wired + state machine + dev gate)** | 8 | `Bible-Insight`, `DataNap`, `Focus Note` (`oia-focus-note`), `Focus Wall` (`oia-focus-wall`), `Signal2Noise`, `Time2Focus`, `TuneOut2FocusIn`, `who-is-watching` |
+| **🟢 SCAFFOLD-READY (markup present, pre-Tier-0.5 model)** | 2 | `migration-pilot`, `scripture-scout` (use `tier-card--upcoming` variant; alias to `--locked` is Strike-018 candidate) |
+| **🟡 SCAFFOLD-READY (CSS only)** | 1 | `clipboard` (Phase 2 deep refactor still HIGH-deferred) |
+| **❌ BLOCKED** (no `options_ui` → RULE-001 violation) | **0** ✅ |
 
-Pillar distribution: **OIA 11 · 864-Flux 2 · FHG 2** (per `864zeros_PILLAR_STRATEGY.md` §VI). All 15 are RULE-006 v1.1 compliant on `extName` (Zero-Point Audit verified 15/15 on 2026-05-09).
+**Fleet compliance milestone (Strike 017):**
+- **RULE-001 (Cog-triggered Options page): 12 / 12 (100%)** — was 9/15 pre-Strike-016
+- **RULE-006 v1.1 (`extName` pillar prefix): 12 / 12 (100%)** — was 1/15 pre-Strike-014
+- **SW `type: "module"` modernization: 12 / 12 (100%)** — was 14/15 pre-Strike-017 (`who-is-watching` was the lone classic-script SW)
+
+Pillar distribution: **OIA 8 · 864-Flux 2 · FHG 2** (per `864zeros_PILLAR_STRATEGY.md` §VI — pillar inventory now reflects post-archival state).
 
 ---
 
 ## III. Per-Extension Manifest
 
-| Extension | Pillar | Display name (post-RULE-006 v1.1) | Version | Options page | Tier-0.5 Status |
+12 active extensions (3 archived in Strike 016 — see [`extensions/_archive/README.md`](../../864zeros-llc/LLC-DIV-3-FACTORY/extensions/_archive/README.md)).
+
+| Extension | Pillar | Display name (current) | Version | Options page | Tier-0.5 Status |
 |---|---|---|---|---|---|
 | `864z-chronical` | OIA | `[OIA] Chronicle` | 1.1.0 | ✅ `options/options.html` | **✅ TIER-0.5 SHIPPED** — full implementation: tier card + `lib/tier.js` state helper + Sovereign Link header button + RULE-005 two-tap Clear All + ?dev=1 dev-override panel + DEV_NOTES.md. Strike 013 reference impl. |
-| `Bible-Insight` | FHG | `[FHG] Bible Insight` | 1.0.0 | ✅ `html/options.html` | 🟢 **SCAFFOLD-READY (CSS only)** — has `lib/transparency-tier.css` linked; tier-card markup not yet wired. Pillar confirmed 2026-05-09. |
-| `clipboard` | 864-Flux | `[864F] ClipBoard` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (CSS only)** — has shared CSS linked. Existing tier ladder (Free/Starter/Pro/Power) uses different markup; needs migration to canonical `tier-card--locked` form. |
-| `migration-pilot` | 864-Flux | `[864F] MigrationPilot — Web to Obsidian` | 0.1.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (markup present)** — has `.tier-card` markup + Liberate verb already (matches Sovereign Link intent). Needs: rename `tier-card--upcoming` → `tier-card--locked` (or alias the modifier), add `lib/tier.js`, wire paywall stub. |
-| `oia-focus-note` | OIA | `[OIA] oia.focus.note` | 1.1.0 | ❌ NONE | **❌ BLOCKED** — RULE-001 violation. No `options_ui`. Tier-0.5 cannot ship until Options page scaffold lands. |
-| `oia-focus-timer` | OIA | `[OIA] oia.focus` | 1.1.0 | ❌ NONE | **❌ BLOCKED** — RULE-001 violation. |
-| `oia-focus-wall` | OIA | `[OIA] oia.focus.wall` | 1.1.0 | ❌ NONE | **❌ BLOCKED** — RULE-001 violation. |
-| `oia.focus.signal` | OIA | `[OIA] oia.focus.signal` | 1.1.0 | ❌ NONE | **❌ BLOCKED** — RULE-001 violation. |
-| `oia.focus.sound` | OIA | `[OIA] oia.focus.sound` | 1.1.0 | ❌ NONE | **❌ BLOCKED** — RULE-001 violation. |
-| `scripture-scout` | FHG | `[FHG] ScriptureScout` | 0.1.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (markup present)** — has `.tier-card` markup + brand-footer + RULE-006 v1.1. Needs: tier-card-locked variant + `lib/tier.js` + paywall flow. Founding-100 cohort gates real launch. |
-| `Signal2Noise` | OIA | `[OIA] Signal2Noise` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (CSS only)** — shared CSS linked; tier-card markup pending. |
-| `TabVault` | OIA | `[OIA] TabVault (864z)` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (CSS only)** — shared CSS linked; tier-card markup pending. (Optional: drop the legacy `(864z)` parenthetical at next routine touch.) |
-| `Time2Focus` | OIA | `[OIA] Time2Focus` | 1.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (CSS only)** — shared CSS linked; tier-card markup pending. |
-| `TuneOut2FocusIn` | OIA | `[OIA] Tune Out 2 Focus In` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (CSS only)** — shared CSS linked; tier-card markup pending. |
-| `who-is-watching` | OIA | `[OIA] Who Is Watching` | 2.1.6 | ❌ NONE | **❌ BLOCKED** — RULE-001 violation. Highest-version extension in fleet (2.1.6); also lacks SW `type: "module"` (separate modernization gap). |
+| `Bible-Insight` | FHG | `[FHG] Bible Insight` | 1.0.0 | ✅ `html/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation gave it shared CSS + Tier-0.5 LOCKED card + dev-override panel. |
+| `clipboard` | 864-Flux | `[864F] ClipBoard` | 1.0.0 | ✅ `options/options.html` | 🟡 **SCAFFOLD-READY (CSS only)** — has shared CSS linked. Existing tier ladder (Free/Starter/Pro/Power) uses different markup; full migration to canonical `tier-card--locked` form is HIGH-deferred (Clipboard Phase 2). |
+| `DataNap` (was TabVault) | OIA | `[OIA] DataNap` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. Web Store listing update pending the rebrand. |
+| `migration-pilot` | 864-Flux | `[864F] MigrationPilot — Web to Obsidian` | 0.1.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (markup present)** — has `.tier-card` + Liberate verb already (matches Sovereign Link intent). Uses `tier-card--upcoming` variant; alias to `--locked` is Strike-018 candidate. |
+| `oia-focus-note` (Focus Note) | OIA | `[OIA] Focus Note` | 1.1.0 | ✅ `options/options.html` (Strike 016) | 🟢 **SCAFFOLD-READY** — full RULE-001 + Tier-0.5 + dev-override scaffold. |
+| `oia-focus-wall` (Focus Wall) | OIA | `[OIA] Focus Wall` | 1.1.0 | ✅ `options/options.html` (Strike 016) | 🟢 **SCAFFOLD-READY** — full RULE-001 + Tier-0.5 + dev-override scaffold. |
+| `scripture-scout` | FHG | `[FHG] ScriptureScout` | 0.1.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY (markup present)** — has `.tier-card` markup + brand-footer + RULE-006 v1.1. Uses `tier-card--upcoming`; alias to `--locked` is Strike-018 candidate. Founding-100 cohort gates real launch. |
+| `Signal2Noise` | OIA | `[OIA] Signal2Noise` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. |
+| `Time2Focus` | OIA | `[OIA] Time2Focus` | 1.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. |
+| `TuneOut2FocusIn` | OIA | `[OIA] TuneOut2FocusIn` | 1.0.0 | ✅ `options/options.html` | 🟢 **SCAFFOLD-READY** — Strike 016 augmentation. |
+| `who-is-watching` | OIA | `[OIA] Who Is Watching` | 2.1.6 | ✅ `options/options.html` (Strike 017) | 🟢 **SCAFFOLD-READY** — Strike 017 scaffold + SW `type: "module"` migration in same touch. Highest-version extension in fleet. |
+
+**Archived (3 — Strike 016):** `oia.focus.signal`, `oia.focus.sound`, `oia-focus-timer` — frozen; not part of active fleet. See `_archive/README.md`.
 
 ---
 
@@ -60,31 +67,29 @@ A four-rung ladder describing what each extension needs to advance to the next t
 
 **Prerequisite for ANY Tier-0.5 work.** An extension cannot host a tier disclosure until it has an `options_ui` page conforming to RULE-001's three mandatory sections (How to Use · Subscription & Tiers · Data Management).
 
-**6 extensions on Rung 0**: `oia-focus-note`, `oia-focus-timer`, `oia-focus-wall`, `oia.focus.signal`, `oia.focus.sound`, `who-is-watching`.
-
-**Estimate to clear:** ~3-4h batched for the 5 `oia.focus.*` extensions (they share a Focus-class scaffold); ~2h for `who-is-watching` (RULE-001 + SW module migration in same touch). Total Rung 0 → Rung 1: ~5-6h focused.
+**0 extensions on Rung 0** ✅ — fully cleared as of Strike 017 (`who-is-watching` was the last; closed in Strike 017 alongside the SW `type: "module"` migration). Rung-0 is now an empty bucket; the historical 6 entries (5 `oia.focus.*` Focus-class + `who-is-watching`) closed across Strikes 016 and 017.
 
 ### IV.b — Rung 1: Transparency baseline (CSS + brand-footer + brand-prefix pill)
 
 Extension has the shared `lib/transparency-tier.css` linked + the standardized 4-line brand-footer rendered + the RULE-006 v1.0 `.brand-prefix` pill in surface headers. **Visual contract for tier disclosure is in place** even if the actual tier card hasn't been built yet.
 
-**8 of 9 options-bearing extensions on Rung 1+** (everything except `864z-chronical`, which is on Rung 4). After post-Strike-014 transparency consolidation, all 8 link the shared CSS and have brand-footers.
+**12 of 12 active extensions on Rung 1+** ✅ (every active extension after Strikes 014-017).
 
 ### IV.c — Rung 2: Tier-card markup wired
 
 Extension's options.html has `<div class="tier-card tier-card--locked">...</div>` markup with the canonical structure (`.tier-card__head`, `.tier-card__name`, `.tier-card__price`, `.tier-features`, `.tier-card__cta`, `.tier-card__lock-watermark`).
 
-**3 extensions on Rung 2+**: `864z-chronical` (canonical), `migration-pilot` (uses `tier-card--upcoming` variant — needs alias or rename to `--locked`), `scripture-scout` (same as migration-pilot).
+**11 of 12 active extensions on Rung 2+** (everything except `clipboard`, which uses a different pre-Tier-0.5 paid-tier ladder; full migration is HIGH-deferred Phase 2).
 
-**Estimate to bring 6 SCAFFOLD-READY-CSS-only extensions up to Rung 2**: ~30 min each (mechanical HTML insertion); ~3h batched.
+`migration-pilot` and `scripture-scout` use a `tier-card--upcoming` variant rather than `tier-card--locked` — alias is a Strike-018 candidate (~30 min total).
 
 ### IV.d — Rung 3: Tier state machine + locked/unlocked logic
 
 Extension has `lib/tier.js` (or equivalent) exporting `getTier()` / `setTier()` / `isVaultUnlocked()`. Options-page JS reads tier on load and toggles `.tier-card--locked` ↔ `.tier-card--unlocked` accordingly.
 
-**1 extension on Rung 3+**: `864z-chronical` only (Strike 013 implementation).
+**8 of 12 active extensions on Rung 3+**: `864z-chronical` (Strike 013 reference) + the 7 Strike-016/017 cohort that received the canonical `lib/tier.js` (DataNap, Focus Note, Focus Wall, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching).
 
-**Estimate to bring a Rung-2 extension to Rung 3**: ~1h (copy `lib/tier.js` from chronicle, wire on/off in options.js).
+`Bible-Insight` was Strike-016-augmented but still pending its own `lib/tier.js` copy (Strike-018 candidate, ~5 min).
 
 ### IV.e — Rung 4: Paywall + dev-override + DEV_NOTES
 
@@ -92,33 +97,35 @@ Extension has a stub or real payment-processor integration on the unlock CTA + t
 
 **1 extension on Rung 4**: `864z-chronical` (with payment stub flagged for ExtPay replacement before any public release).
 
-**Estimate to advance a Rung-3 extension to Rung 4**: ~2-3h (payment integration is the bulk; dev-override + DEV_NOTES are ~30 min copy-paste from chronicle).
+**8 extensions are at "Rung 4 minus payment integration"** — they have the dev-override panel + URL gate + tier-state machine, but lack the production unlock CTA wiring. Each needs ~30 min to replicate Chronicle's stub-CTA pattern, then the operator-side payment integration is a separate per-extension call.
 
 ---
 
-## V. Recommended Strike Sequence (priority-ordered)
+## V. Recommended Strike Sequence (priority-ordered, post-Strike-017)
 
 | Priority | Strike candidate | Effort | Unlocks |
 |---|---|---|---|
-| **P0** | RULE-001 batch scaffold for the 6 BLOCKED extensions | ~5-6h | Promotes 6 from Rung 0 → Rung 1; closes 6 RULE-001 violations |
-| **P1** | Tier-card markup wiring for the 6 SCAFFOLD-READY-CSS-only extensions | ~3h batched | Promotes 6 from Rung 1 → Rung 2 |
-| **P1** | Bible-Insight RULE-007 audit (`debugger` permission + AI integration audit) | ~2h | Required before any FHG-pillar release; gates Founding-100 trust contract for Bible-Insight |
-| **P2** | Migration-pilot + scripture-scout: alias `tier-card--upcoming` → `tier-card--locked` and add `lib/tier.js` | ~1.5h each | Promotes both from Rung 2 → Rung 3 |
-| **P2** | Clipboard Phase 2 (HIGH-deferred) — RULE-001/003/004/005/006/007 deep refactor | ~6-10h | Already-shipping product; closes longest-standing rule-compliance gap |
+| ~~P0~~ | ~~RULE-001 batch scaffold for the 6 BLOCKED extensions~~ | — | ✅ **CLOSED** in Strikes 016 + 017 |
+| **P0 (NEW)** | Bible-Insight RULE-007 audit (`debugger` permission + AI integration audit) + `lib/tier.js` distribution | ~2h | Required before any FHG-pillar release; gates Founding-100 trust contract for Bible-Insight |
+| **P1** | Migration-pilot + scripture-scout: alias `tier-card--upcoming` → `tier-card--locked` + add per-extension `lib/tier.js` | ~30 min total | Promotes both from Rung 2 → Rung 3 |
+| **P1** | DataNap Web Store listing update (rebrand publish) | ~1h | Operator-side marketing; required pre-publish |
+| **P1** | Clipboard Phase 2 (HIGH-deferred) — RULE-001 / 003 / 004 / 005 / 006 / 007 deep refactor | ~6-10h | Already-shipping product; closes longest-standing rule-compliance gap |
+| **P2** | Extract per-extension inline `<script type="module">` to shared `lib/options-tier-init.js` | ~2h | Eliminates 8-extension code duplication; future maintenance lift |
+| **P2** | Replicate chronicle's stub-unlock CTA pattern across the 8 Rung-3 extensions | ~30 min × 8 = ~4h | Promotes 8 extensions from Rung-3 to "Rung-4-minus-payment" |
 | **P3** | ScriptureScout pre-flight scarcity OR (DIV-1 Live Scout) | ~1-2h | Operator-driven competitive recon; charter held in BACKLOG.md |
 | **P3** | Chronicle ExtPay integration (replace stub) | ~2-3h | Promotes chronicle from Rung 4 (stubbed) → Rung 4 (real); enables public release |
 
 ---
 
-## VI. Per-Pillar Readiness Snapshot
+## VI. Per-Pillar Readiness Snapshot (post-Strike-017)
 
-| Pillar | Extensions | Avg readiness rung | Highest-rung extension | Lowest-rung extensions |
+| Pillar | Active Extensions | Avg readiness rung | Highest-rung extension | Lowest-rung extensions |
 |---|---|---|---|---|
-| **OIA** (Slate & Sage) | 11 | Rung 1.0 | `864z-chronical` (Rung 4) | 5 `oia.focus.*` + `who-is-watching` (Rung 0) |
-| **864-Flux** (Slate & Graphite) | 2 | Rung 1.5 | `migration-pilot` (Rung 2) | `clipboard` (Rung 1) |
-| **FHG** (Charcoal & Bronze) | 2 | Rung 1.5 | `scripture-scout` (Rung 2) | `Bible-Insight` (Rung 1) |
+| **OIA** (Slate & Sage) | 8 | Rung 3.0 | `864z-chronical` (Rung 4) | DataNap / Focus Note / Focus Wall / Signal2Noise / Time2Focus / TuneOut2FocusIn / who-is-watching (all Rung 3) |
+| **864-Flux** (Slate & Graphite) | 2 | Rung 1.5 | `migration-pilot` (Rung 2 — pre-Tier-0.5 markup) | `clipboard` (Rung 1 — Phase 2 deferred) |
+| **FHG** (Charcoal & Bronze) | 2 | Rung 2.0 | `scripture-scout` (Rung 2 — pre-Tier-0.5 markup) | `Bible-Insight` (Rung 2 — added in Strike 016 augmentation; needs `lib/tier.js`) |
 
-OIA pillar carries the largest portfolio AND the largest Rung-0 backlog. FHG and 864-Flux are smaller portfolios but have higher per-extension maturity. Tier-0.5 monetization rollout will likely lead with FHG (Bible Insight + ScriptureScout — the Founding-100 trust gate has the strongest paying-customer proxy) followed by 864-Flux (clipboard's existing paid-tier infrastructure makes Tier-0.5 a natural addition).
+OIA pillar's average rung jumped from 1.0 (pre-Strikes-016/017) to 3.0 — the Focus-class scaffold + who-is-watching scaffold both promoted multiple extensions multiple rungs in single strikes. Tier-0.5 monetization rollout will likely lead with FHG (scripture-scout + Bible-Insight — Founding-100 trust gate is the strongest paying-customer proxy) once the alias + tier.js work in §V.P1 lands. clipboard remains the longest-standing compliance gap (HIGH-deferred Phase 2).
 
 ---
 
@@ -143,7 +150,8 @@ OIA pillar carries the largest portfolio AND the largest Rung-0 backlog. FHG and
 | Version | Date | Changes |
 |---|---|---|
 | 1.0 | 2026-05-09 | Initial. Programmatic survey of all 15 extensions across 3 pillars (OIA 11 · 864-Flux 2 · FHG 2). Tier-0.5 readiness ladder (Rung 0 → Rung 4) codified with per-rung effort estimates. RULE-006 v1.1 fleet compliance: 15/15 (Zero-Point Audit verified). 1 extension on Rung 4 (chronicle); 2 on Rung 2; 6 on Rung 1; 6 on Rung 0 (BLOCKED on RULE-001). Recommended strike sequence published. |
+| 1.1 | 2026-05-09 | Post-Strikes-016+017 update. **Active fleet: 12** (3 archived: `oia.focus.signal/sound`, `oia-focus-timer`). TabVault → DataNap rebrand. 6 OIA extensions promoted Rung 0/1 → Rung 2-3 via Strike 016. who-is-watching promoted Rung 0 → Rung 3 via Strike 017 (also closes SW `type: "module"` modernization gap). **100% fleet compliance milestone: RULE-001 + RULE-006 v1.1 + SW type:module all at 12/12.** Strike sequence updated: P0 batch RULE-001 scaffold ✅ CLOSED; new P0 = Bible-Insight RULE-007 audit + lib/tier.js distribution. Per-pillar avg rung shift: OIA 1.0 → 3.0; 864-Flux unchanged (Phase-2 deferred); FHG 1.5 → 2.0. |
 
 ---
 
-*864zeros Factory Manifest v1.0 · 2026-05-09 · 864zeros LLC · DIV-6-KNOWLEDGE.*
+*864zeros Factory Manifest v1.1 · 2026-05-09 · 864zeros LLC · DIV-6-KNOWLEDGE.*
