@@ -996,3 +996,66 @@ This is the first session-internal moment where the active fleet hits 100% on th
 **Strike charter status: SHIPPED.** Strike 017 closes the last RULE-001 violation in the active fleet AND the last SW modernization gap in a single ~1.5h strike. Combined with the prior Strike 016 archival work, the active 12-extension fleet now hits **triple-100% compliance** on the three primary axes (RULE-001 + RULE-006 v1.1 + SW type:module). The Tier-0.5 readiness ladder shows 11/12 on Rung 2+ (only clipboard at Rung 1, deferred per Phase 2), with 8/12 on Rung 3+ (state machine + dev gate operational). The next strike candidates are Bible-Insight RULE-007 audit (new P0) and the small `tier-card--upcoming` → `tier-card--locked` aliasing for migration-pilot + scripture-scout.
 
 ---
+
+### `2026-05-09T-BIBLE-INSIGHT-AUDIT-AND-ALIAS-STRIKE` — Strike 018: Bible-Insight Rung-3 Promotion + RULE-007 Audit + Fleet Alias: DELIVERED
+**Strike:** 018 (Bible-Insight RULE-007 Audit + Tier infrastructure injection + migration-pilot/scripture-scout `--upcoming`→`--locked` alias + Factory Manifest v1.2)
+**Component:** `LLC-DIV-3-FACTORY/extensions/Bible-Insight/` (3 files: NEW lib/tier.js, NEW RULE_007_AUDIT.md, html/options.html augmented) + `LLC-DIV-3-FACTORY/extensions/{migration-pilot,scripture-scout}/options/` (4 files: 2 options.html with class rename + 2 styles.css with dead-rule cleanup) + `ISD-DIV-6-KNOWLEDGE/864zeros_FACTORY_MANIFEST.md` v1.1 → v1.2.
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 4-task directive
+
+**Deliverables:**
+
+1. **Bible-Insight RULE-007 Sovereign Audit (Task 1)** — full per-extension audit at `extensions/Bible-Insight/RULE_007_AUDIT.md` (RULE-008 compliant; ~10 KB; 7 sections):
+   - **§I Verdict: ✅ STRUCTURALLY COMPLIANT** with one P1 disclosure UX gap.
+   - **§II `chrome.debugger` analysis**: bounded, single-purpose use in `js/background.js:347-369, 413` for `Page.printToPDF` CDP calls → `chrome.downloads.download` to user's local Downloads folder. ZERO network exfiltration of debugger output. CDP session attach/detach immediate (no zombie sessions; error handling at 411-417 ensures detach on exception).
+   - **§III AI fetch analysis**: 5 distinct AI fetch sites in `js/lib/api.js`, all to `https://generativelanguage.googleapis.com/v1beta` (Google's official Gemini endpoint) via user's BYOK API key from `chrome.storage.local[$APP_SLUG_settings].apiKey` (zero `.sync` references). Direct-to-provider; no 864zeros proxy. Token tracking is in-memory only (resets on SW restart).
+   - **§IV Other fetch calls**: 2 YouTube transcript public-endpoint fetches in `js/content.js:382, 426`; not RULE-007 surfaces (no secrets, no PII).
+   - **§V Operator action items** (3): P1 add `RULE-007 §Disclosure` block to options.html (verbatim text provided); P2 add `debugger` permission tooltip; P3 resolve $2.99-perpetual vs $4.99/mo tier-model decision (CLAUDE.md vs Chronicle pattern conflict).
+   - **§VI Cross-references**: BUILD_KIT_RULES.md, SECURITY_ROTATION_LOG.md, SOVEREIGN_GAP_REPORT.md, FACTORY_MANIFEST.md, chronicle reference impl.
+
+2. **Bible-Insight `lib/tier.js` injection + ?dev=1 URL gate (Task 2)** — promotes Bible-Insight from Rung 2 → Rung 3:
+   - `lib/tier.js` copied from canonical (`864z-build-kit/references/core/tier.js`)
+   - **Tier-card markup section ADDED to `html/options.html`** — Strike 016 augmentation had only added the brand-footer because its anchor regex `<script src="options.js">` didn't match Bible-Insight's `<script src="../js/options.js" type="module">` (different path + type=module attribute). Strike 018 closes this oversight with a tier-section that includes Sovereign Link Backup messaging tailored to Bible-Insight's vault-class data (highlights, notes, sermon drafts, AI analyses, PDF reports).
+   - **Dev-override panel injected** — `<section class="oia-card dev-override hidden" id="dev-override-panel">` with URL-gate by `?dev=1`; Force tier: vault / Force tier: free buttons.
+   - **Inline `<script type="module">` injected** — imports from `../lib/tier.js`; renders tier card state on load; reveals dev-override on `?dev=1`. Path resolution: `html/options.html` → `../lib/tier.js` ✓.
+   - **Inline `<style>` block injected** — minimal `.dev-override*` + `.tier-section`/`.tier-display`/`.tier-badge*` helper styles (full Tier-0.5 visual contract is in `lib/transparency-tier.css`, already linked from Strike 014).
+
+3. **migration-pilot + scripture-scout `tier-card--upcoming` → `tier-card--locked` alias (Task 3)** — fleet-wide canonical alignment:
+   - HTML rename: 2 instances per extension (4 total) at lines 146 + 159 of each `options/options.html`. Now uses canonical class name; canonical styling from `lib/transparency-tier.css` (opacity 0.60, ⊘ glyphs, LOCKED watermark, sage CTA at full opacity) applies automatically. Visual change: opacity 0.75 + dashed border → opacity 0.60 + tinted background.
+   - Dead local CSS rule cleanup: `.tier-card--upcoming { opacity: 0.75; border-style: dashed; }` in each extension's `options/styles.css:137` replaced with marker comment pointing to `../lib/transparency-tier.css` for canonical styling.
+   - **Honest scope note**: per the literal directive ("alias the .tier-card--upcoming CSS class to .tier-card--locked"), I executed the alias as an HTML rename (the cleanest interpretation that "matches the fleet-wide Chronicle Standard"). Both extensions remain on Rung 2 because they still lack `lib/tier.js`; ~5 min × 2 to promote them to Rung 3 (queued as Strike-019 P1 MICRO).
+
+4. **Factory Manifest v1.1 → v1.2 (Task 4)** — reflects Bible-Insight's promotion to Rung 3:
+   - H1 bumped; closing line bumped to v1.2
+   - §II Fleet at a Glance: SCAFFOLD-READY-Rung-3 cohort 8 → 9 (Bible-Insight joins); pre-Tier-0.5-markup label updated to "canonical `--locked`"
+   - §III Bible-Insight row promoted to Rung 3 with full Strike 018 deliverables noted
+   - §III migration-pilot + scripture-scout rows updated to mention canonical `--locked` markup + lib/tier.js gap
+   - §IV.c rephrased: dropped the "Strike-018 candidate" note; now says Strike 018 closed the variant gap
+   - §IV.d count: 8 → 9 (Bible-Insight joins Rung 3+); migration-pilot + scripture-scout still on Rung 2
+   - §V Strike Sequence: P0 (Bible-Insight RULE-007 audit + lib/tier.js) ✅ CLOSED; new P0 = "Bible-Insight: add RULE-007 §Disclosure block + resolve tier-model decision" + new P1 MICRO = "migration-pilot + scripture-scout lib/tier.js distribution (~10 min batched)"
+   - §VI per-pillar: FHG avg rung 2.0 → 2.5; 864-Flux 1.5 (unchanged); OIA 3.0 (unchanged)
+   - §IX Versioning: v1.2 row appended
+
+**Strike outcomes (active 12-extension fleet readiness):**
+- Rung 4 (SHIPPED): 1 (chronicle)
+- **Rung 3+ (state machine + dev gate): 9 (was 8) — 75% of active fleet**
+- Rung 2 (canonical markup): 2 (migration-pilot, scripture-scout)
+- Rung 1 (CSS only): 1 (clipboard)
+- Rung 0 (BLOCKED): 0 ✅
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR)
+- 1 LOW (Chronicle ExtPay payment integration)
+- ~~1 NEW MEDIUM: Bible-Insight RULE-007 audit~~ → ✅ CLOSED in this strike (verdict: structurally compliant)
+- ~~1 NEW MICRO: Bible-Insight `lib/tier.js` distribution~~ → ✅ CLOSED in this strike
+- ~~1 NEW MICRO: migration-pilot + scripture-scout `--upcoming` → `--locked` alias~~ → ✅ CLOSED in this strike
+- + NEW P1 (~30 min): Bible-Insight RULE-007 §Disclosure block injection (verbatim text in audit doc §V.a)
+- + NEW P1 GTM-decision: Bible-Insight tier-model — $2.99 perpetual (Chronicle pattern) vs $4.99/mo (CLAUDE.md spec) vs both
+- + NEW P1 MICRO (~10 min batched): migration-pilot + scripture-scout lib/tier.js distribution (would bring active fleet to 11/12 on Rung 3+)
+- 9 RULES still active (RULE-000 through RULE-008); no new rules this strike.
+
+**Strike charter status: SHIPPED.** Bible-Insight is now the FHG pillar's first Rung-3 extension; FHG pillar avg rung 2.0 → 2.5. The strike also surfaced a Strike-016 oversight (anchor mismatch on Bible-Insight's `<script src="../js/options.js" type="module">`) that prevented the tier-card markup from being injected back then; Strike 018 closes that gap. The per-extension `RULE_007_AUDIT.md` is the first such artifact and may serve as a template for future per-extension audits (Bible-Insight is the highest-trust extension in the fleet — `debugger` + `unlimitedStorage` + `<all_urls>` + AI integration).
+
+---
