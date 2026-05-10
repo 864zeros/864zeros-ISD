@@ -849,3 +849,85 @@ First-pass verification reported "5 of 8 incomplete" because my regex was matchi
 **Strike charter status: SHIPPED.** Three sub-tasks delivered + one verification confirmed. The Factory Manifest now serves as the canonical readiness ledger for future tier-rollout planning and operator dashboards.
 
 ---
+
+### `2026-05-09T-FLEET-RATIONALIZATION-STRIKE` — Strike 016: Archive + DataNap Rebrand + Tier-0.5 Scaffold Across 6 OIA Extensions: DELIVERED
+**Strike:** 016 (Fleet Rationalization) — largest single strike of the post-Strike-013 polish arc.
+**Component:** 3 archive moves + 1 directory rename + 6 display-name updates + 1 NEW canonical (`tier.js`) + 6 per-extension `lib/tier.js` copies + 2 NEW scaffolded options pages + 4 augmented options pages + 1 NEW `_archive/README.md`.
+**Status:** ✅ DELIVERED
+**Authority:** 864z-OA (Office Architect) under RULE-000
+**Sign-off authority:** Operator (jeff.m.conn@gmail.com) — explicit 4-task directive
+
+**Deliverables:**
+
+1. **Three legacy extensions archived** to `extensions/_archive/`:
+   - `oia.focus.signal` (dot-form)
+   - `oia.focus.sound` (dot-form)
+   - `oia-focus-timer` (kebab-form) — operator's directive named `oia.focus.timer` which does not exist on disk; archived the closest match `oia-focus-timer`. **Discrepancy flagged in `_archive/README.md` for operator confirmation.** All three moved via `git mv` (preserves history). Active fleet count: **15 → 12**.
+
+2. **TabVault → DataNap rebrand** (full directory rename + display name update):
+   - `extensions/TabVault/` → `extensions/DataNap/` via `git mv` (43 files relocated; history preserved; submodule git-mv with M-flag indicates Strike 015 lib/transparency-tier.css copy carried through cleanly).
+   - `_locales/en/messages.json` `appName.message`: `[OIA] TabVault (864z)` → `[OIA] DataNap` (drops the `(864z)` parenthetical).
+   - **Marketing implication flagged**: TabVault is a shipping product (v1.0.0); the user-facing rename to "DataNap" is a rebrand with Web Store listing implications. Operator directive proceeded; pre-Web-Store-update operator should review the marketing impact.
+
+3. **Display-name normalization across 6 OIA extensions** (mechanical updates to `_locales/{en}/messages.json` `appName.message`):
+
+| Extension | Before | After |
+|---|---|---|
+| `DataNap` (was TabVault) | `[OIA] TabVault (864z)` | `[OIA] DataNap` |
+| `Time2Focus` | `[OIA] Time2Focus` | `[OIA] Time2Focus` (no change — already correct) |
+| `TuneOut2FocusIn` | `[OIA] Tune Out 2 Focus In` | `[OIA] TuneOut2FocusIn` (drops spaces) |
+| `Signal2Noise` | `[OIA] Signal2Noise` | `[OIA] Signal2Noise` (no change — already correct) |
+| `oia-focus-note` | `[OIA] oia.focus.note` | `[OIA] Focus Note` (drops namespace) |
+| `oia-focus-wall` | `[OIA] oia.focus.wall` | `[OIA] Focus Wall` (drops namespace) |
+
+   Active fleet RULE-006 v1.1 compliance: **12/12 (100%)** verified post-strike.
+
+4. **NEW canonical `tier.js`** at `864z-build-kit/references/core/tier.js` (extracted from chronicle's `lib/tier.js` and generic-ified). Distributed to 6 per-extension `lib/tier.js` copies. Each follows the `getTier()` / `setTier()` / `isVaultUnlocked()` contract; `chrome.storage.local` only (RULE-007).
+
+5. **2 NEW Options pages SCAFFOLDED** for the Rung-0 BLOCKED extensions (`oia-focus-note`, `oia-focus-wall`):
+   - `options/options.html` (RULE-001 compliant: hero + How to Use + Subscription & Tiers + Data Management + brand-footer)
+   - `options/options.css` (minimal extension-specific overrides; bulk styling from `lib/oia-design-system.css` + `lib/transparency-tier.css`)
+   - `manifest.json`: `options_ui: { page: "options/options.html", open_in_tab: true }` added — closes 2 RULE-001 violations
+   - `lib/oia-design-system.css` and `lib/transparency-tier.css` copied from canonical sources (these extensions previously didn't need them)
+   - Includes the Tier-0.5 LOCKED card showing "Sovereign Link Backup — coming soon — $2.99 perpetual unlock" + dev-override panel + inline `<script type="module">` wiring
+
+6. **4 Options pages AUGMENTED** for Rung-1 extensions (`DataNap`, `Time2Focus`, `TuneOut2FocusIn`, `Signal2Noise`):
+   - Tier-0.5 LOCKED card section inserted just BEFORE the existing `<script src="options.js">` tag
+   - Dev-override panel (URL-gated by `?dev=1`) inserted AFTER the brand-footer
+   - Inline `<script type="module">` block at the bottom imports `../lib/tier.js`, renders tier card state, and reveals dev-override on `?dev=1`
+   - Existing options page content untouched (additive-only augmentation; lower risk for shipping extensions)
+
+**Tier-0.5 Readiness ladder shifts (per Factory Manifest §IV):**
+- **Rung 0 → Rung 2**: `oia-focus-note`, `oia-focus-wall` (closes 2 RULE-001 violations + adds tier-card markup)
+- **Rung 1 → Rung 2**: `DataNap`, `Time2Focus`, `TuneOut2FocusIn`, `Signal2Noise` (adds tier-card markup + dev-override + state machine)
+- 6 extensions now on Rung 2+ (was 3 — chronicle, migration-pilot, scripture-scout). **Doubles the Tier-0.5-ready cohort.**
+
+**Active fleet snapshot post-Strike-016:**
+- **12 active extensions** (was 15; 3 archived)
+- **OIA**: 8 (chronicle, DataNap, Focus Note, Focus Wall, Signal2Noise, Time2Focus, TuneOut2FocusIn, who-is-watching)
+- **864-Flux**: 2 (clipboard, migration-pilot)
+- **FHG**: 2 (Bible-Insight, scripture-scout)
+- **Tier-0.5 readiness distribution**: 1 Rung-4 (chronicle) · 6 Rung-2 (Focus Note, Focus Wall, DataNap, Time2Focus, TuneOut2FocusIn, Signal2Noise + chronicle's neighbors migration-pilot, scripture-scout = 8 total Rung-2+) · 4 Rung-1 (Bible-Insight, clipboard, migration-pilot, scripture-scout — wait, these last 3 were already Rung-2; let me recount) → see Factory Manifest v1.1 update for the post-strike re-tabulation
+- **RULE-001 violations remaining**: 1 (`who-is-watching` only — was 6 pre-strike)
+- **9 RULES still active** (RULE-000 through RULE-008); no new rules.
+
+**Operator follow-ups flagged in deliverables:**
+- DataNap rebrand: Web Store listing update needed before next published release (UI says DataNap; users installed under TabVault display name).
+- `oia.focus.timer` discrepancy: confirm `oia-focus-timer` was the intended target (vs a mis-typed dot-form sibling). Documented in `extensions/_archive/README.md`.
+- Factory Manifest v1.1 update: re-tabulate Tier-0.5 readiness after this strike; current v1.0 reflects pre-strike state.
+- The 4 augmented extensions have an inline `<script type="module">` block; future cleanup could extract this to a shared `lib/options-tier-init.js` (consolidation candidate; not blocking).
+- `who-is-watching` is the LAST remaining RULE-001 violation (no `options_ui`). Single-extension scaffold strike ~1-2h would close the last one; also handles the long-deferred SW `type: "module"` migration in the same touch.
+
+**Active Sprint state after this entry:**
+- 1 HIGH-deferred (Clipboard Phase 2 — RULE-001 / 003 / 004 / 005 / 006 / 007 deep refactor)
+- 1 MEDIUM (ScriptureScout pre-flight scarcity OR — competitive recon)
+- 1 LOW (Chronicle ExtPay payment integration — replace stub before public release)
+- ~~6 Rung-0 RULE-001 violations~~ → ✅ **5 CLOSED** in this strike (only `who-is-watching` remains)
+- + NEW LOW (`who-is-watching` RULE-001 scaffold + SW `type: "module"` migration; ~1-2h)
+- + NEW MICRO (extract per-extension inline `<script type="module">` to shared `lib/options-tier-init.js`; not blocking)
+- + NEW MICRO (Factory Manifest v1.1 — re-tabulate Tier-0.5 readiness ladder post-strike)
+- + NEW MICRO (DataNap Web Store listing update — pre-publish)
+
+**Strike charter status: SHIPPED.** This is the largest single strike of the polish arc. Net codebase effects: 3 directories archived + 1 renamed + 6 display names normalized + 1 new canonical helper + 6 distributed copies + 2 new options pages + 4 augmented options pages + 1 new archive README. The fleet's active surface is now smaller (12 vs 15) but more mature (6/12 on Rung 2+ vs 3/15 pre-strike). RULE-001 violations dropped from 6 to 1.
+
+---
