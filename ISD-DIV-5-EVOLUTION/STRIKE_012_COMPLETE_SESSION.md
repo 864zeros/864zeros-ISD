@@ -209,7 +209,7 @@ The inferred standard is flagged at the top of every new doc as "pending Office 
 
 ### V.d — Three audit findings surfaced (operator-actionable)
 
-1. **7 extensions are missing `options_ui` entirely** — active RULE-001 violations: `oia.focus.note/timer/wall/signal/sound`, `who-is-watching`, `864z-chronical`. The 5 `oia.focus.*` extensions can share a single Focus-class scaffold (~3-4h batched).
+1. **7 extensions are missing `options_ui` entirely** — active RULE-001 violations: `oia.focus.note/timer/wall/signal/sound`, `who-is-watching`, `864z-chronicle`. The 5 `oia.focus.*` extensions can share a single Focus-class scaffold (~3-4h batched).
 2. **RULE-006 brand-prefix is mostly absent in chrome-toolbar `extName` strings** — only `[FHG] ScriptureScout` carries the pill in its `messages.json` extName; the other 14 extensions either have header pills only (post-Phase-1 cohort) or no pill at all. Codifying whether RULE-006 extends to `extName` is an open Office Architect call.
 3. **`864z-markdown-standard` is referenced but not codified** — strong RULE-008 candidate; inferred standard documented in all 3 new master docs' header.
 
@@ -313,7 +313,7 @@ These are explicit hand-offs surfaced inside the documents. None require strike-
 | 7 extensions missing `options_ui` (RULE-001 violation) | MEDIUM | TECH_STACK_AUDIT §IV.a + ROADMAP §IV.a | Q2 batched scaffold sweep (~7-8h) — 5 oia.focus.* share a Focus-class scaffold |
 | RULE-006 brand-prefix coverage in chrome-toolbar `extName` | MEDIUM | TECH_STACK_AUDIT §IV.f | Office Architect decision: does RULE-006 extend to `extName` strings or surfaces only? |
 | 864z-markdown-standard not codified | LOW-MED | All 3 master docs (header) + ROADMAP §VII risks | RULE-008 candidate; codify the inferred standard or amend it |
-| `864z-chronical` RULE-007 audit (AI-conversation capture is secret-adjacent) | MEDIUM | TECH_STACK_AUDIT §IV.g + ROADMAP §VII | Q2 audit; defer public release until cleared |
+| `864z-chronicle` RULE-007 audit (AI-conversation capture is secret-adjacent) | MEDIUM | TECH_STACK_AUDIT §IV.g + ROADMAP §VII | Q2 audit; defer public release until cleared |
 | `who-is-watching` SW non-module type | LOW | TECH_STACK_AUDIT §V.e + ROADMAP §IV.a | Modernize to `type: "module"` (~2h) when next routine touch happens |
 | 32px icon missing across 14 manifests | LOW | TECH_STACK_AUDIT §V.c + ROADMAP §IV.a | Mechanical manifest edit + asset gen (~10 min × 14) |
 | `author` field unset on 10/15 manifests | LOW | TECH_STACK_AUDIT §V.d | Standardize on `"864zeros LLC ({Pillar} pillar)"` format; mechanical fix |
@@ -368,7 +368,7 @@ Plus 5 cross-repo Division READMEs (DIV-0 / DIV-1 / DIV-3 / DIV-4 / DIV-5) and t
 
 ### IX.f — Compliance burndown queue (P0)
 
-7 RULE-001 violations to close before any of the affected extensions can ship a major-version update: `oia.focus.note`, `oia.focus.timer`, `oia.focus.wall`, `oia.focus.signal`, `oia.focus.sound`, `who-is-watching`, `864z-chronical`.
+7 RULE-001 violations to close before any of the affected extensions can ship a major-version update: `oia.focus.note`, `oia.focus.timer`, `oia.focus.wall`, `oia.focus.signal`, `oia.focus.sound`, `who-is-watching`, `864z-chronicle`.
 
 ---
 

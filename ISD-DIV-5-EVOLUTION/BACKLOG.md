@@ -214,7 +214,7 @@ Once a rule is codified, existing extensions that pre-date the rule should be au
 | `Bible-Insight` | unknown | UNAUDITED | TBD |
 | `Time2Focus`, `TabVault`, `Signal2Noise`, `TuneOut2FocusIn` | unknown | UNAUDITED | TBD |
 | `oia-focus-note`, `oia-focus-timer`, `oia-focus-wall`, `oia.focus.signal`, `oia.focus.sound` | unknown | UNAUDITED | TBD |
-| `864z-chronical`, `who-is-watching` | unknown | UNAUDITED | TBD |
+| `864z-chronicle`, `who-is-watching` | unknown | UNAUDITED | TBD |
 
 ### RULE-002 (SW Download Pattern) — codified 2026-05-08
 

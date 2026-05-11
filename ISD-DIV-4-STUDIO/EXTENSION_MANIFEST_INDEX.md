@@ -16,7 +16,7 @@ DIV-4 STUDIO can pull from this index for marketing copy, store-listing prep, an
 | **[clipboard](../../864zeros-llc/LLC-DIV-3-FACTORY/extensions/clipboard/README.md)** | Engineering 100%, GTM 70% | M | OIA | Freemium ($1.99/$3.99/$5.99/$150 lifetime) | Local-first web clipper. Capture anything. Keep it. Own it. |
 | **[Bible-Insight](../../864zeros-llc/LLC-DIV-3-FACTORY/extensions/Bible-Insight/README.md)** | Approved (gated on Thaw revenue) | M-L | **FHG** *(separate brand!)* | Freemium ($4.99/mo) | Bible study, locally captured, AI-assisted. For His Glory. |
 | **[TabVault](../../864zeros-llc/LLC-DIV-3-FACTORY/extensions/TabVault/README.md)** | DEPLOYED (Strike 002) | M | OIA | Freemium (Pro planned) | Deep Sleep for your tabs. OneTab without the data loss. |
-| **[Chronicle (864z-chronical)](../../864zeros-llc/LLC-DIV-3-FACTORY/extensions/864z-chronical/README.md)** | Engineering ready | S | OIA | Free Edition v1 | Your AI conversation history. Captured automatically. |
+| **[Chronicle (864z-chronicle)](../../864zeros-llc/LLC-DIV-3-FACTORY/extensions/864z-chronicle/README.md)** | Engineering ready | S | OIA | Free Edition v1 | Your AI conversation history. Captured automatically. |
 | **[who-is-watching](../../864zeros-llc/LLC-DIV-3-FACTORY/extensions/who-is-watching/README.md)** | v2.1.6 mature | L | OIA | Free Edition v1 | See exactly who is tracking you on every page. Block them in one click. |
 
 ### oia.focus series (canonical products)
@@ -139,7 +139,7 @@ When DIV-4 STUDIO writes copy, the **Migration/Liberation framing** applies to T
 ```
 864zeros-llc/LLC-DIV-3-FACTORY/extensions/
 ├── clipboard/README.md                   ◄── NEW (or updated)
-├── 864z-chronical/README.md              ◄── UPDATED (existed)
+├── 864z-chronicle/README.md              ◄── UPDATED (existed)
 ├── TabVault/README.md                    ◄── NEW
 ├── Bible-Insight/README.md               ◄── NEW
 ├── who-is-watching/README.md             ◄── UPDATED (existed)

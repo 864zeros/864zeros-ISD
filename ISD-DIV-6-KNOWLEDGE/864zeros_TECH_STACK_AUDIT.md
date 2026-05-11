@@ -45,7 +45,7 @@
 | `oia.focus.signal` | **OIA** | Focus | 1.1.0 | 🟴 missing | ❓ unaudited | — | `icons/` | 16,48,128 |
 | `oia.focus.sound` | **OIA** | Focus | 1.1.0 | 🟴 missing | ❓ unaudited | — | `icons/` | 16,48,128 |
 | `who-is-watching` | **OIA** | Recon (privacy) | 2.1.6 | 🟴 missing | ❓ unaudited | — | `icons/` | 16,48,128 |
-| `864z-chronical` | **OIA** | Recon (AI capture) | 1.0.0 | 🟴 missing | ❓ unaudited | — | `icons/` | 16,48,128 |
+| `864z-chronicle` | **OIA** | Recon (AI capture) | 1.0.0 | 🟴 missing | ❓ unaudited | — | `icons/` | 16,48,128 |
 
 ---
 
@@ -79,7 +79,7 @@ Focus-class extensions don't touch host pages. Smallest permission surface; lowe
 
 ### III.d — Recon Class (1 extension)
 
-`864z-chronical`
+`864z-chronicle`
 
 **Fingerprint:** `storage` + `sidePanel` + scoped host_permissions to specific AI sites (`gemini.google.com`, `claude.ai`, `chatgpt.com`, `aistudio.google.com`, `chat.openai.com`).
 
@@ -93,7 +93,7 @@ Recon-class extensions silently capture the user's interactions with named third
 
 🟴 **7 extensions missing `options_ui` entirely.** Migration backlog:
 
-`oia-focus-note`, `oia-focus-timer`, `oia-focus-wall`, `oia.focus.signal`, `oia.focus.sound`, `who-is-watching`, `864z-chronical`
+`oia-focus-note`, `oia-focus-timer`, `oia-focus-wall`, `oia.focus.signal`, `oia.focus.sound`, `who-is-watching`, `864z-chronicle`
 
 Each needs a `options/options.html` scaffolded with the 3 RULE-001 sections (How to Use · Subscription & Tiers · Data Management) + a Cog in the side-panel header. The 5 `oia.focus.*` extensions can share a near-identical Options scaffold (Focus class has a near-identical concern set).
 
@@ -124,7 +124,7 @@ Each needs a `options/options.html` scaffolded with the 3 RULE-001 sections (How
 
 ### IV.g — RULE-007 Compliance (Secret Sovereignty / BYOK)
 
-🟡 `clipboard` is the canonical pre-rule-compliant example (BYOK API key flow for AI providers). `Bible-Insight` MUST adopt at strike charter (planned). `864z-chronical` requires audit (captures user-AI conversations — secret-adjacent). Other 12 extensions: no secret handling identified, but formal audit pending.
+🟡 `clipboard` is the canonical pre-rule-compliant example (BYOK API key flow for AI providers). `Bible-Insight` MUST adopt at strike charter (planned). `864z-chronicle` requires audit (captures user-AI conversations — secret-adjacent). Other 12 extensions: no secret handling identified, but formal audit pending.
 
 ---
 
@@ -133,7 +133,7 @@ Each needs a `options/options.html` scaffolded with the 3 RULE-001 sections (How
 ### V.a — Naming Convention Drift
 
 Three live conventions:
-- **kebab-case:** `migration-pilot`, `scripture-scout`, `oia-focus-note`, `oia-focus-timer`, `oia-focus-wall`, `who-is-watching`, `864z-chronical`
+- **kebab-case:** `migration-pilot`, `scripture-scout`, `oia-focus-note`, `oia-focus-timer`, `oia-focus-wall`, `who-is-watching`, `864z-chronicle`
 - **dot-case:** `oia.focus.signal`, `oia.focus.sound`
 - **PascalCase:** `Bible-Insight`, `Signal2Noise`, `TabVault`, `Time2Focus`, `TuneOut2FocusIn`
 - **lowercase:** `clipboard`
@@ -173,7 +173,7 @@ Three live conventions:
 |---|---|---|---|---|
 | P0 | Add `options_ui` scaffold to 7 RULE-001-noncompliant extensions | 7 | ~2h each (5 share Focus-class scaffold = ~3h batched) | Web Store release of any non-compliant extension |
 | P1 | RULE-006 brand-prefix audit + injection across the 11 unaudited extensions | 11 | ~30 min each (mechanical) | RULE-006 universal compliance milestone |
-| P1 | RULE-007 audit of `864z-chronical` (AI conversation capture is secret-adjacent) | 1 | ~1h | Public release / FHG-pillar trust gate |
+| P1 | RULE-007 audit of `864z-chronicle` (AI conversation capture is secret-adjacent) | 1 | ~1h | Public release / FHG-pillar trust gate |
 | P2 | Add 32px icon to 14 manifests | 14 | ~10 min each (manifest edit + asset) | Retina UX polish |
 | P2 | Modernize `who-is-watching` SW to `type: "module"` | 1 | ~2h (refactor + test) | Future ESM-only brick adoption |
 | P3 | Standardize `author` field across all 15 manifests | 15 | ~5 min each | Tooling that reads author field |

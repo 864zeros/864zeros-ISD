@@ -87,7 +87,7 @@ Three pillars. Palettes never bleed. Per-pillar voice never crosses surfaces. En
 
 | Pillar | Active Extensions | Count | Notable |
 |---|---|---|---|
-| **OIA** | `oia.focus.note`, `oia.focus.timer`, `oia.focus.wall`, `oia.focus.signal`, `oia.focus.sound`, `TabVault`, `Signal2Noise`, `Time2Focus`, `TuneOut2FocusIn`, `who-is-watching`, `864z-chronical` | 11 | Largest portfolio; the focus.* family is the pillar's quintessential expression |
+| **OIA** | `oia.focus.note`, `oia.focus.timer`, `oia.focus.wall`, `oia.focus.signal`, `oia.focus.sound`, `TabVault`, `Signal2Noise`, `Time2Focus`, `TuneOut2FocusIn`, `who-is-watching`, `864z-chronicle` | 11 | Largest portfolio; the focus.* family is the pillar's quintessential expression |
 | **864-Flux** | `clipboard`, `migration-pilot` | 2 | Reference impls for RULE-001 through RULE-005; clipboard awaits Phase 2 deep refactor |
 | **FHG** | `scripture-scout`, `Bible-Insight` (planned) | 2 (1 shipping) | scripture-scout is the only pillar member shipping; first directory-format brick (BRK-UI-004) was harvested here |
 

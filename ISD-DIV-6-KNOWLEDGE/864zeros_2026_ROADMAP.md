@@ -60,9 +60,9 @@ All other Active Sprint items closed in the 2026-05-08 sweep. Net-new items expe
 
 | Target | Detail | Effort | Gate |
 |---|---|---|---|
-| Close 7 RULE-001 violations | 5 `oia.focus.*` (batched scaffold) + `who-is-watching` + `864z-chronical` | ~3-4h batched + ~2h × 2 individual = ~7-8h | None — pure compliance work |
+| Close 7 RULE-001 violations | 5 `oia.focus.*` (batched scaffold) + `who-is-watching` + `864z-chronicle` | ~3-4h batched + ~2h × 2 individual = ~7-8h | None — pure compliance work |
 | Universal RULE-006 audit + injection | 11 unaudited extensions × ~30 min mechanical | ~5-6h | None |
-| RULE-007 audit of `864z-chronical` | AI-conversation capture is secret-adjacent | ~1h | Pre-public-release for that extension |
+| RULE-007 audit of `864z-chronicle` | AI-conversation capture is secret-adjacent | ~1h | Pre-public-release for that extension |
 | `who-is-watching` SW modernization → `type: "module"` | Lone non-module SW; modernization debt | ~2h | Required before adopting any ESM-only brick |
 | 32px icon addition across 14 manifests | Mechanical manifest edit + asset gen | ~10 min × 14 = ~2.5h | Retina toolbar rendering polish |
 
@@ -114,7 +114,7 @@ These are explicit guardrails — **NOT** roadmap items. Drift here triggers Off
 |---|---|---|
 | Clipboard Phase 2 paid-tier UX risk | HIGH | Phase 2 deferred until UX decisions converge; running incrementally on Phase 1 in production |
 | RULE-001 backlog (7 violations) blocking any non-compliant Web Store release | MEDIUM | Q2 scaffold sweep planned (~7-8h batched) |
-| `864z-chronical` RULE-007 audit (secret-adjacent AI capture) | MEDIUM | Q2 scheduled; defer any public release until cleared |
+| `864z-chronicle` RULE-007 audit (secret-adjacent AI capture) | MEDIUM | Q2 scheduled; defer any public release until cleared |
 | **DIV-2 numbering gap** in division layout (jumps from DIV-1 to DIV-3) | LOW | Queued for OFFICE_ARCHITECT.md §VI reconciliation; no operational impact |
 | **DIV-6 source-of-truth filename typo** (`864zeros_MASTER_CONTEXT.md`) | LOW | Rename queued for next cleanup pass with NotebookLM re-index coordination — not renamed in-place to avoid breaking active ingestion |
 | Compliance audit backlog: 10+ extensions UNAUDITED for RULE-001/002/003/005/006 | MEDIUM | Q2 burndown queue published in TECH_STACK_AUDIT §VI |
@@ -138,7 +138,7 @@ These are explicit guardrails — **NOT** roadmap items. Drift here triggers Off
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.0 | 2026-05-09 | Initial synthesis. Q2 2026 targets locked: 7-extension RULE-001 backlog burndown + universal RULE-006 audit + RULE-007 sweep of `864z-chronical` + 32px icon universalization + `who-is-watching` SW modernization. Q3 themes: brand-firewall hardening, RULE-007 universal audit, brick-compounding cadence, pillar diversification (FHG → ≥3), public-launch playbook formalization. 7 strategic constants flagged as inviolable. 7 risks tracked. |
+| 1.0 | 2026-05-09 | Initial synthesis. Q2 2026 targets locked: 7-extension RULE-001 backlog burndown + universal RULE-006 audit + RULE-007 sweep of `864z-chronicle` + 32px icon universalization + `who-is-watching` SW modernization. Q3 themes: brand-firewall hardening, RULE-007 universal audit, brick-compounding cadence, pillar diversification (FHG → ≥3), public-launch playbook formalization. 7 strategic constants flagged as inviolable. 7 risks tracked. |
 
 ---
 

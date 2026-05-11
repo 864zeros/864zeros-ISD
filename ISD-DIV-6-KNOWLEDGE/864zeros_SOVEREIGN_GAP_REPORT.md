@@ -17,7 +17,7 @@ All 15 Chrome extensions under `LLC-DIV-3-FACTORY/extensions/`:
 
 | # | Extension | Class | Pillar |
 |---|---|---|---|
-| 1 | `864z-chronical` | AI-Capture | OIA |
+| 1 | `864z-chronicle` | AI-Capture | OIA |
 | 2 | `Bible-Insight` | Liberation + AI | FHG |
 | 3 | `clipboard` | Liberation + AI | OIA |
 | 4 | `migration-pilot` | Liberation | OIA |
@@ -62,7 +62,7 @@ Read-only static analysis: `Grep` and `Read` only — zero modifications, zero t
 
 | Extension | `storage.local` | `storage.sync` | `storage.session` | IndexedDB (DB name) | localStorage | sessionStorage | `downloads.download` |
 |---|---|---|---|---|---|---|---|
-| `864z-chronical` | settings only | — | — | `chronicle` (entries, exchanges) | — | — | — |
+| `864z-chronicle` | settings only | — | — | `chronicle` (entries, exchanges) | — | — | — |
 | `Bible-Insight` | settings + token-usage timestamp | — | — | `bibleinsight` (contentItems, tags, contentTags + others) | — | — | YES (PDF/JSON backup) |
 | `clipboard` | settings + API key + tier + credits + Drive tokens | — | — | `clipboard` (clips, tags, clip_tags) | — | — | YES (PDF, JSON backup) |
 | `migration-pilot` | (none in active code; settings only via library) | — | — | `migration-pilot` (captures) | — | — | YES (Markdown export) |
@@ -80,10 +80,10 @@ Read-only static analysis: `Grep` and `Read` only — zero modifications, zero t
 
 **Fleet-wide observations:**
 
-- **Zero `chrome.storage.sync` usage** in any active extension code. RULE-007 §`.sync` forbidden — clean. (One historical doc reference in `864z-chronical/{864z} chronical extension (1).md` at lines 1209/1354 references `chrome.storage.sync.get('chronicleTier')` — design spec only, **not present in shipping code**.)
+- **Zero `chrome.storage.sync` usage** in any active extension code. RULE-007 §`.sync` forbidden — clean. (One historical doc reference in `864z-chronicle/{864z} chronicle extension (1).md` at lines 1209/1354 references `chrome.storage.sync.get('chronicleTier')` — design spec only, **not present in shipping code**.)
 - **Zero `localStorage` / `sessionStorage`** in any active extension code. Only matches are in `IGNORE/` notes folders for `who-is-watching`.
 - All 15 extensions use `chrome.storage.local` for at least settings (manifest `storage` permission is universal — confirmed in `864zeros_TECH_STACK_AUDIT.md` §I.1).
-- IndexedDB present in 7/15 extensions — exactly the 4 vault-class (Bible-Insight, clipboard, migration-pilot, scripture-scout) plus 864z-chronical, TabVault, who-is-watching.
+- IndexedDB present in 7/15 extensions — exactly the 4 vault-class (Bible-Insight, clipboard, migration-pilot, scripture-scout) plus 864z-chronicle, TabVault, who-is-watching.
 
 ### II.2 Per-extension detail (vault-class)
 
@@ -174,7 +174,7 @@ drive_device_id                  # synthetic UUID
 
 | Extension | `fetch()` count | Hardcoded exit URL(s) | BYOK / bundled / none | User content in payload? |
 |---|---|---|---|---|
-| `864z-chronical` | 0 | (none) | NONE | NO — local IndexedDB only |
+| `864z-chronicle` | 0 | (none) | NONE | NO — local IndexedDB only |
 | `Bible-Insight` | ~8 | `https://generativelanguage.googleapis.com/v1beta/...` | BYOK (operator-supplied Gemini key) | YES — full captured page text up to `AI_CONFIG.MAX_CONTENT_CHARS` per call |
 | `clipboard` | ~12 | `https://generativelanguage.googleapis.com/...` (Gemini) + `https://api.anthropic.com/v1/messages` (Claude) + Google Drive API + `https://oauth2.googleapis.com/...` + `https://www.googleapis.com/oauth2/v2/userinfo` + `https://accounts.google.com/o/oauth2/auth` (OAuth) + `https://extensionpay.com` (ExtPay payments) | BYOK for AI; OAuth for Drive | YES for AI (clip content, post-redaction); YES for Drive (backup of entire `clips`/`tags`/`clip_tags` IDB) |
 | `migration-pilot` | 0 | (none) | NONE | NO — local IndexedDB + filesystem export only |
@@ -241,7 +241,7 @@ All `Authorization: Bearer {token}` and `x-api-key: {token}` references appear i
 | `clipboard` | Clip content (post-`redact()`), images (base64, no redaction), synthesis multi-clip combined content | Gemini OR Claude (operator-selected) | TLS | Per-call — invoked from sidepanel; tier-gated; "ai-summary"/"ai-vision"/"ai-auto-tag"/"synthesize-clips" feature gates |
 | `clipboard` (Drive) | **Entire IndexedDB** as JSON backup (clips + tags + clip_tags) | `googleapis.com/upload/drive/v3` (operator's `appdata` folder) | TLS | User must connect via OAuth; can disable auto-sync; max 5 backups retained |
 | `TabVault` (Drive) | Vaulted tab metadata (URL, title, favicon, group) as JSON backup | Same | TLS | Same opt-in pattern |
-| `864z-chronical` | **NOTHING transmitted** — DOM-scraped conversations stay in local IndexedDB | (n/a) | (n/a) | N/A — no exit point |
+| `864z-chronicle` | **NOTHING transmitted** — DOM-scraped conversations stay in local IndexedDB | (n/a) | (n/a) | N/A — no exit point |
 | `who-is-watching` | **NOTHING transmitted** — observed network identities stay in local IndexedDB | (n/a) | (n/a) | N/A |
 
 ### IV.4 PII patterns inside captured user content
@@ -250,7 +250,7 @@ All `Authorization: Bearer {token}` and `x-api-key: {token}` references appear i
 
 - **Bible-Insight**: NO redactor present. Full content goes to Gemini.
 - **clipboard**: `lib/redactor.js` strips emails / phones / SSN-like patterns BEFORE AI calls. Drive backups, however, are stored verbatim (no redaction on backup path) — user content goes to Drive in plaintext (TLS-protected to Drive only).
-- **864z-chronical**: User-AI conversations may contain anything — full content captured to local IDB. Since nothing leaves the device, no transit risk.
+- **864z-chronicle**: User-AI conversations may contain anything — full content captured to local IDB. Since nothing leaves the device, no transit risk.
 - **migration-pilot, scripture-scout**: User content stays local; Markdown exports go to user's filesystem.
 
 ---
@@ -265,7 +265,7 @@ Three of 15 extensions touch AI providers:
 |---|---|---|---|
 | `Bible-Insight` | Google Gemini (`gemini-1.5-*` per `AI_CONFIG.GEMINI_MODEL`) | BYOK (operator's free-tier or paid Gemini key) | Full captured page text + AI-instruction prompt; image base64 + vision instruction; verse-reference + translation request |
 | `clipboard` | Google Gemini OR Anthropic Claude (per `config.provider`) | BYOK (operator's key, stored in `chrome.storage.local` as `${APP_SLUG}_ai_api_key`) | Clip content (post-`redact()`) + instruction; image base64 + instruction; multi-clip synthesis (combined truncated content) |
-| `864z-chronical` | NONE — only PASSIVELY READS AI conversation surfaces (gemini.google.com, claude.ai, chatgpt.com, aistudio.google.com, chat.openai.com) | n/a | n/a — no AI calls; only DOM scraping of user's own conversations |
+| `864z-chronicle` | NONE — only PASSIVELY READS AI conversation surfaces (gemini.google.com, claude.ai, chatgpt.com, aistudio.google.com, chat.openai.com) | n/a | n/a — no AI calls; only DOM scraping of user's own conversations |
 
 ### V.2 RULE-007 compliance per AI-touching extension
 
@@ -273,7 +273,7 @@ Three of 15 extensions touch AI providers:
 |---|---|---|---|---|---|---|
 | `Bible-Insight` | YES | NO | NO | NO (`.local` only) | Settings page exposes API key field; no plain-English secret disclosure section observed | **MOSTLY COMPLIANT** — missing the "plain-English secret-handling disclosure" mandated by RULE-007 §Operations |
 | `clipboard` | YES (active path via `lib/api-client.js`) | NO | NO (active path) — but **dead code at `lib/ai/ai-client.js` references `clipboard-864z.864zeros.workers.dev`** | NO | Options shows masked API key + tier + status; README still describes the proxy architecture (drift) | **COMPLIANT in shipping code; AT RISK of regression** if `ai-client.js` is ever re-imported |
-| `864z-chronical` | n/a | n/a | n/a | n/a | n/a | **N/A** — does not touch AI providers in the BYOK sense (DOM scrape only) |
+| `864z-chronicle` | n/a | n/a | n/a | n/a | n/a | **N/A** — does not touch AI providers in the BYOK sense (DOM scrape only) |
 
 ### V.3 Response handling
 
@@ -307,7 +307,7 @@ Three of 15 extensions touch AI providers:
 
 | Extension | What's lost on cache-clear | What's lost on full extension wipe | Loss-blast-radius |
 |---|---|---|---|
-| `864z-chronical` | NOTHING (cache-only) | Entire `chronicle` IndexedDB (all conversation captures from gemini/claude/chatgpt/aistudio) | **CATASTROPHIC** — irreplaceable AI conversation history |
+| `864z-chronicle` | NOTHING (cache-only) | Entire `chronicle` IndexedDB (all conversation captures from gemini/claude/chatgpt/aistudio) | **CATASTROPHIC** — irreplaceable AI conversation history |
 | `Bible-Insight` | NOTHING | `chrome.storage.local` (settings + Gemini API key) + `bibleinsight` IDB (all captures, tags, AI analyses); PDFs in Downloads survive | **CATASTROPHIC** — sermon notes, theological research, verse cross-references, generated study reports |
 | `clipboard` | NOTHING | `chrome.storage.local` (API key + Drive token + tier) + `clipboard` IDB (clips + screenshots + PDFs); Drive backups survive on Drive (operator must Restore) | **SUBSTANTIAL → CATASTROPHIC depending on Drive-sync state** |
 | `migration-pilot` | NOTHING | `migration-pilot` IDB; Markdown exports in Downloads survive | **SUBSTANTIAL → TRIVIAL if user has Liberated** (the entire product premise) |
@@ -327,7 +327,7 @@ Three of 15 extensions touch AI providers:
 
 The user's mental model "if I clear my cache I'll lose my AI conversation history" is **WRONG** — Chronicle's IndexedDB survives cache-clear. The model that's RIGHT is "if I uninstall the extension or run `Clear all site data` for the extension, I lose **everything irreplaceable**."
 
-The four extensions where loss is CATASTROPHIC under "full wipe" are: **864z-chronical, Bible-Insight, clipboard, migration-pilot** — and three of these (Bible-Insight, clipboard, migration-pilot) have a Liberation/export path the user can pre-emptively run. Chronicle does NOT — it has no Liberate-to-Markdown action yet (loss is unrecoverable).
+The four extensions where loss is CATASTROPHIC under "full wipe" are: **864z-chronicle, Bible-Insight, clipboard, migration-pilot** — and three of these (Bible-Insight, clipboard, migration-pilot) have a Liberation/export path the user can pre-emptively run. Chronicle does NOT — it has no Liberate-to-Markdown action yet (loss is unrecoverable).
 
 ---
 
@@ -347,7 +347,7 @@ The four extensions where loss is CATASTROPHIC under "full wipe" are: **864z-chr
 | `clipboard` (analyze image) | Same | NO | Base64 image + vision instruction (no image redaction layer) | YES | NO preview gate | **FULL-CAPTURE** of image |
 | `clipboard` (synthesize "quick-summary") | Same | NO | Up to 500 chars per clip × N clips, post-redact, + synthesis instruction | YES (tier+credit-gated) | NO preview gate | **SELECTED-CONTENT** |
 | `clipboard` (synthesize "research-dossier") | Same | NO | Up to 1500 chars per clip × N clips + source URLs + titles + synthesis instruction. **Source URL leak risk** if URLs contain tokens / PII paths | YES | NO preview gate | **FULL-CAPTURE** (and notable URL exposure) |
-| `864z-chronical` | (none — DOM scrape only) | n/a | (none transmitted by extension; the conversation already exists at the AI provider — it's the user's own session) | n/a | n/a | **NONE** — extension has no AI exit point |
+| `864z-chronicle` | (none — DOM scrape only) | n/a | (none transmitted by extension; the conversation already exists at the AI provider — it's the user's own session) | n/a | n/a | **NONE** — extension has no AI exit point |
 
 ### VII.2 Headline finding
 
@@ -371,7 +371,7 @@ Score key:
 
 | # | Extension | Durability | Leak | RULE-007 score | Notes |
 |---|---|---|---|---|---|
-| 1 | `864z-chronical` | CATASTROPHIC | NONE | 10/10 (no AI exit point) | Local-only; no Liberate path yet (recovery gap) |
+| 1 | `864z-chronicle` | CATASTROPHIC | NONE | 10/10 (no AI exit point) | Local-only; no Liberate path yet (recovery gap) |
 | 2 | `Bible-Insight` | CATASTROPHIC | FULL-CAPTURE | 7/10 | BYOK ✓ no proxy ✓; missing plain-English secret disclosure; no per-call prompt preview |
 | 3 | `clipboard` | SUBSTANTIAL→CATASTROPHIC | FULL-CAPTURE (images) / SELECTED-CONTENT (text) | 7/10 | Active path BYOK ✓; **dead-code proxy at risk**; redactor present; README drift |
 | 4 | `migration-pilot` | SUBSTANTIAL→TRIVIAL | NONE | 10/10 | Reference impl; no AI; pure local→filesystem |
@@ -396,7 +396,7 @@ Score key:
 ### IX.1 P0 — Chronicle has no Liberation path
 
 **Severity:** Highest blast radius across the fleet.
-**What:** `864z-chronical` captures the user's entire AI conversation history (every conversation on Gemini, Claude, ChatGPT, AI Studio) into IndexedDB. There is currently NO `chrome.downloads.download` invocation, NO export action, NO Markdown-Liberate flow. `service-worker.js` has a `CLEAR_ALL` handler but no export handler.
+**What:** `864z-chronicle` captures the user's entire AI conversation history (every conversation on Gemini, Claude, ChatGPT, AI Studio) into IndexedDB. There is currently NO `chrome.downloads.download` invocation, NO export action, NO Markdown-Liberate flow. `service-worker.js` has a `CLEAR_ALL` handler but no export handler.
 **Implication:** A user who uninstalls Chronicle, runs "Clear all site data" for the extension, or has Chrome corruption events loses 100% of captured AI history with zero recovery surface.
 **Remediation:** Port the BRK-DL-001 Base64 data URI download brick + RULE-002 SW download pattern into Chronicle. Add a `LIBERATE_TO_MARKDOWN` message handler. Estimated 1–2 hours.
 
